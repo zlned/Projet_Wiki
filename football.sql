@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 08 Décembre 2014 à 15:31
+-- Généré le :  Lun 08 Décembre 2014 à 20:30
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -149,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `joueur` (
   KEY `id_pays_2` (`id_pays`),
   KEY `id_equipe` (`id_equipe`),
   KEY `id_trophee_perso` (`id_trophee_perso`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Contenu de la table `joueur`
@@ -163,7 +163,15 @@ INSERT INTO `joueur` (`id_joueur`, `nom_joueur`, `id_pays`, `id_equipe`, `poste_
 (5, 'STEVE MANDANDA', 33, 2, 'GARDIEN DE BUT', 0, 99, 17, 'Steve Mandanda, né le 28 mars 1985 à Kinshasa, est un footballeur international français qui évolue au poste de gardien de but à l''Olympique de Marseille. Il est le frère du gardien de but international congolais Parfait Mandanda.', 1, 0, 0, 0, 17, 0, 29),
 (6, 'ANDRE AYEW', 23, 2, 'ATTAQUANT', 3, 99, 17, 'André Ayew, né le 17 décembre 1989 à Seclin, est un footballeur international ghanéen qui évolue au poste de milieu de terrain à l''Olympique de Marseille. Il possède également la nationalité française.', 3, 0, 1, 2, 15, 2, 24),
 (7, 'NICOLAS NKOULOU', 237, 2, 'DEFENSEUR', 2, 99, 16, 'Nicolas Nkoulou, né le 27 mars 1990 à Yaoundé, est un footballeur international camerounais qui évolue au poste de défenseur à l''Olympique de Marseille. Formé à la Kadji Sport Academies au Cameroun, il rejoint l''AS Monaco en novembre 2007. Il signe son premier contrat professionnel en 2008, à seulement 18 ans. Décrit comme très prometteur par ses pairs, il est sacré champion des réserves professionnelles en étant l''un des piliers ', 2, 0, 0, 2, 16, 0, 24),
-(8, 'ANDRE PIERRE GIGNAC', 33, 2, 'ATTAQUANT', 12, 99, 17, 'André-Pierre Gignac, né le 5 décembre 1985 à Martigues, est un footballeur international français qui évolue au poste d''attaquant à l''Olympique de Marseille. André-Pierre Gignac commence à jouer au football à l''âge de cinq ans et demi à l''Étoile sportive fosséenne avant de poursuivre sa formation au FC Martigues. Lors de l''édition 2001-2002 de la Coupe Gambardella, il parvient à se hisser en demi-finale avec l''équipe martégale, éliminée par l''OGC Nice', 2, 0, 4, 8, 16, 1, 29);
+(8, 'ANDRE PIERRE GIGNAC', 33, 2, 'ATTAQUANT', 12, 99, 17, 'André-Pierre Gignac, né le 5 décembre 1985 à Martigues, est un footballeur international français qui évolue au poste d''attaquant à l''Olympique de Marseille. André-Pierre Gignac commence à jouer au football à l''âge de cinq ans et demi à l''Étoile sportive fosséenne avant de poursuivre sa formation au FC Martigues. Lors de l''édition 2001-2002 de la Coupe Gambardella, il parvient à se hisser en demi-finale avec l''équipe martégale, éliminée par l''OGC Nice', 2, 0, 4, 8, 16, 1, 29),
+(9, 'HENRI BEDIMO', 237, 3, 'DEFENSEUR', 0, 99, 11, 'Henri Bedimo Nsamé est un footballeur international camerounais né le 4 juin 1984 à Douala. Évoluant au poste de défenseur gauche, il commence sa carrière professionnelle au Toulouse FC en 2003 ', 0, 0, 0, 0, 10, 1, 30),
+(10, 'CHRISTOPHE JALLET', 33, 3, 'DEFENSEUR', 0, 99, 17, 'Christophe Jallet, né le 31 octobre 1983 à Cognac, est un footballeur international français qui évolue aux postes d''arrière latéral droit ou de milieu latéral droit à l''Olympique lyonnais. Christophe Jallet débute le football à l''AL Saint-Brice, en banlieue de Cognac, puis à l''UA Cognac où il évolue alors derrière l''attaquant. Pisté par le principal club de la région, les Chamois niortais, depuis ses 13 ans, ses parents estiment qu''il est trop jeune pour partir et il reste donc à Cognac.', 2, 0, 0, 0, 17, 0, 31),
+(11, 'YOHAN GOURCUFF', 33, 3, 'MILIEU DE TERRAIN', 3, 99, 7, 'Yoann Gourcuff, né le 11 juillet 1986 à Plœmeur dans le Morbihan, est un footballeur international français qui évolue au poste de meneur de jeu à l''Olympique lyonnais.', 0, 0, 0, 3, 3, 4, 28),
+(12, 'YASSINE BENZIA', 33, 3, 'ATTAQUANT', 1, 99, 4, 'Yassine Benzia, né le 8 septembre 1994 à Saint-Aubin-les-Elbeuf, est un footballeur français, qui évolue au poste d''attaquant à l''Olympique lyonnais.', 0, 0, 0, 1, 1, 3, 20),
+(13, 'AYMEN ABDENNOUR', 216, 4, 'DEFENSEUR', 0, 99, 7, 'AYMEN ABDENNOUR, né le 6 août 1989 à Sousse, est un footballeur tunisien évoluant à l''AS Monaco, en Ligue 1 française. Il mesure 1,87 m pour 84 kg.', 2, 0, 0, 0, 7, 0, 25),
+(14, 'JEREMI TOULALAN', 33, 4, 'MILIEU DE TERRAIN', 0, 99, 15, 'Jérémy Toulalan, né le 10 septembre 1983 à Nantes, est un footballeur international français qui est capitaine et évolue au poste de milieu de terrain à l''AS Monaco', 5, 0, 0, 0, 14, 1, 31),
+(15, 'LACINA TRAORE', 225, 4, 'ATTAQUANT', 4, 99, 14, 'Lacina Traoré, né le 20 mai 1990 à Abidjan, est un footballeur international ivoirien qui évolue au poste d''attaquant à l''AS Monaco. Formé à l''Académie Mimosifcom, il rejoint le Stade d''Abidjan dès son jeune âge. En 2006, il intègre l''équipe A du club et est titulaire à tous les matchs. En 2008, il rejoint le club roumain du CFR Cluj. Il quitte la Roumanie en 2010 pour rejoindre la Russie et le Kouban Krasnodar.', 3, 0, 1, 3, 11, 3, 24),
+(16, 'DIMITAR BERBATOV', 359, 4, 'ATTAQUANT', 5, 99, 16, 'Dimitar Berbatov est un footballeur international bulgare qui évolue au poste d''attaquant à l''AS Monaco. Dimitar Berbatov naît le 30 janvier 1981 à Blagoevgrad. Ivan Berbatov, son père, était également un footballeur professionnel. Sa mère, Margarita, était une infirmière.', 4, 0, 1, 4, 15, 1, 33);
 
 -- --------------------------------------------------------
 
@@ -191,7 +199,9 @@ INSERT INTO `pays` (`id_pays`, `nom_pays`, `continent`) VALUES
 (55, 'BRESIL', 'AMERIQUE LATINE'),
 (59, 'URUGUAY', 'AMERIQUE LATINE'),
 (216, 'TUNISIE', 'AFRIQUE'),
-(237, 'CAMEROUN', 'AFRIQUE');
+(225, 'COTE D''IVOIRE', 'AFRIQUE'),
+(237, 'CAMEROUN', 'AFRIQUE'),
+(359, 'BULGARIE', 'EUROPE');
 
 -- --------------------------------------------------------
 
