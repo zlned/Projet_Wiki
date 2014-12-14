@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="copyright" content="2004 by Jean-François Pillou">
+<META NAME="ROBOTS" content="all">
+<META NAME="author" content="Jean-François Pillou">
+<META NAME="subject" content="ASP">
+<META NAME="topic" content="ASP Session">
+<META NAME="keywords" content="ASP,Active Server Pages,Microsoft Active server pages,Objet Session, Contents, StaticObjects, Lock, Unlock">
+<META NAME="title" content="ASP - L'objet Session">
+<title>ASP - L'objet Session</title>
+<link rel="stylesheet" href="../ccm.css" type="text/css">
+
+
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute; informatique" href="http://www.commentcamarche.net/rss/actualite.php3">
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute;s du site CommentCaMarche.net" href="http://www.commentcamarche.net/rss/rss.php3">
+</head>
+
+<body>
+
+<table class="ccmmain">
+<tr>
+<td height="1" width="170"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="540"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="12"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="10"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+</tr>
+
+<tr>
+<td colspan="2" bgcolor="#AEBFE2" style="vertical-align:top;text-align:left;height:46;background-color:#AEBFE2;">
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td style="vertical-align:top;"><a href="../index.htm" target="_top"><img src="../images/logotop.png" border="0" width="328" height="42" title="Comment Ca Marche - Communaut&eacute; informatique" alt="Comment Ca Marche - Communaut&eacute; informatique"></a></td>
+    <td style="width:30px">&nbsp;</td>
+    <td style="vertical-align:middle;text-align:left"></td></tr>
+</table>
+</td>
+<td style="background-color: #AEBFE2; vertical-align:bottom;">&nbsp;</td>
+<td style="background-color: #AEBFE2;">&nbsp;</td>
+</tr>
+
+<tr>
+<td bgcolor="#8EA6D6"><div id="ccmicons"><a href="../index.htm"  ><img src="../images/icohome2.gif" name="icohome" alt="Accueil - Encyclop&eacute;die informatique" title="Accueil - Encyclop&eacute;die informatique" width="24" border="0"></a><a href="http://www.commentcamarche.net/encyclopedie"  ><img src="../images/icozip2.gif" name="icozip" alt="T&eacute;l&eacute;charger l'encyclop&eacute;die" title="T&eacute;l&eacute;charger l'encyclop&eacute;die" width="24" border="0"></a><a href="http://www.commentcamarche.net/ccmbugs/?Bug_url=%2Fasp%2Fasp-session.php3#ecrire"  ><img src="../images/icowri2.gif" name="icowri" alt="Contribuer &agrave; cet article" width="24" border="0"></a><a href="http://www.commentcamarche.net/contact/"  ><img src="../images/icomail2.gif" name="icomail" alt="" title="Ecrire &agrave; Jean-Francois Pillou" width="24"  border="0"></a></div></td>
+<td colspan="3" bgcolor="#8EA6D6"></td>
+</tr>
+
+<tr>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1" rowspan="2"><img src="../images/pixel_white.png" height="1" width="12" alt=""></td>
+
+<td bgcolor="#FFFFFF" height="100%" valign="top" rowspan="2">
+</td>
+</tr>
+
+<tr><td valign="top" colspan="3"><div id="contenu"><h1> ASP - L'objet Session</h1><table border="0" cellpadding="0" cellspacing="0" width="722">
+	<tr>
+		<td><img src="images/asp-session.png" alt="ASP - L'objet Session"></td>
+		<td valign="top" width="38"><a href="asp-application.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt=""></a></td>
+		<td valign="top" width="38"><a href="aspglobal.htm"><img src="../images/forward.gif" border="0" width="38" height="63" alt=""></a></td>		<td valign="top" width="63"><a href="../index.htm"><img src="../images/logoPClw.gif" alt="Encyclopédie" height="60" width="63" border="0"></a></td>
+		</tr>
+</table>
+<br><div id="CCMmenu">
+<table width="156">
+<tr><th>Active Server Pages (ASP)</th></tr>
+<tr><td><a class="mlink" href="aspintro.htm">ASP</a></td></tr>
+<tr><td><a class="mlink" href="aspcode.htm">ASP - Implantation du code</a></td></tr>
+<tr><th><span class="rouge">Objets ASP</span></th></tr>
+<tr><td><a class="mlink" href="asp-objets.htm">Mod&egrave;le objet ASP</a></td></tr>
+<tr><td><a class="mlink" href="asp-response.htm">ASP - Objet Response</a></td></tr>
+<tr><td><a class="mlink" href="asp-request.htm">ASP - Objet Request</a></td></tr>
+<tr><td><a class="mlink" href="asp-application.htm">ASP - Objet Application</a></td></tr>
+<tr><td><a class="mlink" href="asp-session.htm">ASP - Objet Session</a></td></tr>
+<tr><th><span class="rouge">Configuration</span></th></tr>
+<tr><td><a class="mlink" href="aspglobal.htm">ASP - Fichier global.asa</a></td></tr>
+<tr><th><span class="rouge">A lire aussi</span></th></tr>
+<tr><td><a class="mlink" href="../html/htmlintro.htm">HTML</a></td></tr>
+<tr><td><a class="mlink" href="../css/cssintro.htm">CSS</a></td></tr>
+<tr><td><a class="mlink" href="../javascript/jsintro.htm">Javascript</a></td></tr>
+<tr><td><a class="mlink" href="../php/phpintro.htm">PHP</a></td></tr>
+<tr><td><a class="mlink" href="../ajax/ajax-intro.htm">AJAX</a></td></tr>
+<tr><td><a class="mlink" href="../www/rss.htm">RSS</a></td></tr>
+<tr><td><a class="mlink" href="../www/podcast-podcasting.htm">Podcast</a></td></tr>
+<tr><td><a class="mlink" href="../web/webintro.htm">Webmastering</a></td></tr>
+<tr><td><a class="mlink" href="../web/webdomain.htm">Nom de domaine</a></td></tr>
+<tr><td><a class="mlink" href="../web/hebergement.htm">H&eacute;bergement</a></td></tr>
+<tr><td><a class="mlink" href="../web/referencement.htm">R&eacute;f&eacute;rencement</a></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/1-langages">FAQ langages</a></td></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/2-programmation">FAQ programmation</a></td></tr>
+</table></div>
+<hr>
+
+<a name="introduction" class="ancre"></a><h2>Introduction aux sessions</h2>
+
+<p align="justify">Le <a href="../internet/http.htm">protocole HTTP</a> est un protocole non connecté (on parle aussi de protocole sans états,
+en anglais stateless protocol), cela signifie que chaque requête sur une page web est traitée indépendamment des
+autres et qu'aucun m&eacute;canisme n'est pr&eacute;vu &agrave; la base pour pouvoir exploiter l'historique
+des différentes requêtes sur les pages successives.
+Ainsi le serveur web ne peut pas se &laquo;&nbsp;souvenir&nbsp;&raquo; de la requête précédente, ce qui emp&ecirc;che
+des utilisations telles que le commerce &eacute;lectronique, pour lequel une mémorisation des achats
+de l'utilisateur &agrave; travers les différentes pages est n&eacute;cessaire.
+
+<p align="justify">Il est donc n&eacute;cessaire de trouver un moyen
+de maintenir une certaine cohésion entre l'utilisateur et la requête, notamment&nbsp;:
+<ul>
+<li>reconnaître les requêtes provenant du même utilisateur,
+<li>associer un profil à l'utilisateur,
+<li>connaître les paramètres de l'application pour l'utilisateur (nombre de produits vendus, ...).
+</ul>
+
+<p align="justify">Ce mécanisme de gestion des états est appel&eacute; gestion de session (en anglais session tracking).
+
+<a name="presentation" class="ancre"></a><h2>Pr&eacute;sentation de l'objet Session</h2>
+
+<p align="justify">Le r&ocirc;le de l'objet <b>Session</b> est ainsi de permettre de stocker temporairement
+(pendant toute la dur&eacute;e de vie de la session) des informations transmissibles
+de page en page.
+Le m&eacute;canisme utilis&eacute; par l'objet Session pour permettre de transmettre les informations
+est bas&eacute;e sur l'utilisation de <a href="../securite/cookies.htm">cookies</a>, mais il est r&eacute;alis&eacute; de mani&egrave;re
+transparente, ce qui signifie que l'utilisateur n'a pas &agrave; s'en soucier.
+L'utilisation de l'objet Session est tr&egrave;s simple, elle consiste uniquement &agrave; enregistrer
+une variable dans la session, &agrave; la r&eacute;cup&eacute;rer tout aussi simplement. L'objet Session
+fournit &eacute;galement les m&eacute;canismes permettant de d&eacute;truire les donn&eacute;es de la session.
+
+<a name="corps" class="ancre"></a><h2>Les constituants de l'objet Session</h2>
+
+<p align="justify">L'objet Session poss&egrave;de plusieurs collections, propri&eacute;t&eacute;s et m&eacute;thodes&nbsp;:
+
+<p align="justify">
+<table class="ccm"width="150" >
+<tr>
+<th align="middle">Collections</th>
+<th align="middle">Propri&eacute;t&eacute;s</th>
+<th align="middle">M&eacute;thodes</th>
+</tr>
+<tr>
+<td><a href="#contents">Contents</a></td>
+<td>Contents.count</td>
+<td>Contents.Remove()</td>
+</tr>
+<tr>
+<td><a href="#staticobjects">StaticObjects</a></td>
+<td>Contents.item(nom)</td>
+<td>Contents.RemoveAll()</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>StaticObjects.count</td>
+<td><a href="#abandon">Abandon</a></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>StaticObjects.item(nom)</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>Codepage</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>LCID</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>SessionID</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="#timeout">Timeout</a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+
+<p align="justify">L'objet Session peut ainsi &ecirc;tre vu comme un conteneur
+regroupant des donn&eacute;es dynamiques rendues accessibles pour un visiteur, tout au long
+de sa navigation sur le site. L'objet Session regroupe ainsi en quelque sorte l'ensemble des variables globales de l'utilisateur.
+
+<a name="evenements" class="ancre"></a><h2>Les &eacute;v&eacute;nements OnStart et OnEnd</h2>
+
+<p align="justify">L'objet Session propose deux &eacute;v&eacute;nements, OnStart() et OnEnd(), permettant respectivement
+d'ex&eacute;cuter des actions au d&eacute;marrage et &agrave; l'arr&ecirc;t de la session, c'est-&agrave;-dire
+au d&eacute;but de la navigation (ou plus exactement &agrave; l'ouverture de la session) ou lorsque l'utilisateur quitte le site
+(ou plus exactement ferme sa session).
+
+<a name="contents" class="ancre"></a><h2>La collection Contents</h2>
+
+<p align="justify">La collection <b>Contents</b> contient des variables dynamiques cr&eacute;&eacute;es sur le serveur
+ pour un utilisateur. Il s'agit d'une fonctionnalit&eacute; tr&egrave;s utile permettant par exemple de mettre
+en place tr&egrave;s facilement un panier de courses ou des pr&eacute;f&eacute;rences !
+
+<p align="justify">La cr&eacute;ation d'une valeur dans la collection <i>Contents</i> se fait de la mani&egrave;re suivante&nbsp;:
+<pre class="Code">Session.Contents("nom_variable") = variable</pre>
+<p align="justify">Il existe toutefois une notation &eacute;quivalente, moins lourde&nbsp;:
+<pre class="Code">Session("nom_variable") = variable</pre>
+
+
+<p align="justify">A l'inverse, l'utilisation d'une valeur stock&eacute;e dans la session se fait en appelant <i>Session("nom_variable")</i>,
+par exemple comme suit&nbsp;:
+
+<pre class="Code">Bienvenue &lt;%Response.Write(Session("nom"))%&gt;</pre>
+
+
+<p align="justify">La collection <i>Contents</i> contient elle-m&ecirc;me deux propri&eacute;t&eacute;s et deux m&eacute;thodes.
+Les propri&eacute;t&eacute;s de la collection Contents sont les suivantes&nbsp;:
+<ul>
+<li>Contents.count, repr&eacute;sentant le nombre d'objets dans la collection ;
+<li>Contents.item(nom), repr&eacute;sentant l'objet identifi&eacute; par le nom pass&eacute; entre parenth&egrave;ses.
+</ul>
+
+<p align="justify">Les m&eacute;thodes de la collection Contents sont les suivantes&nbsp;:
+<ul>
+<li>Contents.remove(nom), supprime l'objet identifi&eacute; par le nom pass&eacute; en argument ;
+<li>Contents.removeall(), supprime tous les objets de la collection.
+</ul>
+
+
+<p align="justify">Le code suivant permet d'afficher l'ensemble des variables contenues dans la session, ainsi que leurs valeurs&nbsp;:
+
+<pre class="Code">&lt;%
+dim i
+For Each i in Session.Contents
+  Response.Write(&quot;<br />&quot; &amp; i &amp; &quot; : &quot; &amp; Session(i))
+Next
+%&gt;</pre>
+
+<a name="staticobjects" class="ancre"></a><h2>La collection StaticObjects</h2>
+
+<p align="justify">La collection <b>StaticObjects</b> permet de manipuler les donn&eacute;es contenues dans les balises HTML &lt;OBJECT&gt; et dont l'attribut <i>scope</i> vaut &laquo;&nbsp;<i>application</i>&nbsp;&raquo;.
+
+<p align="justify">La collection <i>StaticObjects</i> contient elle-m&ecirc;me deux propri&eacute;t&eacute;s et deux m&eacute;thodes.
+Les propri&eacute;t&eacute;s de la collection StaticObjects sont les suivantes&nbsp;:
+<ul>
+<li>StaticObjects.count, repr&eacute;sentant le nombre d'objets dans la collection ;
+<li>StaticObjects.item(nom), repr&eacute;sentant l'objet identifi&eacute; par le nom pass&eacute; entre parenth&egrave;ses.
+</ul>
+
+<p align="justify">Les m&eacute;thodes de la collection StaticObjects sont les suivantes&nbsp;:
+<ul>
+<li>StaticObjects.remove(nom), supprime l'objet identifi&eacute; par le nom pass&eacute; en argument ;
+<li>StaticObjects.removeall(), supprime tous les objets de la collection.
+</ul>
+
+<a name="abandon" class="ancre"></a><h2>La m&eacute;thode Abandon()</h2>
+
+<p align="justify">La m&eacute;thode <i>Abandon</i> permet d'abandonner la session, c'est-&agrave;-dire de supprimer l'ensemble
+des donn&eacute;es qui y sont stock&eacute;es.
+
+<a name="timeout" class="ancre"></a><h2>La propri&eacute;t&eacute; Timeout</h2>
+
+<p align="justify">La propri&eacute;t&eacute; <i>Timeout</i> permet de modifier la valeur (en minutes) de la
+dur&eacute;e de la session (par d&eacute;faut 20 minutes)&nbsp;:
+
+<pre class="Code">Session.Timeout = nombre_minutes</pre>
+
+<a name="plus" class="ancre"></a><h2>Plus d'information</h2>
+<ul>
+<li><a href="http://www.aspfr.com">ASPfr.com</a></li>
+</ul>
+
+<h2 id="sujets_sim">Trucs & astuces pertinents trouv&eacute;s dans la base de connaissances</h2><table class="simili"><tr class="sb">
+<td style="width:75px"><span class="">01/02&nbsp;10h14</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-5041-verrouiller-la-session-windows-xp"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-5041-verrouiller-la-session-windows-xp">Verrouiller la session Windows XP</a> (<a href="http://www.commentcamarche.net/faq/148-windows-xp">Windows XP</a>)</td>
+
+</tr>
+<tr class="sa">
+<td style="width:75px"><span class="Date">25/01&nbsp;14h12</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-675-windows-xp-ouverture-de-session-se-loguer-automatiquement"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-675-windows-xp-ouverture-de-session-se-loguer-automatiquement">Ouverture de session : se loguer automatiquement</a> (<a href="http://www.commentcamarche.net/faq/148-windows-xp">Windows XP</a>)</td>
+
+</tr>
+<tr class="sb">
+<td style="width:75px"><span class="Date">07/12&nbsp;16h49</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-1236-securite-outils-pour-securiser-windows-xp-et-autres"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-1236-securite-outils-pour-securiser-windows-xp-et-autres">Outils pour sécuriser Windows XP (et autres)</a> (<a href="http://www.commentcamarche.net/faq/12-securite">Sécurité</a>)</td>
+
+</tr>
+<tr class="sa">
+<td style="width:75px"><span class="Date">04/09&nbsp;12h09</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-3879-windows-mot-de-passe-de-session-perdu-ou-oublie"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-3879-windows-mot-de-passe-de-session-perdu-ou-oublie">Mot de passe de session perdu ou oublié</a> (<a href="http://www.commentcamarche.net/faq/102-windows">Windows</a>)</td>
+
+</tr>
+<tr class="sb">
+<td style="width:75px"><span class="Date">09/11&nbsp;00h48</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-867-bash-fermeture-de-session-se-delogger-rapidement"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-867-bash-fermeture-de-session-se-delogger-rapidement">Fermeture de session - Se délogger rapidement</a> (<a href="http://www.commentcamarche.net/faq/372-bash">Bash</a>)</td>
+
+</tr>
+<tr class="sa"><td colspan="3" style="text-align:right"><img src="../images/plus.png" alt="ASP Session" border="0"> Plus d'astuces sur &laquo;&nbsp;<a href="../astuces/asp-session"><b>ASP Session</b></a>&nbsp;&raquo;</td></tr></table><h2 id="discus_sim">Discussions pertinentes trouv&eacute;es dans le forum</h2><table class="simili"><tr class="sb">
+<td><span class="Dategris">02/03&nbsp;14h11</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1344421-asp-session#2005-03-02%2014%3A58%3A12"><img src="../images/carre.gif" border="0" alt="asp session"></a><a href="http://www.commentcamarche.net/forum/affich-1344421-asp-session">&nbsp;ASP session</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">02/03&nbsp;14h58</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-1344421-asp-session#2005-03-02%2014%3A58%3A12">marlene</a></td><td style="text-align:center"><span class="Texte">7</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">27/01&nbsp;16h36</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1267243-asp-l-objet-application-et-session#2005-01-29%2011%3A00%3A35"><img src="../images/carre.gif" border="0" alt="asp. objet application session"></a><a href="http://www.commentcamarche.net/forum/affich-1267243-asp-l-objet-application-et-session">&nbsp;ASP. L'objet Application et Session</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">29/01&nbsp;11h00</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-1267243-asp-l-objet-application-et-session#2005-01-29%2011%3A00%3A35">moha_islam</a></td><td style="text-align:center"><span class="Texte">6</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">01/03&nbsp;15h21</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1342116-asp-session#2005-03-01%2016%3A20%3A31"><img src="../images/carre.gif" border="0" alt="asp session"></a><a href="http://www.commentcamarche.net/forum/affich-1342116-asp-session">&nbsp;ASP- session</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">01/03&nbsp;16h20</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-1342116-asp-session#2005-03-01%2016%3A20%3A31">Canard007</a></td><td style="text-align:center"><span class="Texte">3</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">02/08&nbsp;17h05</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-13759-asp-objet-session#2001-08-03%2009%3A23%3A49"><img src="../images/carre.gif" border="0" alt="asp objet session"></a><a href="http://www.commentcamarche.net/forum/affich-13759-asp-objet-session">&nbsp;ASP : Objet Session</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">03/08&nbsp;09h23</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-13759-asp-objet-session#2001-08-03%2009%3A23%3A49">Meg</a></td><td style="text-align:center"><span class="Texte">2</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">24/05&nbsp;14h44</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-9117-asp-session#2001-05-24%2019%3A08%3A13"><img src="../images/carre.gif" border="0" alt="asp session"></a><a href="http://www.commentcamarche.net/forum/affich-9117-asp-session">&nbsp;asp/session</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-11-windows">Windows</a></td>
+<td><span class="Date">24/05&nbsp;19h08</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-9117-asp-session#2001-05-24%2019%3A08%3A13">br@scoo</a></td><td style="text-align:center"><span class="Texte">1</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">20/09&nbsp;18h16</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-20567-session-en-asp-signifie#2001-09-21%2014%3A26%3A51"><img src="../images/carre.gif" border="0" alt="session asp signifie"></a><a href="http://www.commentcamarche.net/forum/affich-20567-session-en-asp-signifie">&nbsp;Session en asp signifie???</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">21/09&nbsp;14h26</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-20567-session-en-asp-signifie#2001-09-21%2014%3A26%3A51">Bobinours</a></td><td style="text-align:center"><span class="Texte">1</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">30/07&nbsp;10h37</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-127514-asp-session-et-cadre#2002-07-30%2014%3A47%3A14"><img src="../images/carre.gif" border="0" alt="asp session cadre"></a><a href="http://www.commentcamarche.net/forum/affich-127514-asp-session-et-cadre">&nbsp;ASP: session et cadre</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">30/07&nbsp;14h47</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-127514-asp-session-et-cadre#2002-07-30%2014%3A47%3A14">gaillardps</a></td><td style="text-align:center"><span class="Texte">1</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">01/10&nbsp;11h48</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-423845-variable-session-asp-et-fonction-javascript#2003-10-13%2020%3A38%3A01"><img src="../images/carre.gif" border="0" alt="variable session asp fonction javascript"></a><a href="http://www.commentcamarche.net/forum/affich-423845-variable-session-asp-et-fonction-javascript">&nbsp;Variable session asp et fonction javascript</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-11-windows">Windows</a></td>
+<td><span class="Date">13/10&nbsp;20h38</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-423845-variable-session-asp-et-fonction-javascript#2003-10-13%2020%3A38%3A01">Bino</a></td><td style="text-align:center"><span class="Texte">1</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">28/09&nbsp;20h07</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1029701-utilisation-de-l-objet-session-en-asp#2004-09-30%2010%3A43%3A27"><img src="../images/carre.gif" border="0" alt="utilisation objet session asp"></a><a href="http://www.commentcamarche.net/forum/affich-1029701-utilisation-de-l-objet-session-en-asp">&nbsp;utilisation de l'objet session en ASP</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">30/09&nbsp;10h43</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-1029701-utilisation-de-l-objet-session-en-asp#2004-09-30%2010%3A43%3A27">fred</a></td><td style="text-align:center"><span class="Texte">1</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">21/08&nbsp;22h24</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1748165-asp-variables-de-session-iis-5-0#2006-09-20%2021%3A05%3A13"><img src="../images/carre.gif" border="0" alt="asp variables session iis 5.0"></a><a href="http://www.commentcamarche.net/forum/affich-1748165-asp-variables-de-session-iis-5-0">&nbsp;[ASP] Variables de session - IIS 5.0</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">20/09&nbsp;21h05</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-1748165-asp-variables-de-session-iis-5-0#2006-09-20%2021%3A05%3A13">Bruno</a></td><td style="text-align:center"><span class="Texte">1</span></td>
+</tr>
+	<tr class="sa">
+	<td colspan="2"><span class="Texte"><img src="../images/carreblock.gif" width="12" alt="" title="Discussion ferm&eacute;e">Discussion ferm&eacute;e
+    <img src="../images/carrevalid.png" width="12" alt="" title="Probl&egrave;me r&eacute;solu">Probl&egrave;me r&eacute;solu</span></td>
+	<td style="vertical-align:top;text-align:right;" colspan="3"><img src="../images/plus.png" alt="ASP Session" border="0"> Plus de discussions sur &laquo;&nbsp;<a href="http://www.commentcamarche.net/f/asp-session"><b>ASP Session</b></a>&nbsp;&raquo;</td></tr></table>
+<br><span class="Footer">Ce document intitul&eacute; &laquo;&nbsp;<a href="http://www.commentcamarche.net/asp/asp-session.php3">ASP - L'objet Session</a>&nbsp;&raquo; issu de l'<a href="http://www.commentcamarche.net/encyclopedie/">encyclop&eacute;die</a> <a href="http://www.commentcamarche.net/informatique/informatique.php3">informatique</a> <a href="http://www.commentcamarche.net">Comment &Ccedil;a Marche</a> (<a href="http://www.commentcamarche.net/">www.commentcamarche.net</a>) est mis &agrave; disposition sous les termes de la licence <a href="../ccmguide/ccmlicence.htm">Creative Commons</a>.
+Vous pouvez copier, modifier des copies de cette page, dans les conditions fix&eacute;es par la licence, tant que cette note appara&icirc;t clairement.</span>
+<br>&nbsp;
+<center><a href="asp-application.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt=""></a>
+<a href="aspglobal.htm"><img src="../images/forward.gif" border="0" width="38" height="63" alt=""></a></center>
+</div>
+
+</td>
+</tr>
+
+<tr><th colspan="4" style="background-color:#CED7F6">&nbsp;</th></tr>
+</table>
+<div id="footer"><br><a href="../ccmguide/ccmintro.htm"><b>A propos</b></a> | <a href="../ccmguide/cgu-conditions-generales.htm"><b>Conditions g&eacute;n&eacute;rales</b></a>  | &copy; Tous droits r&eacute;serv&eacute;s 2007 <a href="http://www.commentcamarche.net">Quidéa</a>
+</div>
+</body>
+</html>

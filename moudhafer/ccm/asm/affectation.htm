@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="copyright" content="1998 by Jean-François Pillou">
+<META NAME="ROBOTS" content="all">
+<META NAME="author" content="Jean-François Pillou">
+<META NAME="subject" content="L'assembleur">
+<META NAME="topic" content="Assembleur">
+<META NAME="keywords" content="Assembleur, assembleur, langage, Langage, instruction, Instruction, instructions, Instructions">
+<META NAME="title" content="L'assembleur - Instructions d'affectation">
+<title>Instructions d'affectation</title>
+<link rel="stylesheet" href="../ccm.css" type="text/css">
+
+
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute; informatique" href="http://www.commentcamarche.net/rss/actualite.php3">
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute;s du site CommentCaMarche.net" href="http://www.commentcamarche.net/rss/rss.php3">
+
+</head>
+
+<body>
+
+<table class="ccmmain">
+<tr>
+<td height="1" width="170"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="540"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="12"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="10"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+</tr>
+
+<tr>
+<td colspan="2" bgcolor="#AEBFE2" style="vertical-align:top;text-align:left;height:46;background-color:#AEBFE2;">
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td style="vertical-align:top;"><a href="../index.htm" target="_top"><img src="../images/logotop.png" border="0" width="328" height="42" title="Comment Ca Marche - Communaut&eacute; informatique" alt="Comment Ca Marche - Communaut&eacute; informatique"></a></td>
+    <td style="width:30px">&nbsp;</td>
+    <td style="vertical-align:middle;text-align:left"></td></tr>
+</table>
+</td>
+<td style="background-color: #AEBFE2; vertical-align:bottom;">&nbsp;</td>
+<td style="background-color: #AEBFE2;">&nbsp;</td>
+</tr>
+
+<tr>
+<td bgcolor="#8EA6D6"><div id="ccmicons"><a href="../index.htm"  ><img src="../images/icohome2.gif" name="icohome" alt="Accueil - Encyclop&eacute;die informatique" title="Accueil - Encyclop&eacute;die informatique" width="24" border="0"></a><a href="http://www.commentcamarche.net/encyclopedie"  ><img src="../images/icozip2.gif" name="icozip" alt="T&eacute;l&eacute;charger l'encyclop&eacute;die" title="T&eacute;l&eacute;charger l'encyclop&eacute;die" width="24" border="0"></a><a href="http://www.commentcamarche.net/ccmbugs/?Bug_url=%2Fasm%2Faffectation.php3#ecrire"  ><img src="../images/icowri2.gif" name="icowri" alt="Contribuer &agrave; cet article" width="24" border="0"></a><a href="http://www.commentcamarche.net/contact/"  ><img src="../images/icomail2.gif" name="icomail" alt="" title="Ecrire &agrave; Jean-Francois Pillou" width="24"  border="0"></a></div></td>
+<td colspan="3" bgcolor="#8EA6D6"></td>
+</tr>
+
+<tr>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1" rowspan="2"><img src="../images/pixel_white.png" height="1" width="12" alt=""></td>
+
+<td bgcolor="#FFFFFF" height="100%" valign="top" rowspan="2">
+</td>
+</tr>
+
+<tr><td valign="top" colspan="3"><div id="contenu"><h1> L'assembleur - Instructions d'affectation</h1><table border="0" cellpadding="0" cellspacing="0" width="722">
+	<tr>
+		<td><img src="images/affectation.gif" alt="Instructions d'affectation en assembleur"></td>
+		<td valign="top" width="38"><a href="logique.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt=""></a></td>
+		<td valign="top" width="38"><a href="saut.htm"><img src="../images/forward.gif" border="0" width="38" height="63" alt=""></a></td>		<td valign="top" width="63"><a href="../index.htm"><img src="../images/logoPClw.gif" alt="Encyclopédie" height="60" width="63" border="0"></a></td>
+		</tr>
+</table>
+<br><div id="CCMmenu">
+<table width="156">
+<tr><th>Assembleur</th></tr>
+<tr><td><a class="mlink" href="assembleur.htm" >Assembleur</a></td></tr>
+<tr><td><a class="mlink" href="source.htm" >Compilation</a></td></tr>
+<tr><td><a class="mlink" href="instruction.htm" >Instructions</a></td></tr>
+<tr><td><a class="mlink" href="adressage.htm" >Adressage</a></td></tr>
+<tr><td><a class="mlink" href="logique.htm" >Instructions arithm&eacute;tiques et logiques</a></td></tr>
+<tr><td><a class="mlink" href="affectation.htm" >Affectation</a></td></tr>
+<tr><td><a class="mlink" href="saut.htm" >Branchements</a></td></tr>
+<tr><td><a class="mlink" href="pile.htm" >Pile</a></td></tr>
+<tr><td><a class="mlink" href="procedure.htm" >Proc&eacute;dures</a></td></tr>
+<tr><td><a class="mlink" href="segmentation.htm" >Segmentation de la m&eacute;moire</a></td></tr>
+<tr><td><a class="mlink" href="liste.htm" >Liste des principales instructions</a></td></tr>
+<tr><th><span class="rouge">A lire aussi</span></th></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/1-langages">FAQ langages</a></td></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/2-programmation">FAQ programmation</a></td></tr>
+</table></div>
+<hr>
+
+<a name="instruction" class="ancre"></a><h2>Qu'est-ce qu'une instruction d'affectation ?</h2>
+
+<p align="justify">Une instruction d'affectation est une instruction qui modifie le contenu d'un registre
+ou d'une case m&eacute;moire en y affectant une valeur, ou une adresse (d'o&ugrave; son nom...).
+C'est l'instruction MOV (provenant du mot anglais <i>move</i> qui signifie d&eacute;placer) qui permet
+non pas de &laquo;&nbsp;d&eacute;placer&nbsp;&raquo; une donn&eacute;e mais plut&ocirc;t copier une donn&eacute;e
+d'un endroit &agrave; un autre, c'est-&agrave;-dire recr&eacute;er une entit&eacute; identique &agrave; un
+endroit diff&eacute;rent.
+
+<a name="sens" class="ancre"></a><h2>Dans quel sens se font les &eacute;changes ?</h2>
+
+<p align="justify">L'instruction MOV permet d'effectuer les transferts de donn&eacute;es dans les deux sens
+(i.e. aussi bien du registre vers la m&eacute;moire que l'inverse). Ainsi, en notation
+symbolique on note la destination en premier puis la source, ce qui donne :
+<br/>MOV destination, source
+<p align="justify">Voyons cela sur un exemple&nbsp;:
+<br/><b><i>MOV AX, [0110]</i></b> va copier le contenu de l'adresse 110H dans le registre AX
+<br/><b><i>MOV [0110], AX</i></b> va copier le contenu du registre AX &agrave; l'adresse 110H
+
+<h2 id="discus_sim">Discussions pertinentes trouv&eacute;es dans le forum</h2><table class="simili"><tr class="sb">
+<td><span class="Date">01/11&nbsp;10h38</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2450909-nouveau-pc-via-un-assembleur-bug-ecran-bleu#2007-02-22%2011%3A21%3A21"><img src="../images/carrevalid.png" border="0" alt="nouveau pc via assembleur écran bleu"></a><a href="http://www.commentcamarche.net/forum/affich-2450909-nouveau-pc-via-un-assembleur-bug-ecran-bleu">&nbsp;nouveau PC via un assembleur : bug écran bleu</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Datered">22/02&nbsp;11h21</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-2450909-nouveau-pc-via-un-assembleur-bug-ecran-bleu#2007-02-22%2011%3A21%3A21">pakistador</a></td><td style="text-align:center"><span class="Texte">13</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">08/11&nbsp;14h09</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-472661-faire-un-prog-en-assembleur#2007-01-25%2013%3A28%3A05"><img src="../images/carrevalid.png" border="0" alt="prog assembleur"></a><a href="http://www.commentcamarche.net/forum/affich-472661-faire-un-prog-en-assembleur">&nbsp;faire un prog en assembleur</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">25/01&nbsp;13h28</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-472661-faire-un-prog-en-assembleur#2007-01-25%2013%3A28%3A05">mina</a></td><td style="text-align:center"><span class="Texte">11</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">03/01&nbsp;18h03</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1212863-assembleur-pile#2005-01-06%2021%3A25%3A59"><img src="../images/carre.gif" border="0" alt="assembleur pile"></a><a href="http://www.commentcamarche.net/forum/affich-1212863-assembleur-pile">&nbsp;Assembleur Pile</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">06/01&nbsp;21h25</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-1212863-assembleur-pile#2005-01-06%2021%3A25%3A59">sam3000</a></td><td style="text-align:center"><span class="Texte">20</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">10/07&nbsp;14h29</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2301079-assembleur#2006-07-27%2014%3A37%3A28"><img src="../images/carre.gif" border="0" alt="assembleur"></a><a href="http://www.commentcamarche.net/forum/affich-2301079-assembleur">&nbsp;assembleur</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">27/07&nbsp;14h37</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-2301079-assembleur#2006-07-27%2014%3A37%3A28">pascal007</a></td><td style="text-align:center"><span class="Texte">20</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">16/06&nbsp;18h07</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-322315-assembleur-32-bits#2003-06-20%2011%3A47%3A30"><img src="../images/carre.gif" border="0" alt="assembleur 32 bits"></a><a href="http://www.commentcamarche.net/forum/affich-322315-assembleur-32-bits">&nbsp;Assembleur, 32 Bits ...</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">20/06&nbsp;11h47</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-322315-assembleur-32-bits#2003-06-20%2011%3A47%3A30">Pascal_</a></td><td style="text-align:center"><span class="Texte">10</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">28/12&nbsp;21h52</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-551048-convertisseur-4en1-en-assembleur#2004-01-06%2018%3A48%3A07"><img src="../images/carreblock.gif" border="0" alt="convertisseur 4en1 assembleur" title="La discussion a été fermée par un modérateur.
+Vous pouvez uniquement lire les discussions mais vous ne pouvez pas y répondre.
+"></a><a href="http://www.commentcamarche.net/forum/affich-551048-convertisseur-4en1-en-assembleur">&nbsp;Convertisseur 4en1 en Assembleur</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">06/01&nbsp;18h48</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-551048-convertisseur-4en1-en-assembleur#2004-01-06%2018%3A48%3A07">Marcel&nbsp;Pagnol</a></td><td style="text-align:center"><span class="Texte">9</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">17/03&nbsp;05h56</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-239495-sortir-d-une-boucle-en-language-assembleur#2003-03-17%2023%3A40%3A29"><img src="../images/carre.gif" border="0" alt="sortir boucle language assembleur"></a><a href="http://www.commentcamarche.net/forum/affich-239495-sortir-d-une-boucle-en-language-assembleur">&nbsp;sortir d'une boucle en language assembleur</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">17/03&nbsp;23h40</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-239495-sortir-d-une-boucle-en-language-assembleur#2003-03-17%2023%3A40%3A29">ipl</a></td><td style="text-align:center"><span class="Texte">7</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">18/01&nbsp;15h31</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-202348-assembleur-et-langage-machine#2007-01-10%2011%3A45%3A19"><img src="../images/carre.gif" border="0" alt="assembleur langage machine"></a><a href="http://www.commentcamarche.net/forum/affich-202348-assembleur-et-langage-machine">&nbsp;Assembleur et langage machine</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">10/01&nbsp;11h45</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-202348-assembleur-et-langage-machine#2007-01-10%2011%3A45%3A19">Eleve&nbsp;en&nbsp;d&eacute;t...</a></td><td style="text-align:center"><span class="Texte">6</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">13/06&nbsp;13h51</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-319498-assembleur-sos-questions-diverses#2003-06-13%2016%3A39%3A39"><img src="../images/carre.gif" border="0" alt="assembleur diverses"></a><a href="http://www.commentcamarche.net/forum/affich-319498-assembleur-sos-questions-diverses">&nbsp;[assembleur] Sos questions diverses</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-11-windows">Windows</a></td>
+<td><span class="Date">13/06&nbsp;16h39</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-319498-assembleur-sos-questions-diverses#2003-06-13%2016%3A39%3A39">Amoureux3</a></td><td style="text-align:center"><span class="Texte">6</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">26/11&nbsp;10h22</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-498737-assembleur-language-c-est-ce-necessaire#2003-11-26%2014%3A17%3A10"><img src="../images/carre.gif" border="0" alt="assembleur language necessaire"></a><a href="http://www.commentcamarche.net/forum/affich-498737-assembleur-language-c-est-ce-necessaire">&nbsp;assembleur + language  c  est-ce necessaire?</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-11-windows">Windows</a></td>
+<td><span class="Date">26/11&nbsp;14h17</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-498737-assembleur-language-c-est-ce-necessaire#2003-11-26%2014%3A17%3A10">witheflag</a></td><td style="text-align:center"><span class="Texte">6</span></td>
+</tr>
+	<tr class="sa">
+	<td colspan="2"><span class="Texte"><img src="../images/carreblock.gif" width="12" alt="" title="Discussion ferm&eacute;e">Discussion ferm&eacute;e
+    <img src="../images/carrevalid.png" width="12" alt="" title="Probl&egrave;me r&eacute;solu">Probl&egrave;me r&eacute;solu</span></td>
+	<td style="vertical-align:top;text-align:right;" colspan="3"><img src="../images/plus.png" alt="Assembleur" border="0"> Plus de discussions sur &laquo;&nbsp;<a href="http://www.commentcamarche.net/f/assembleur"><b>Assembleur</b></a>&nbsp;&raquo;</td></tr></table>
+<br><span class="Footer">Ce document intitul&eacute; &laquo;&nbsp;<a href="http://www.commentcamarche.net/asm/affectation.php3">L'assembleur - Instructions d'affectation</a>&nbsp;&raquo; issu de l'<a href="http://www.commentcamarche.net/encyclopedie/">encyclop&eacute;die</a> <a href="http://www.commentcamarche.net/informatique/informatique.php3">informatique</a> <a href="http://www.commentcamarche.net">Comment &Ccedil;a Marche</a> (<a href="http://www.commentcamarche.net/">www.commentcamarche.net</a>) est mis &agrave; disposition sous les termes de la licence <a href="../ccmguide/ccmlicence.htm">Creative Commons</a>.
+Vous pouvez copier, modifier des copies de cette page, dans les conditions fix&eacute;es par la licence, tant que cette note appara&icirc;t clairement.</span>
+<br>&nbsp;
+<center><a href="logique.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt=""></a>
+<a href="saut.htm"><img src="../images/forward.gif" border="0" width="38" height="63" alt=""></a></center>
+</div>
+
+</td>
+</tr>
+
+<tr><th colspan="4" style="background-color:#CED7F6">&nbsp;</th></tr>
+</table>
+<div id="footer"><br><a href="../ccmguide/ccmintro.htm"><b>A propos</b></a> | <a href="../ccmguide/cgu-conditions-generales.htm"><b>Conditions g&eacute;n&eacute;rales</b></a>  | &copy; Tous droits r&eacute;serv&eacute;s 2007 <a href="http://www.commentcamarche.net">Quidéa</a>
+</div>
+</body>
+</html>

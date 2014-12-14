@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META NAME="copyright" content="2006 by Jean-François Pillou">
+<META NAME="ROBOTS" content="all">
+<META NAME="author" content="Jean-François Pillou">
+<META NAME="subject" content="Comment ça marche? [L'informatique - MP3]">
+<META NAME="topic" content="WAV">
+<META NAME="keywords" content="WAV, Wave, Format WAV, Format Wave, RIFF, PCM, Pulse Coded Modulation">
+<META NAME="title" content="Le format WAV">
+<title>MP3</title>
+<link rel="stylesheet" href="../ccm.css" type="text/css">
+
+
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute; informatique" href="http://www.commentcamarche.net/rss/actualite.php3">
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute;s du site CommentCaMarche.net" href="http://www.commentcamarche.net/rss/rss.php3">
+</head>
+
+<body>
+
+<table class="ccmmain">
+<tr>
+<td height="1" width="170"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="540"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="12"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="10"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+</tr>
+
+<tr>
+<td colspan="2" bgcolor="#AEBFE2" style="vertical-align:top;text-align:left;height:46;background-color:#AEBFE2;">
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td style="vertical-align:top;"><a href="../index.htm" target="_top"><img src="../images/logotop.png" border="0" width="328" height="42" title="Comment Ca Marche - Communaut&eacute; informatique" alt="Comment Ca Marche - Communaut&eacute; informatique"></a></td>
+    <td style="width:30px">&nbsp;</td>
+    <td style="vertical-align:middle;text-align:left"></td></tr>
+</table>
+</td>
+<td style="background-color: #AEBFE2; vertical-align:bottom;">&nbsp;</td>
+<td style="background-color: #AEBFE2;">&nbsp;</td>
+</tr>
+
+<tr>
+<td bgcolor="#8EA6D6"><div id="ccmicons"><a href="../index.htm"  ><img src="../images/icohome2.gif" name="icohome" alt="Accueil - Encyclop&eacute;die informatique" title="Accueil - Encyclop&eacute;die informatique" width="24" border="0"></a><a href="http://www.commentcamarche.net/encyclopedie"  ><img src="../images/icozip2.gif" name="icozip" alt="T&eacute;l&eacute;charger l'encyclop&eacute;die" title="T&eacute;l&eacute;charger l'encyclop&eacute;die" width="24" border="0"></a><a href="http://www.commentcamarche.net/ccmbugs/?Bug_url=%2Faudio%2Fwav.php3#ecrire"  ><img src="../images/icowri2.gif" name="icowri" alt="Contribuer &agrave; cet article" width="24" border="0"></a><a href="http://www.commentcamarche.net/contact/"  ><img src="../images/icomail2.gif" name="icomail" alt="" title="Ecrire &agrave; Jean-Francois Pillou" width="24"  border="0"></a></div></td>
+<td colspan="3" bgcolor="#8EA6D6"></td>
+</tr>
+
+<tr>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1" rowspan="2"><img src="../images/pixel_white.png" height="1" width="12" alt=""></td>
+
+<td bgcolor="#FFFFFF" height="100%" valign="top" rowspan="2">
+</td>
+</tr>
+
+<tr><td valign="top" colspan="3"><div id="contenu"><h1> Le format WAV</h1><table border="0" cellpadding="0" cellspacing="0" width="722">
+	<tr>
+		<td><img src="images/wav-riff-pcm.png" alt="WAV"></td>
+		<td valign="top" width="38"><a href="son.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt=""></a></td>
+		<td valign="top" width="38"><a href="mp3.htm"><img src="../images/forward.gif" border="0" width="38" height="63" alt=""></a></td>		<td valign="top" width="63"><a href="../index.htm"><img src="../images/logoPClw.gif" alt="Encyclopédie" height="60" width="63" border="0"></a></td>
+		</tr>
+</table>
+<br><div id="CCMmenu">
+<table width="156">
+<tr><th>Son num&eacute;rique</th></tr>
+<tr><td><a class="mlink" href="son.htm">Son num&eacute;rique</a></td></tr>
+<tr><th><span class="rouge">Formats de fichiers</span></th></tr>
+<tr><td><a class="mlink" href="mp3.htm">MP3</a></td></tr>
+<tr><td><a class="mlink" href="ogg-vorbis.htm">Ogg Vorbis</a></td></tr>
+<tr><td><a class="mlink" href="aac-m4a.htm">AAC</a> (<a class="mlink" href="aac-m4a.htm">m4a</a>)</td></tr>
+<tr><th><span class="rouge">Home Cinema</span></th></tr>
+<tr><td><a class="mlink" href="home-cinema.htm">Home cinema</a></td></tr>
+<tr><td><a class="mlink" href="son-multicanal-5-1-7-1.htm">Configuration spatiale</a></td></tr>
+<tr><td><a class="mlink" href="dolby-surround-pro-logic.htm">Dolby Surround</a></td></tr>
+<tr><td><a class="mlink" href="dolby-digital-ac3.htm">Dolby Digital</a></td></tr>
+<tr><td><a class="mlink" href="dts-digital-theater-sound.htm">DTS</a></td></tr>
+<tr><td><a class="mlink" href="thx-select-thx-ultra.htm">THX</a></td></tr>
+<tr><th><span class="rouge">Formats d'&eacute;change</span></th></tr>
+<tr><td><a class="mlink" href="spdif-s-pdif.htm">S/PDIF</a></td></tr>
+<tr><th><span class="rouge">Voir aussi :</span></th></tr>
+<tr><td><a class="mlink" href="../pc/pc.htm">Ordinateur</a></td></tr>
+<tr><td><a class="mlink" href="../pc/ordinateur-portable.htm">Ordinateur portable</a></td></tr>
+<tr><td><a class="mlink" href="../pc/processeur.htm">Processeur</a></td></tr>
+<tr><td><a class="mlink" href="../pc/disque.htm">Disque dur</a></td></tr>
+<tr><td><a class="mlink" href="../pc/carte-graphique.htm">Carte graphique</a></td></tr>
+<tr><td><a class="mlink" href="../pc/carte-son.htm">Carte son</a></td></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/3-materiel">FAQ mat&eacute;riel</a></td></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/179-video">FAQ vid&eacute;o</a></td></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/178-multimedia">FAQ multim&eacute;dia</a></td></tr>
+</table></div>
+<hr>
+
+<a name="pres" class="ancre"></a><h2>Pr&eacute;sentation du format MP3</h2>
+
+<p align="justify">Le format <b>WAV</b> (contraction de &laquo;&nbsp;WAVEform audio format&nbsp;&raquo;) est un
+standard de stockage de donn&eacute;es audio num&eacute;rique d&eacute;fini par Microsoft et IBM.
+
+<p align="justify">Il s'agit probablement du format de stockage audio le plus r&eacute;pandu, &eacute;tant
+donn&eacute; qu'il s'agit du format natif des sons du syst&egrave;me d'exploitation Microsoft Windows.
+
+<p align="justify">Le format WAV n'est pas en r&eacute;alit&eacute; un format de codage mais un format de conteneur audio.
+Ainsi, un fichier WAV est structur&eacute; selon le standard RIFF (Resource Interchange File Format), d&eacute;finissant
+une structure permettant d'encapsuler des donn&eacute;es multim&eacute;dias.
+
+<p align="justify">Un fichier WAV peut ainsi contenir
+
+<a name="pres" class="ancre"></a><h2>Structure</h2>
+
+<p align="justify">Le format WAV d&eacute;finit une structure de donn&eacute;es permettant d'accueillir des
+donn&eacute;es audio sous forme de morceaux (en anglais <i>chunks</i>). Il s'agit de structures
+de donn&eacute;es imbriqu&eacute;es, &agrave; la mani&egrave;re de poup&eacute;es russes.
+
+<p align="justify">La structure globale du fichier est la suivante&nbsp;:
+<table border="2" cellspacing="0" width="619">
+<tbody>
+  <tr valign="top"><td width="13%">Adresse (octet)</td>
+  <td width="7%">Nom</td>
+  <td width="15%">Taille (oct.)</td>
+  <td width="62%">Description</td></tr>
+  <tr valign="top"><td>00h</td>
+  <td>rID</td>
+  <td>4h</td>
+  <td>Mot &laquo;RIFF&raquo;</td></tr>
+  <tr valign="top"><td>04h</td>
+  <td>rLen</td>
+  <td>4h</td>
+  <td>Taille du morceau de donn&eacute;es (chunk)</td></tr>
+<tr valign="top"><td>08h</td>
+  <td>rData</td>
+  <td>rLen</td>
+  <td>Morceau de données (chunk)</td></tr>
+</tbody>
+</table>
+
+<p align="justify">La section rData contient le chunk, cod&eacute; sous la forme suivante&nbsp;:
+<table border="2" cellspacing="0" width="619">
+<tbody><tr valign="top"><td width="13%">Adresse (octet)</td>
+  <td width="20%">Nom</td>
+  <td width="16%">Taille (octet)</td>
+  <td width="49%">Description</td></tr>
+<tr valign="top"><td>00h</td>
+  <td>wID</td>
+  <td>4</td>
+  <td>Terme “WAVE”</td></tr>
+<tr valign="top"><td>04h</td>
+  <td>Format Chunk</td>
+  <td>18</td>
+  <td>Format utilis&eacute;</td></tr>
+<tr valign="top"><td>1Ch</td>
+  <td>WAVE Data Chunk</td>
+  <td>?</td>
+  <td>Données</td></tr>
+</tbody></table>
+
+Format Chunk&nbsp;:
+<table border="2" cellspacing="0" width="619">
+<tbody><tr valign="top"><td width="13%">D&eacute;calage (octet)</td>
+  <td width="20%">Nom</td>
+  <td width="16%">Taille (octet)</td>
+  <td width="49%">Description</td></tr>
+<tr valign="top"><td>00h</td>
+  <td>fId</td>
+  <td>4</td>
+  <td>Terme &laquo;fmt &raquo; (l'espace est n&eacute;cessaire)</td></tr>
+<tr valign="top"><td>04h</td>
+  <td>fLen</td>
+  <td>4</td>
+  <td>??</td></tr>
+<tr valign="top"><td>08h</td>
+  <td><i>wFormatTag</i></td>
+  <td>2</td>
+  <td>Format (en g&eacute;n&eacute;ral 1 pour le format Microsoft Pulse Code Modulation)</td></tr>
+<tr valign="top"><td>0Ah</td>
+  <td>nChannels</td>
+  <td>2</td>
+  <td>Nombre de canaux (1=mono, 2=stéréo)</td></tr>
+<tr valign="top"><td>0Ch</td>
+  <td>nSamplesPerSec</td>
+  <td>4</td>
+  <td>Fréquence d’échantillonage (en Hz)</td></tr>
+<tr valign="top"><td>10h</td>
+  <td><i>nAvgBytesPerSec</i></td>
+  <td>4</td>
+  <td>nChannels * nSamplesPerSec * (nBitsPerSample/8)
+  <br/>Permet d'estimer la taille du tampon n&eacute;cessaire</td></tr>
+<tr valign="top"><td>14h</td>
+  <td><i>nBlockAlign</i></td>
+  <td>2</td>
+  <td>nChannels * (nBitsPerSample / 8)
+  <br/>Permet l’alignement du tampon</td></tr>
+<tr valign="top"><td>16h</td>
+  <td><i>FormatSpecific</i></td>
+  <td>2</td>
+  <td>Longueur d’un échantillon en bits (8 ou 16)</td></tr>
+</tbody></table>
+
+Le WAVE Data Chunk&nbsp;:
+<table border="2" cellspacing="0" width="619">
+<tbody><tr valign="top"><td width="13%">Adresse (octet)</td>
+  <td width="20%">Nom</td>
+  <td width="16%">Taille (octet)</td>
+  <td width="49%">Description</td></tr>
+<tr valign="top">
+  <td>00h</td>
+  <td>dId</td>
+  <td>4</td>
+  <td>Terme &laquo;data&raquo;</td>
+</tr>
+<tr>
+  <td>04h</td>
+  <td>dLen</td>
+  <td>4</td>
+  <td>Longueur du champ dData (en octets)</td>
+</tr>
+<tr>
+  <td>08h</td>
+  <td><i>dData</i></td>
+  <td>dLen</td>
+  <td>Données du son échantillonné</td>
+</tr>
+</tbody></table>
+
+<p>Le champ dData est formatt&eacute; comme suit&nbsp;:
+<ul>
+<li>En mono 8 bits: chaque octet représente un échantillon,</li>
+<li>En stéréo 8 bits:&nbsp;2 octets pour chaque échantillon (canal gauche, canal droit),</li>
+<li>En mono 16bits chaque mot (octet faible, octet fort) représente un échantillon</li>
+<li>En stéréo 16 bits: 2 mots pour chaque échantillon (gauche faible, gauche fort, droit faible, droit fort)</li>
+</ul>
+
+<h2 id="sujets_sim">Trucs & astuces pertinents trouv&eacute;s dans la base de connaissances</h2><table class="simili"><tr class="sb">
+<td style="width:75px"><span class="">08/03&nbsp;00h52</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-3063-audio-conversion-ram-rm-et-ra-en-wav"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-3063-audio-conversion-ram-rm-et-ra-en-wav">conversion .RAM, .RM, et .RA en .WAV</a> (<a href="http://www.commentcamarche.net/faq/180-audio">Audio</a>)</td>
+
+</tr>
+<tr class="sa">
+<td style="width:75px"><span class="Date">07/02&nbsp;14h12</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-2460-audio-convertir-un-fichier-midi-en-mp3-ou-wav"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-2460-audio-convertir-un-fichier-midi-en-mp3-ou-wav">Convertir un fichier MIDI en MP3 ou WAV</a> (<a href="http://www.commentcamarche.net/faq/180-audio">Audio</a>)</td>
+
+</tr>
+<tr class="sa"><td colspan="3" style="text-align:right"><img src="../images/plus.png" alt="WAV" border="0"> Plus d'astuces sur &laquo;&nbsp;<a href="../astuces/wav"><b>WAV</b></a>&nbsp;&raquo;</td></tr></table><h2 id="discus_sim">Discussions pertinentes trouv&eacute;es dans le forum</h2><table class="simili"><tr class="sb">
+<td><span class="Dategris">12/05&nbsp;16h44</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-730945-convertir-fichier-omg-en-mp3-ou-wav#2007-02-04%2013%3A06%3A30"><img src="../images/carrevalid.png" border="0" alt="convertir fichier omg mp3 wav"></a><a href="http://www.commentcamarche.net/forum/affich-730945-convertir-fichier-omg-en-mp3-ou-wav">&nbsp;Convertir fichier OMG en MP3 ou WAV ?</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-11-windows">Windows</a></td>
+<td><span class="Date">04/02&nbsp;13h06</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-730945-convertir-fichier-omg-en-mp3-ou-wav#2007-02-04%2013%3A06%3A30">yo</a></td><td style="text-align:center"><span class="Texte">10</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">13/08&nbsp;16h26</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1732492-convertir-wav-en-mp3-ou-wma#2007-02-05%2022%3A11%3A58"><img src="../images/carrevalid.png" border="0" alt="convertir wav mp3 wma"></a><a href="http://www.commentcamarche.net/forum/affich-1732492-convertir-wav-en-mp3-ou-wma">&nbsp;convertir wav en mp3 ou wma</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-20-audio-numerique">Audio num&eacute;rique</a></td>
+<td><span class="Date">05/02&nbsp;22h11</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-1732492-convertir-wav-en-mp3-ou-wma#2007-02-05%2022%3A11%3A58">Math</a></td><td style="text-align:center"><span class="Texte">10</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">26/04&nbsp;07h52</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1471607-convertir-un-divx-wav-en-divx-mp3#2005-04-28%2011%3A25%3A31"><img src="../images/carrevalid.png" border="0" alt="convertir divx wav divx mp3"></a><a href="http://www.commentcamarche.net/forum/affich-1471607-convertir-un-divx-wav-en-divx-mp3">&nbsp;convertir un divx  wav en divx mp3</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-20-audio-numerique">Audio num&eacute;rique</a></td>
+<td><span class="Date">28/04&nbsp;11h25</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-1471607-convertir-un-divx-wav-en-divx-mp3#2005-04-28%2011%3A25%3A31">Kermitt31</a></td><td style="text-align:center"><span class="Texte">9</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">16/10&nbsp;10h17</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1855201-musique-wav-en-mp3#2005-10-16%2018%3A22%3A43"><img src="../images/carrevalid.png" border="0" alt="musique wav mp3"></a><a href="http://www.commentcamarche.net/forum/affich-1855201-musique-wav-en-mp3">&nbsp;Musique wav en mp3</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-20-audio-numerique">Audio num&eacute;rique</a></td>
+<td><span class="Date">16/10&nbsp;18h22</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-1855201-musique-wav-en-mp3#2005-10-16%2018%3A22%3A43">GilMus</a></td><td style="text-align:center"><span class="Texte">6</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">19/11&nbsp;18h08</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1927049-passer-des-formats-rmj-ou-wmp-au-format-wav#2005-11-21%2000%3A09%3A11"><img src="../images/carrevalid.png" border="0" alt="passer formats rmj wmp format wav"></a><a href="http://www.commentcamarche.net/forum/affich-1927049-passer-des-formats-rmj-ou-wmp-au-format-wav">&nbsp;Passer des formats rmj ou wmp au format wav</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-20-audio-numerique">Audio num&eacute;rique</a></td>
+<td><span class="Date">21/11&nbsp;00h09</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-1927049-passer-des-formats-rmj-ou-wmp-au-format-wav#2005-11-21%2000%3A09%3A11">mikol</a></td><td style="text-align:center"><span class="Texte">6</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">24/09&nbsp;16h08</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1815215-convertir-fichier-mp3-en-fichier-wav-leger#2006-09-09%2021%3A59%3A42"><img src="../images/carrevalid.png" border="0" alt="convertir fichier mp3 fichier wav léger"></a><a href="http://www.commentcamarche.net/forum/affich-1815215-convertir-fichier-mp3-en-fichier-wav-leger">&nbsp;Convertir fichier mp3 en fichier wav léger ?</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-20-audio-numerique">Audio num&eacute;rique</a></td>
+<td><span class="Date">09/09&nbsp;21h59</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-1815215-convertir-fichier-mp3-en-fichier-wav-leger#2006-09-09%2021%3A59%3A42">Mysst</a></td><td style="text-align:center"><span class="Texte">6</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">28/01&nbsp;10h25</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1268515-conversion-fichiers-wma-en-wav#2006-04-01%2008%3A55%3A09"><img src="../images/carrevalid.png" border="0" alt="conversion fichiers wma wav"></a><a href="http://www.commentcamarche.net/forum/affich-1268515-conversion-fichiers-wma-en-wav">&nbsp;conversion fichiers wma en wav</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-20-audio-numerique">Audio num&eacute;rique</a></td>
+<td><span class="Date">01/04&nbsp;08h55</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-1268515-conversion-fichiers-wma-en-wav#2006-04-01%2008%3A55%3A09">nicolas</a></td><td style="text-align:center"><span class="Texte">4</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">06/02&nbsp;19h30</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1288360-transformer-un-fichier-wav-en-un-fichier-mp3#2005-02-07%2011%3A18%3A57"><img src="../images/carrevalid.png" border="0" alt="transformer fichier wav fichier mp3"></a><a href="http://www.commentcamarche.net/forum/affich-1288360-transformer-un-fichier-wav-en-un-fichier-mp3">&nbsp;Transformer un fichier WAV en un fichier MP3</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">07/02&nbsp;11h18</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-1288360-transformer-un-fichier-wav-en-un-fichier-mp3#2005-02-07%2011%3A18%3A57">kathy</a></td><td style="text-align:center"><span class="Texte">3</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">08/12&nbsp;17h27</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1966739-comment-retrouver-fichiers-wav-apres-restore#2005-12-11%2018%3A14%3A39"><img src="../images/carrevalid.png" border="0" alt="re fichiers wav restore"></a><a href="http://www.commentcamarche.net/forum/affich-1966739-comment-retrouver-fichiers-wav-apres-restore">&nbsp;comment retrouver fichiers wav après restore</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-20-audio-numerique">Audio num&eacute;rique</a></td>
+<td><span class="Date">11/12&nbsp;18h14</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-1966739-comment-retrouver-fichiers-wav-apres-restore#2005-12-11%2018%3A14%3A39">davi</a></td><td style="text-align:center"><span class="Texte">3</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">06/02&nbsp;13h04</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2080802-m4p-wav#2007-02-04%2014%3A27%3A19"><img src="../images/carrevalid.png" border="0" alt="m4p wav"></a><a href="http://www.commentcamarche.net/forum/affich-2080802-m4p-wav">&nbsp;m4p =&gt; wav</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-20-audio-numerique">Audio num&eacute;rique</a></td>
+<td><span class="Date">04/02&nbsp;14h27</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-2080802-m4p-wav#2007-02-04%2014%3A27%3A19">pol&nbsp;pi</a></td><td style="text-align:center"><span class="Texte">3</span></td>
+</tr>
+	<tr class="sa">
+	<td colspan="2"><span class="Texte"><img src="../images/carreblock.gif" width="12" alt="" title="Discussion ferm&eacute;e">Discussion ferm&eacute;e
+    <img src="../images/carrevalid.png" width="12" alt="" title="Probl&egrave;me r&eacute;solu">Probl&egrave;me r&eacute;solu</span></td>
+	<td style="vertical-align:top;text-align:right;" colspan="3"><img src="../images/plus.png" alt="WAV" border="0"> Plus de discussions sur &laquo;&nbsp;<a href="http://www.commentcamarche.net/f/wav"><b>WAV</b></a>&nbsp;&raquo;</td></tr></table>
+<br><span class="Footer">Ce document intitul&eacute; &laquo;&nbsp;<a href="http://www.commentcamarche.net/audio/wav.php3">Le format WAV</a>&nbsp;&raquo; issu de l'<a href="http://www.commentcamarche.net/encyclopedie/">encyclop&eacute;die</a> <a href="http://www.commentcamarche.net/informatique/informatique.php3">informatique</a> <a href="http://www.commentcamarche.net">Comment &Ccedil;a Marche</a> (<a href="http://www.commentcamarche.net/">www.commentcamarche.net</a>) est mis &agrave; disposition sous les termes de la licence <a href="../ccmguide/ccmlicence.htm">Creative Commons</a>.
+Vous pouvez copier, modifier des copies de cette page, dans les conditions fix&eacute;es par la licence, tant que cette note appara&icirc;t clairement.</span>
+<br>&nbsp;
+<center><a href="son.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt=""></a>
+<a href="mp3.htm"><img src="../images/forward.gif" border="0" width="38" height="63" alt=""></a></center>
+</div>
+
+</td>
+</tr>
+
+<tr><th colspan="4" style="background-color:#CED7F6">&nbsp;</th></tr>
+</table>
+<div id="footer"><br><a href="../ccmguide/ccmintro.htm"><b>A propos</b></a> | <a href="../ccmguide/cgu-conditions-generales.htm"><b>Conditions g&eacute;n&eacute;rales</b></a>  | &copy; Tous droits r&eacute;serv&eacute;s 2007 <a href="http://www.commentcamarche.net">Quidéa</a>
+</div>
+</body>
+</html>

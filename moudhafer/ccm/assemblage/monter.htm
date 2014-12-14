@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="copyright" content="2005 by Jean-François Pillou">
+<META NAME="ROBOTS" content="all">
+<META NAME="author" content="Jean-François Pillou">
+<META NAME="subject" content="Comment ça marche? [L'informatique]">
+<META NAME="topic" content="Assembler un PC">
+<META NAME="keywords" content="Montage d'un ordinateur,monter son PC,monter soi-m&ecirc;me son PC,assemblage d'un PC,assembler un PC">
+<META NAME="title" content="Assemblage d'un PC">
+<title>Assembler un PC</title>
+<link rel="stylesheet" href="../ccm.css" type="text/css">
+
+
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute; informatique" href="http://www.commentcamarche.net/rss/actualite.php3">
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute;s du site CommentCaMarche.net" href="http://www.commentcamarche.net/rss/rss.php3">
+</head>
+
+<body>
+
+<table class="ccmmain">
+<tr>
+<td height="1" width="170"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="540"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="12"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="10"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+</tr>
+
+<tr>
+<td colspan="2" bgcolor="#AEBFE2" style="vertical-align:top;text-align:left;height:46;background-color:#AEBFE2;">
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td style="vertical-align:top;"><a href="../index.htm" target="_top"><img src="../images/logotop.png" border="0" width="328" height="42" title="Comment Ca Marche - Communaut&eacute; informatique" alt="Comment Ca Marche - Communaut&eacute; informatique"></a></td>
+    <td style="width:30px">&nbsp;</td>
+    <td style="vertical-align:middle;text-align:left"></td></tr>
+</table>
+</td>
+<td style="background-color: #AEBFE2; vertical-align:bottom;">&nbsp;</td>
+<td style="background-color: #AEBFE2;">&nbsp;</td>
+</tr>
+
+<tr>
+<td bgcolor="#8EA6D6"><div id="ccmicons"><a href="../index.htm"  ><img src="../images/icohome2.gif" name="icohome" alt="Accueil - Encyclop&eacute;die informatique" title="Accueil - Encyclop&eacute;die informatique" width="24" border="0"></a><a href="http://www.commentcamarche.net/encyclopedie"  ><img src="../images/icozip2.gif" name="icozip" alt="T&eacute;l&eacute;charger l'encyclop&eacute;die" title="T&eacute;l&eacute;charger l'encyclop&eacute;die" width="24" border="0"></a><a href="http://www.commentcamarche.net/ccmbugs/?Bug_url=%2Fassemblage%2Fmonter.php3#ecrire"  ><img src="../images/icowri2.gif" name="icowri" alt="Contribuer &agrave; cet article" width="24" border="0"></a><a href="http://www.commentcamarche.net/contact/"  ><img src="../images/icomail2.gif" name="icomail" alt="" title="Ecrire &agrave; Jean-Francois Pillou" width="24"  border="0"></a></div></td>
+<td colspan="3" bgcolor="#8EA6D6"></td>
+</tr>
+
+<tr>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1" rowspan="2"><img src="../images/pixel_white.png" height="1" width="12" alt=""></td>
+
+<td bgcolor="#FFFFFF" height="100%" valign="top" rowspan="2">
+</td>
+</tr>
+
+<tr><td valign="top" colspan="3"><div id="contenu"><h1> Assemblage d'un PC</h1><table border="0" cellpadding="0" cellspacing="0" width="722">
+	<tr>
+		<td><img src="images/assemblage.gif" alt="Assemblage d'un ordinateur de type PC"></td>
+		<td valign="top" width="38"><a href="../index.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt="Assemblage d'un PC"></a></td>
+				<td valign="top" width="63"><a href="../index.htm"><img src="../images/logoPClw.gif" alt="Encyclopédie" height="60" width="63" border="0"></a></td>
+		</tr>
+</table>
+<br><div id="CCMmenu">
+<table width="156">
+<tr><th>Assemblage d'un ordinateur</th></tr>
+
+<tr><td><a class="mlink" href="monter.htm">Assembler un PC</a></td></tr>
+<tr><td><a class="mlink" href="preparation-boitier.htm">Pr&eacute;parer le bo&icirc;tier</a></td></tr>
+<tr><td><a class="mlink" href="montage-processeur.htm">Monter le processeur</a></td></tr>
+<tr><td><a class="mlink" href="insertion-barrettes-memoire.htm">Ins&eacute;rer la RAM</a></td></tr>
+<tr><td><a class="mlink" href="fixation-carte-mere.htm">Fixer la carte m&egrave;re</a></td></tr>
+<tr><td><a class="mlink" href="installation-cartes-extension.htm">Enficher les cartes d'extension</a></td></tr>
+<tr><td><a class="mlink" href="branchement-disques-durs.htm">Branchement des disques</a></td></tr>
+<tr><td><a class="mlink" href="organisation-interne.htm">Brancher les p&eacute;riph&eacute;riques</a></td></tr>
+<tr><th><span class="rouge">Voir aussi :</span></th></tr>
+<tr><td><a class="mlink" href="../pc/pc.htm">Ordinateur</a></td></tr>
+<tr><td><a class="mlink" href="../pc/ordinateur-portable.htm">Ordinateur portable</a></td></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/3-materiel">FAQ mat&eacute;riel</a></td></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/404-gravure">FAQ gravure</a></td></tr>
+</table></div>
+<hr>
+
+<a name="assemblage" class="ancre"></a><h2>De l'assemblage d'un ordinateur</h2>
+
+<p align="justify">Un ordinateur de type PC est modulaire, c'est-&agrave;-dire qu'il peut &ecirc;tre mont&eacute;
+en assemblant des &eacute;l&eacute;ments mat&eacute;riels de diff&eacute;rents constructeurs,
+afin d'obtenir un ordinateur conforme &agrave; ses besoins.
+
+<p align="justify">Les &eacute;l&eacute;ments constitutifs de l'ordinateur &agrave; assembler sont
+les suivants&nbsp;:
+<ul>
+<li>Le <a href="../pc/boitier.htm">bo&icirc;tier</a> : ch&acirc;ssis m&eacute;tallique accueillant
+les &eacute;l&eacute;ments internes de l'ordinateur. La plupart du temps il est fourni avec son alimentation
+&eacute;lectrique et un jeu de vis, connecteurs et nappes.
+<li>La <a href="../pc/carte-mere.htm">carte m&egrave;re</a> : grande carte imprim&eacute;e permettant
+de connecter un processeur, de la m&eacute;moire vive, des disques durs et lecteurs de CD/DVD, et
+proposant un jeu de connecteurs d'extension.
+<li>Le <a href="../pc/processeur.htm">processeur</a>, circuit int&eacute;gr&eacute; principal de l'ordinateur,
+v&eacute;ritable cerveau de l'ordinateur charg&eacute; des principaux calculs.
+<li>Les <a href="../pc/ram.htm">barrettes de m&eacute;moire vive</a>,
+<li>Les <a href="../pc/peripherique.htm">p&eacute;riph&eacute;riques de stockage</a> tels que les <a href="../pc/disque.htm">disques durs</a>,
+les lecteurs ou graveurs de <a href="../pc/cdrom.htm">CD-ROM</a> et <a href="../pc/dvdrom.htm">DVD-ROM</a>, ainsi que
+le lecteur de disquettes.
+<li>Les <a href="../pc/peripherique.htm">cartes d'extension</a>, permettant d'&eacute;tendre les fonctionnalit&eacute;s
+et performances de l'ordinateur.
+</ul>
+
+
+<p align="justify">La <a href="../pc/carte-mere.htm">carte m&egrave;re</a>
+est une carte maîtresse, prenant la forme d'un grand circuit imprimé possédant
+des connecteurs pour le processeur, la m&eacute;moire vive, des cartes d'extension.
+
+<p align="center"><img src="../pc/images/motherboard.png" alt="Carte m&egrave;re">
+
+<p align="justify">Il est n&eacute;cessaire avant toute chose de consulter attentivement son manuel
+afin de rep&eacute;rer les diff&eacute;rents connecteurs.
+
+<p align="justify">
+<table border="0">
+	<tr>
+		<td><img src="../images/warning.gif"></td>
+		<td>
+<ul>
+<li>Toutes les op&eacute;rations d&eacute;crites dans ce dossier sont simples, mais une <b>ERREUR</b> (inversion de connecteurs par exemple)
+peut entraîner des <b>DEGATS IRREVERSIBLES</b> sur le mat&eacute;riel.
+Ce guide est fait pour vous aider, il n'est en rien une r&eacute;f&eacute;rence, c'est pourquoi CommentCaMarche.net
+ne saurait être responsable des dommages caus&eacute;s par sa mauvaise utilisation.</li>
+<li>Pour toutes les op&eacute;rations d&eacute;crites, il faut s'assurer d'avoir
+d&eacute;branch&eacute; le cordon d'alimentation du PC, puis de se d&eacute;barrasser de l'&eacute;lectricit&eacute;
+statique en touchant par exemple le bo&icirc;tier m&eacute;tallique de l'ordinateur d'une main,
+le sol de l'autre !</li>
+</ul></td>
+</tr>
+</table>
+
+<h2 id="sujets_sim">Trucs & astuces pertinents trouv&eacute;s dans la base de connaissances</h2><table class="simili"><tr class="sb">
+<td style="width:75px"><span class="">21/02&nbsp;00h14</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-3446-windows-xp-mon-pc-rame-que-faire"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-3446-windows-xp-mon-pc-rame-que-faire">Mon PC rame, que faire ?</a> (<a href="http://www.commentcamarche.net/faq/102-windows">Windows</a>)</td>
+
+</tr>
+<tr class="sa">
+<td style="width:75px"><span class="Date">20/02&nbsp;12h23</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-3017-camera-tv-pc-charger-les-videos-d-un-camescope-sur-le-pc"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-3017-camera-tv-pc-charger-les-videos-d-un-camescope-sur-le-pc">Charger les vidéos d'un camescope sur le PC</a> (<a href="http://www.commentcamarche.net/faq/179-video">Vidéo</a>)</td>
+
+</tr>
+<tr class="sb">
+<td style="width:75px"><span class="Date">15/02&nbsp;10h07</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-3804-pc-bruyant-reduction-du-bruit"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-3804-pc-bruyant-reduction-du-bruit">PC bruyant : Réduction du bruit</a> (<a href="http://www.commentcamarche.net/faq/3-materiel">Matériel</a>)</td>
+
+</tr>
+<tr class="sa">
+<td style="width:75px"><span class="Date">09/02&nbsp;14h48</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-38-passer-le-son-de-l-ordi-sur-une-chaine-hi-fi"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-38-passer-le-son-de-l-ordi-sur-une-chaine-hi-fi">Passer le son de l'ordi sur une chaîne hi-fi</a> (<a href="http://www.commentcamarche.net/faq/313-carte-son">Carte son</a>)</td>
+
+</tr>
+<tr class="sb">
+<td style="width:75px"><span class="Date">01/02&nbsp;11h04</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-5033-windows-xp-recree-son-cd-original-pc-grande-marque"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-5033-windows-xp-recree-son-cd-original-pc-grande-marque">Windows XP: recrée son CD original (PC grande marque)</a> (<a href="http://www.commentcamarche.net/faq/148-windows-xp">Windows XP</a>)</td>
+
+</tr>
+<tr class="sa">
+<td style="width:75px"><span class="Date">29/01&nbsp;13h38</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-4549-linux-multiboot-sur-pc-de-type-packard-bell"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-4549-linux-multiboot-sur-pc-de-type-packard-bell">Multiboot sur PC de type Packard Bell</a> (<a href="http://www.commentcamarche.net/faq/97-linux">Linux</a>)</td>
+
+</tr>
+<tr class="sb">
+<td style="width:75px"><span class="Date">14/12&nbsp;13h31</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-4606-protection-de-la-vie-privee-sur-mon-pc"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-4606-protection-de-la-vie-privee-sur-mon-pc">Sur mon PC</a> (<a href="http://www.commentcamarche.net/faq/443-protection-de-la-vie-privee">Protection de la vie privée</a>)</td>
+
+</tr>
+<tr class="sa">
+<td style="width:75px"><span class="Date">07/12&nbsp;17h03</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-1404-securisation-d-un-pc"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-1404-securisation-d-un-pc">Sécurisation d'un PC</a> (<a href="http://www.commentcamarche.net/faq/12-securite">Sécurité</a>)</td>
+
+</tr>
+<tr class="sb">
+<td style="width:75px"><span class="Date">01/12&nbsp;10h19</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-2811-blocage-du-pc-ordinateur-se-bloque-systeme-gele-freezes"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-2811-blocage-du-pc-ordinateur-se-bloque-systeme-gele-freezes">Blocage du PC / Ordinateur se bloque / Système gelé (freezes)</a> (<a href="http://www.commentcamarche.net/faq/3-materiel">Matériel</a>)</td>
+
+</tr>
+<tr class="sa">
+<td style="width:75px"><span class="Date">17/11&nbsp;21h24</span></td><td valign="middle"><a href="http://www.commentcamarche.net/faq/sujet-3400-virus-fichier-telecharge-qui-fait-planter-le-pc"><img src="../images/carre.gif" border="0" alt=""></a>&nbsp;<a href="http://www.commentcamarche.net/faq/sujet-3400-virus-fichier-telecharge-qui-fait-planter-le-pc">Fichier téléchargé qui fait planter le PC</a> (<a href="http://www.commentcamarche.net/faq/137-virus">Virus</a>)</td>
+
+</tr>
+<tr class="sa"><td colspan="3" style="text-align:right"><img src="../images/plus.png" alt="Assembler un PC" border="0"> Plus d'astuces sur &laquo;&nbsp;<a href="../astuces/assembler-un-pc"><b>Assembler un PC</b></a>&nbsp;&raquo;</td></tr></table><h2 id="discus_sim">Discussions pertinentes trouv&eacute;es dans le forum</h2><table class="simili"><tr class="sb">
+<td><span class="Dategris">28/06&nbsp;23h29</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2288704-conseil-pour-assembler-mon-pc#2006-07-01%2000%3A41%3A26"><img src="../images/carrevalid.png" border="0" alt="conseil assembler pc"></a><a href="http://www.commentcamarche.net/forum/affich-2288704-conseil-pour-assembler-mon-pc">&nbsp;conseil pour assembler mon pc</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Date">01/07&nbsp;00h41</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-2288704-conseil-pour-assembler-mon-pc#2006-07-01%2000%3A41%3A26">epango</a></td><td style="text-align:center"><span class="Texte">15</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Date">01/11&nbsp;10h38</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2450909-nouveau-pc-via-un-assembleur-bug-ecran-bleu#2007-02-22%2011%3A21%3A21"><img src="../images/carrevalid.png" border="0" alt="nouveau pc via assembleur écran bleu"></a><a href="http://www.commentcamarche.net/forum/affich-2450909-nouveau-pc-via-un-assembleur-bug-ecran-bleu">&nbsp;nouveau PC via un assembleur : bug écran bleu</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Datered">22/02&nbsp;11h21</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-2450909-nouveau-pc-via-un-assembleur-bug-ecran-bleu#2007-02-22%2011%3A21%3A21">pakistador</a></td><td style="text-align:center"><span class="Texte">13</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">18/07&nbsp;12h38</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1676399-assemblage-pc-pb-avec-le-raid#2005-07-19%2009%3A15%3A09"><img src="../images/carrevalid.png" border="0" alt="assemblage pc raid"></a><a href="http://www.commentcamarche.net/forum/affich-1676399-assemblage-pc-pb-avec-le-raid">&nbsp;[assemblage PC] pb avec le RAID</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Date">19/07&nbsp;09h15</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-1676399-assemblage-pc-pb-avec-le-raid#2005-07-19%2009%3A15%3A09">Kermitt31</a></td><td style="text-align:center"><span class="Texte">11</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">04/11&nbsp;12h16</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1895687-besoin-de-vos-conseils-pour-choix-pc-assemble#2005-11-04%2013%3A56%3A09"><img src="../images/carrevalid.png" border="0" alt="vos conseils choix pc assemblé"></a><a href="http://www.commentcamarche.net/forum/affich-1895687-besoin-de-vos-conseils-pour-choix-pc-assemble">&nbsp;Besoin de vos conseils pour choix pc assemblé</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Date">04/11&nbsp;13h56</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-1895687-besoin-de-vos-conseils-pour-choix-pc-assemble#2005-11-04%2013%3A56%3A09">julius91</a></td><td style="text-align:center"><span class="Texte">7</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">05/03&nbsp;15h15</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1351466-pb-assemblage-pc#2005-03-06%2013%3A15%3A35"><img src="../images/carrevalid.png" border="0" alt="assemblage pc"></a><a href="http://www.commentcamarche.net/forum/affich-1351466-pb-assemblage-pc">&nbsp;pb assemblage pc</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Date">06/03&nbsp;13h15</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-1351466-pb-assemblage-pc#2005-03-06%2013%3A15%3A35">BrickeT</a></td><td style="text-align:center"><span class="Texte">5</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">11/01&nbsp;17h50</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2031773-assemblage-pc-ne-demarrant-pas#2006-01-11%2019%3A12%3A28"><img src="../images/carrevalid.png" border="0" alt="assemblage pc démarrant"></a><a href="http://www.commentcamarche.net/forum/affich-2031773-assemblage-pc-ne-demarrant-pas">&nbsp;assemblage - PC ne démarrant pas</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Date">11/01&nbsp;19h12</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-2031773-assemblage-pc-ne-demarrant-pas#2006-01-11%2019%3A12%3A28">Yoan</a></td><td style="text-align:center"><span class="Texte">5</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">21/06&nbsp;18h16</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1618407-assemblage-pc#2005-06-21%2019%3A09%3A36"><img src="../images/carrevalid.png" border="0" alt="assemblage pc"></a><a href="http://www.commentcamarche.net/forum/affich-1618407-assemblage-pc">&nbsp;[assemblage] PC ?</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Date">21/06&nbsp;19h09</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-1618407-assemblage-pc#2005-06-21%2019%3A09%3A36">artatum</a></td><td style="text-align:center"><span class="Texte">4</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Date">06/01&nbsp;13h39</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2571573-assemblage-nouveau-pc-pour-vista#2007-01-06%2016%3A15%3A12"><img src="../images/carrevalid.png" border="0" alt="assemblage nouveau pc vista"></a><a href="http://www.commentcamarche.net/forum/affich-2571573-assemblage-nouveau-pc-pour-vista">&nbsp;Assemblage nouveau PC pour Vista</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Date">06/01&nbsp;16h15</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-2571573-assemblage-nouveau-pc-pour-vista#2007-01-06%2016%3A15%3A12">Coyotito40k</a></td><td style="text-align:center"><span class="Texte">4</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">08/09&nbsp;14h58</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1786437-assemblage-pc#2005-09-08%2015%3A51%3A17"><img src="../images/carrevalid.png" border="0" alt="assemblage pc"></a><a href="http://www.commentcamarche.net/forum/affich-1786437-assemblage-pc">&nbsp;assemblage pc</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-11-windows">Windows</a></td>
+<td><span class="Date">08/09&nbsp;15h51</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-1786437-assemblage-pc#2005-09-08%2015%3A51%3A17">mustapha1991...</a></td><td style="text-align:center"><span class="Texte">3</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Date">21/12&nbsp;12h21</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2542107-assembler-un-pc#2006-12-21%2021%3A37%3A40"><img src="../images/carrevalid.png" border="0" alt="assembler pc."></a><a href="http://www.commentcamarche.net/forum/affich-2542107-assembler-un-pc">&nbsp;assembler un PC.</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Date">21/12&nbsp;21h37</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-2542107-assembler-un-pc#2006-12-21%2021%3A37%3A40">houly</a></td><td style="text-align:center"><span class="Texte">3</span></td>
+</tr>
+	<tr class="sa">
+	<td colspan="2"><span class="Texte"><img src="../images/carreblock.gif" width="12" alt="" title="Discussion ferm&eacute;e">Discussion ferm&eacute;e
+    <img src="../images/carrevalid.png" width="12" alt="" title="Probl&egrave;me r&eacute;solu">Probl&egrave;me r&eacute;solu</span></td>
+	<td style="vertical-align:top;text-align:right;" colspan="3"><img src="../images/plus.png" alt="Assembler un PC" border="0"> Plus de discussions sur &laquo;&nbsp;<a href="http://www.commentcamarche.net/f/assembler-un-pc"><b>Assembler un PC</b></a>&nbsp;&raquo;</td></tr></table>
+<br><span class="Footer">Ce document intitul&eacute; &laquo;&nbsp;<a href="http://www.commentcamarche.net/assemblage/monter.php3">Assemblage d'un PC</a>&nbsp;&raquo; issu de l'<a href="http://www.commentcamarche.net/encyclopedie/">encyclop&eacute;die</a> <a href="http://www.commentcamarche.net/informatique/informatique.php3">informatique</a> <a href="http://www.commentcamarche.net">Comment &Ccedil;a Marche</a> (<a href="http://www.commentcamarche.net/">www.commentcamarche.net</a>) est mis &agrave; disposition sous les termes de la licence <a href="../ccmguide/ccmlicence.htm">Creative Commons</a>.
+Vous pouvez copier, modifier des copies de cette page, dans les conditions fix&eacute;es par la licence, tant que cette note appara&icirc;t clairement.</span>
+<br>&nbsp;
+<center><a href="../index.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt="Assemblage d'un PC"></a>
+</center>
+</div>
+
+</td>
+</tr>
+
+<tr><th colspan="4" style="background-color:#CED7F6">&nbsp;</th></tr>
+</table>
+<div id="footer"><br><a href="../ccmguide/ccmintro.htm"><b>A propos</b></a> | <a href="../ccmguide/cgu-conditions-generales.htm"><b>Conditions g&eacute;n&eacute;rales</b></a>  | &copy; Tous droits r&eacute;serv&eacute;s 2007 <a href="http://www.commentcamarche.net">Quidéa</a>
+</div>
+</body>
+</html>

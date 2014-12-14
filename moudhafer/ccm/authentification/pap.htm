@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="copyright" content="2005 by Jean-François Pillou">
+<META NAME="ROBOTS" content="all">
+<META NAME="author" content="Jean-François Pillou">
+<META NAME="subject" content="Authentification">
+<META NAME="topic" content="PAP">
+<META NAME="keywords" content="PAP, Password Authentication Protocol">
+<META NAME="title" content="Authentification - Le protocole PAP">
+<title>PAP</title>
+<link rel="stylesheet" href="../ccm.css" type="text/css">
+
+
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute; informatique" href="http://www.commentcamarche.net/rss/actualite.php3">
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute;s du site CommentCaMarche.net" href="http://www.commentcamarche.net/rss/rss.php3">
+</head>
+
+<body>
+
+<table class="ccmmain">
+<tr>
+<td height="1" width="170"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="540"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="12"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="10"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+</tr>
+
+<tr>
+<td colspan="2" bgcolor="#AEBFE2" style="vertical-align:top;text-align:left;height:46;background-color:#AEBFE2;">
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td style="vertical-align:top;"><a href="../index.htm" target="_top"><img src="../images/logotop.png" border="0" width="328" height="42" title="Comment Ca Marche - Communaut&eacute; informatique" alt="Comment Ca Marche - Communaut&eacute; informatique"></a></td>
+    <td style="width:30px">&nbsp;</td>
+    <td style="vertical-align:middle;text-align:left"></td></tr>
+</table>
+</td>
+<td style="background-color: #AEBFE2; vertical-align:bottom;">&nbsp;</td>
+<td style="background-color: #AEBFE2;">&nbsp;</td>
+</tr>
+
+<tr>
+<td bgcolor="#8EA6D6"><div id="ccmicons"><a href="../index.htm"  ><img src="../images/icohome2.gif" name="icohome" alt="Accueil - Encyclop&eacute;die informatique" title="Accueil - Encyclop&eacute;die informatique" width="24" border="0"></a><a href="http://www.commentcamarche.net/encyclopedie"  ><img src="../images/icozip2.gif" name="icozip" alt="T&eacute;l&eacute;charger l'encyclop&eacute;die" title="T&eacute;l&eacute;charger l'encyclop&eacute;die" width="24" border="0"></a><a href="http://www.commentcamarche.net/ccmbugs/?Bug_url=%2Fauthentification%2Fpap.php3#ecrire"  ><img src="../images/icowri2.gif" name="icowri" alt="Contribuer &agrave; cet article" width="24" border="0"></a><a href="http://www.commentcamarche.net/contact/"  ><img src="../images/icomail2.gif" name="icomail" alt="" title="Ecrire &agrave; Jean-Francois Pillou" width="24"  border="0"></a></div></td>
+<td colspan="3" bgcolor="#8EA6D6"></td>
+</tr>
+
+<tr>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1" rowspan="2"><img src="../images/pixel_white.png" height="1" width="12" alt=""></td>
+
+<td bgcolor="#FFFFFF" height="100%" valign="top" rowspan="2">
+</td>
+</tr>
+
+<tr><td valign="top" colspan="3"><div id="contenu"><h1> Authentification - Le protocole PAP</h1><table border="0" cellpadding="0" cellspacing="0" width="722">
+	<tr>
+		<td><img src="images/pap.png" alt="Introduction &agrave; PAP"></td>
+		<td valign="top" width="38"><a href="aaa-aac.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt=""></a></td>
+		<td valign="top" width="38"><a href="chap.htm"><img src="../images/forward.gif" border="0" width="38" height="63" alt=""></a></td>		<td valign="top" width="63"><a href="../index.htm"><img src="../images/logoPClw.gif" alt="Encyclopédie" height="60" width="63" border="0"></a></td>
+		</tr>
+</table>
+<br><div id="CCMmenu">
+<table width="156">
+<tr><th>Authentification</th></tr>
+<tr><td><a class="mlink" href="authentification.htm">Authentification</a></td></tr>
+<tr><td><a class="mlink" href="pap.htm">PAP</a></td></tr>
+<tr><td><a class="mlink" href="chap.htm">CHAP</a></td></tr>
+<tr><td><a class="mlink" href="ms-chap.htm">MS-CHAP</a></td></tr>
+<tr><td><a class="mlink" href="eap.htm">EAP</a></td></tr>
+<tr><td><a class="mlink" href="radius.htm">RADIUS</a></td></tr>
+<tr><td><a class="mlink" href="sso.htm">SSO - Single Sign-On</a></td></tr>
+<tr><td><a class="mlink" href="kerberos.htm">Kerberos</a></td></tr>
+<tr><th><span class="rouge">Plus d'information</span></th></tr>
+<tr><td><a class="mlink" href="../virus/virus.htm">Virus</a></td></tr>
+<tr><td><a class="mlink" href="../virus/trojan.htm">Cheval de Troie</a></td></tr>
+<tr><td><a class="mlink" href="../virus/spywares.htm">Spyware</a></td></tr>
+<tr><td><a class="mlink" href="../virus/hoax.htm">Hoax</a></td></tr>
+<tr><td><a class="mlink" href="../protect/firewall.htm">Firewall</a></td></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/12-securite">FAQ s&eacute;curit&eacute;</a></td></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/156-internet">FAQ Internet</a></td></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/11-reseaux">FAQ R&eacute;seaux</a></td></tr>
+</table></div>
+<hr>
+
+<a name="introduction" class="ancre"></a><h2>PAP</h2>
+
+<p align="justify">Le protocole <b>PAP</b> (<i>Password Authentication Protocol</i>) est, comme son
+nom l'indique, un protocole d'authentification par mot de passe. Le protocole PAP a &eacute;t&eacute;
+originalement utilis&eacute; dans le cadre du protocole <a href="../internet/ppp.htm">PPP</a>.
+
+<p align="justify">Le principe du protocole PAP consiste &agrave; envoyer
+l'identifiant et le mot de passe en clair &agrave; travers
+le r&eacute;seau. Si le mot de passe correspond, alors l'acc&egrave;s est autoris&eacute;.
+
+<p align="justify">Ainsi, le protocole PAP n'est utilis&eacute; en pratique qu'&agrave; travers un
+r&eacute;seau s&eacute;curis&eacute;.
+
+<h2 id="discus_sim">Discussions pertinentes trouv&eacute;es dans le forum</h2><table class="simili"><tr class="sb">
+<td><span class="Dategris">06/04&nbsp;09h59</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1420695-mon-materiel-usb-pap-n-est-plus-reconnu#2005-04-08%2011%3A18%3A48"><img src="../images/carre.gif" border="0" alt="matériel usb pap reconnu"></a><a href="http://www.commentcamarche.net/forum/affich-1420695-mon-materiel-usb-pap-n-est-plus-reconnu">&nbsp;mon matériel USB PaP n'est plus reconnu</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Date">08/04&nbsp;11h18</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-1420695-mon-materiel-usb-pap-n-est-plus-reconnu#2005-04-08%2011%3A18%3A48">Marion</a></td><td style="text-align:center"><span class="Texte">3</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">26/04&nbsp;11h06</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-693935-connexion-pap-wifi#2004-04-26%2013%3A59%3A06"><img src="../images/carre.gif" border="0" alt="connexion pàp wifi"></a><a href="http://www.commentcamarche.net/forum/affich-693935-connexion-pap-wifi">&nbsp;Connexion PàP wifi</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-5-reseaux">Réseaux</a></td>
+<td><span class="Date">26/04&nbsp;13h59</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-693935-connexion-pap-wifi#2004-04-26%2013%3A59%3A06">christophe</a></td><td style="text-align:center"><span class="Texte">2</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">09/01&nbsp;09h45</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-573040-printer-hp-designjet-100-ne-prend-plus-de-pap#2004-01-09%2011%3A20%3A55"><img src="../images/carre.gif" border="0" alt="printer hp designjet 100 prend pap"></a><a href="http://www.commentcamarche.net/forum/affich-573040-printer-hp-designjet-100-ne-prend-plus-de-pap">&nbsp;Printer HP Designjet 100 ne prend plus de pap</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Date">09/01&nbsp;11h20</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-573040-printer-hp-designjet-100-ne-prend-plus-de-pap#2004-01-09%2011%3A20%3A55">andret</a></td><td style="text-align:center"><span class="Texte">1</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Date">11/01&nbsp;10h49</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2582920-pap#2007-01-11%2010%3A49%3A37"><img src="../images/carregold.png" border="0" alt="pap"></a><a href="http://www.commentcamarche.net/forum/affich-2582920-pap">&nbsp;pap</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-1-logiciels-pilotes">Logiciels/Pilotes</a></td>
+<td><span class="Date">11/01&nbsp;10h49</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-2582920-pap#2007-01-11%2010%3A49%3A37">installation...</a></td><td style="text-align:center"><span class="ForumRed">0</span></td>
+</tr>
+	<tr class="sa">
+	<td colspan="2"><span class="Texte"><img src="../images/carreblock.gif" width="12" alt="" title="Discussion ferm&eacute;e">Discussion ferm&eacute;e
+    <img src="../images/carrevalid.png" width="12" alt="" title="Probl&egrave;me r&eacute;solu">Probl&egrave;me r&eacute;solu</span></td>
+	<td style="vertical-align:top;text-align:right;" colspan="3"><img src="../images/plus.png" alt="PAP" border="0"> Plus de discussions sur &laquo;&nbsp;<a href="http://www.commentcamarche.net/f/pap"><b>PAP</b></a>&nbsp;&raquo;</td></tr></table>
+<br><span class="Footer">Ce document intitul&eacute; &laquo;&nbsp;<a href="http://www.commentcamarche.net/authentification/pap.php3">Authentification - Le protocole PAP</a>&nbsp;&raquo; issu de l'<a href="http://www.commentcamarche.net/encyclopedie/">encyclop&eacute;die</a> <a href="http://www.commentcamarche.net/informatique/informatique.php3">informatique</a> <a href="http://www.commentcamarche.net">Comment &Ccedil;a Marche</a> (<a href="http://www.commentcamarche.net/">www.commentcamarche.net</a>) est mis &agrave; disposition sous les termes de la licence <a href="../ccmguide/ccmlicence.htm">Creative Commons</a>.
+Vous pouvez copier, modifier des copies de cette page, dans les conditions fix&eacute;es par la licence, tant que cette note appara&icirc;t clairement.</span>
+<br>&nbsp;
+<center><a href="aaa-aac.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt=""></a>
+<a href="chap.htm"><img src="../images/forward.gif" border="0" width="38" height="63" alt=""></a></center>
+</div>
+
+</td>
+</tr>
+
+<tr><th colspan="4" style="background-color:#CED7F6">&nbsp;</th></tr>
+</table>
+<div id="footer"><br><a href="../ccmguide/ccmintro.htm"><b>A propos</b></a> | <a href="../ccmguide/cgu-conditions-generales.htm"><b>Conditions g&eacute;n&eacute;rales</b></a>  | &copy; Tous droits r&eacute;serv&eacute;s 2007 <a href="http://www.commentcamarche.net">Quidéa</a>
+</div>
+</body>
+</html>

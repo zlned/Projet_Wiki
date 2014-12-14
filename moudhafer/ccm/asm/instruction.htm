@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="copyright" content="1998 by Jean-François Pillou">
+<META NAME="ROBOTS" content="all">
+<META NAME="author" content="Jean-François Pillou">
+<META NAME="subject" content="L'assembleur">
+<META NAME="topic" content="Instruction assembleur">
+<META NAME="rev" content="webmaster@commentcamarche.net">
+<META NAME="keywords" content="Assembleur, assembleur, langage, Langage, instruction, Instruction, instructions, Instructions">
+<META NAME="title" content="L'assembleur - Instructions">
+<title>Instruction en assembleur</title>
+<link rel="stylesheet" href="../ccm.css" type="text/css">
+
+
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute; informatique" href="http://www.commentcamarche.net/rss/actualite.php3">
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute;s du site CommentCaMarche.net" href="http://www.commentcamarche.net/rss/rss.php3">
+</head>
+
+
+<body>
+
+<table class="ccmmain">
+<tr>
+<td height="1" width="170"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="540"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="12"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="10"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+</tr>
+
+<tr>
+<td colspan="2" bgcolor="#AEBFE2" style="vertical-align:top;text-align:left;height:46;background-color:#AEBFE2;">
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td style="vertical-align:top;"><a href="../index.htm" target="_top"><img src="../images/logotop.png" border="0" width="328" height="42" title="Comment Ca Marche - Communaut&eacute; informatique" alt="Comment Ca Marche - Communaut&eacute; informatique"></a></td>
+    <td style="width:30px">&nbsp;</td>
+    <td style="vertical-align:middle;text-align:left"></td></tr>
+</table>
+</td>
+<td style="background-color: #AEBFE2; vertical-align:bottom;">&nbsp;</td>
+<td style="background-color: #AEBFE2;">&nbsp;</td>
+</tr>
+
+<tr>
+<td bgcolor="#8EA6D6"><div id="ccmicons"><a href="../index.htm"  ><img src="../images/icohome2.gif" name="icohome" alt="Accueil - Encyclop&eacute;die informatique" title="Accueil - Encyclop&eacute;die informatique" width="24" border="0"></a><a href="http://www.commentcamarche.net/encyclopedie"  ><img src="../images/icozip2.gif" name="icozip" alt="T&eacute;l&eacute;charger l'encyclop&eacute;die" title="T&eacute;l&eacute;charger l'encyclop&eacute;die" width="24" border="0"></a><a href="http://www.commentcamarche.net/ccmbugs/?Bug_url=%2Fasm%2Finstruction.php3#ecrire"  ><img src="../images/icowri2.gif" name="icowri" alt="Contribuer &agrave; cet article" width="24" border="0"></a><a href="http://www.commentcamarche.net/contact/"  ><img src="../images/icomail2.gif" name="icomail" alt="" title="Ecrire &agrave; Jean-Francois Pillou" width="24"  border="0"></a></div></td>
+<td colspan="3" bgcolor="#8EA6D6"></td>
+</tr>
+
+<tr>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1" rowspan="2"><img src="../images/pixel_white.png" height="1" width="12" alt=""></td>
+
+<td bgcolor="#FFFFFF" height="100%" valign="top" rowspan="2">
+</td>
+</tr>
+
+<tr><td valign="top" colspan="3"><div id="contenu"><h1> L'assembleur - Instructions</h1><table border="0" cellpadding="0" cellspacing="0" width="722">
+	<tr>
+		<td><img src="images/instruction.gif" alt="Instruction en assembleur"></td>
+		<td valign="top" width="38"><a href="source.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt=""></a></td>
+		<td valign="top" width="38"><a href="adressage.htm"><img src="../images/forward.gif" border="0" width="38" height="63" alt=""></a></td>		<td valign="top" width="63"><a href="../index.htm"><img src="../images/logoPClw.gif" alt="Encyclopédie" height="60" width="63" border="0"></a></td>
+		</tr>
+</table>
+<br><div id="CCMmenu">
+<table width="156">
+<tr><th>Assembleur</th></tr>
+<tr><td><a class="mlink" href="assembleur.htm" >Assembleur</a></td></tr>
+<tr><td><a class="mlink" href="source.htm" >Compilation</a></td></tr>
+<tr><td><a class="mlink" href="instruction.htm" >Instructions</a></td></tr>
+<tr><td><a class="mlink" href="adressage.htm" >Adressage</a></td></tr>
+<tr><td><a class="mlink" href="logique.htm" >Instructions arithm&eacute;tiques et logiques</a></td></tr>
+<tr><td><a class="mlink" href="affectation.htm" >Affectation</a></td></tr>
+<tr><td><a class="mlink" href="saut.htm" >Branchements</a></td></tr>
+<tr><td><a class="mlink" href="pile.htm" >Pile</a></td></tr>
+<tr><td><a class="mlink" href="procedure.htm" >Proc&eacute;dures</a></td></tr>
+<tr><td><a class="mlink" href="segmentation.htm" >Segmentation de la m&eacute;moire</a></td></tr>
+<tr><td><a class="mlink" href="liste.htm" >Liste des principales instructions</a></td></tr>
+<tr><th><span class="rouge">A lire aussi</span></th></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/1-langages">FAQ langages</a></td></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/2-programmation">FAQ programmation</a></td></tr>
+</table></div>
+<hr>
+
+<a name="instruction" class="ancre"></a><h2>A quoi ressemble une instruction ?</h2>
+
+<p align="justify">L'instruction est l'&eacute;l&eacute;ment cl&eacute; de l'ordinateur car c'est elle qui permet de sp&eacute;cifier
+au processeur l'action &agrave; effectuer. Toutes les instructions sont stock&eacute;es en m&eacute;moire et un compteur
+dans le processeur permet de passer de l'une &agrave; l'autre.
+
+<br/>Une instruction est compos&eacute;e de deux &eacute;l&eacute;ments&nbsp;:
+<ul>
+<li>le code op&eacute;ration : action &agrave; effectuer par le processeur</li>
+<li>le champ op&eacute;rande : donn&eacute;e ou bien adresse de la case m&eacute;moire contenant une donn&eacute;e</li>
+</ul>
+
+
+<p align="justify">La taille d'une instruction d&eacute;pend de l'instruction et de l'op&eacute;rande, elle est g&eacute;n&eacute;ralement de quelques octets
+(1 &agrave; 8).
+La taille des instructions d&eacute;pend &eacute;galement de l'architecture du processeur. Elle peut ainsi
+ atteindre 4 octets dans le cas de processeurs 32 bits, voire 8 octets pour les processeurs x86 64 bits.
+L'octet est l'unit&eacute; qui est utilis&eacute;e g&eacute;n&eacute;ralement car elle est pratique pour le stockage de certaines donn&eacute;es
+(notamment les caract&egrave;res).
+
+<p align="justify">
+<table class="ccm">
+	<tr>
+<td>code op&eacute;ration</td>
+<td>champ op&eacute;rande</td>
+</tr>
+</table>
+
+<a name="types" class="ancre"></a><h2>Les types d'instructions</h2>
+
+<p align="justify">L'ensemble des instructions est appel&eacute; <i>jeu d'instruction</i>. On peut les r&eacute;partir selon plusieurs
+cat&eacute;gories selon le type d'action que son ex&eacute;cution d&eacute;clenche.
+
+<a name="types" class="ancre"></a><h3>Instructions d'affectation</h3>
+
+<p align="justify">Les instructions d'affectation permettent de faire des transferts de donn&eacute;es entre
+les registres et la m&eacute;moire, c'est-&agrave;-dire&nbsp;:
+<ul>
+<li>soit une &eacute;criture (du registre vers la m&eacute;moire)</li>
+<li>soit une lecture (de la m&eacute;moire vers un registre)</li>
+</ul>
+
+
+<a name="types" class="ancre"></a><h3>Instructions arithm&eacute;tiques et logiques</h3>
+
+<p align="justify">Ces instructions portent sur le registre AX (l'accumulateur). Elles permettent
+d'effectuer une op&eacute;ration entre le registre AX et une donn&eacute;e puis stocker
+le r&eacute;sultat dans AX. Ces instructions sont&nbsp;:
+<ul>
+<li>l'addition : AX = AX + donn&eacute;e</li>
+<li>la soustraction : AX = AX - donn&eacute;e</li>
+<li>l'incr&eacute;mentation : AX = AX + 1</li>
+<li>la d&eacute;cr&eacute;mentation : AX = AX - 1</li>
+<li>le d&eacute;calage &agrave; gauche</li>
+<li>le d&eacute;calage &agrave; droite</li>
+</ul>
+
+
+<a name="types" class="ancre"></a><h3>Instructions de comparaison</h3>
+
+<p align="justify">Permet de comparer le registre AX &agrave; une donn&eacute;e. Le r&eacute;sultat de
+la comparaison est indiqu&eacute; gr&acirc;ce &agrave;... des indicateurs...
+
+<br/>Ces instructions (ainsi que les instructions de branchement) sont n&eacute;cessaires
+pour permettre une &laquo;&nbsp;interactivit&eacute;&nbsp;&raquo;, c'est-&agrave;-dire qu'en fonction de certains
+param&egrave;tres le programme va pouvoir avoir divers comportements. Sans ces indicateurs
+les programmes auraient un comportement d&eacute;termin&eacute; et le programme ferait
+constamment les m&ecirc;mes actions (comme un film...).
+
+<a name="types" class="ancre"></a><h3>Instructions de branchement</h3>
+
+<p align="justify">Ce type d'instruction permet de sauter &agrave; une instruction non cons&eacute;cutive &agrave;
+
+l'instruction en cours. En l'absence de ce type d'instruction le processeur passe automatiquement
+&agrave; l'instruction suivante (c'est-&agrave;-dire l'instruction contigu&euml; (en m&eacute;moire) &agrave; l'instruction
+en cours). C'est le registre IP qui rep&egrave;re l'instruction suivante &agrave; ex&eacute;cuter.
+Les instructions de branchement permettent donc de modifier la valeur de ce registre et ainsi de
+choisir la prochaine instruction &agrave; ex&eacute;cuter.
+
+<p align="justify">On distingue deux sortes de branchements&nbsp;:
+<ul>
+<li>Les branchements conditionnels : en fonction d'une condition &agrave; satisfaire le processeur traitera le
+branchement indiqu&eacute; ou l'instruction suivante.
+	<ul>
+	<li>condition satisfaite : ex&eacute;cution de l'instruction situ&eacute;e &agrave; l'adresse indiqu&eacute;e</li>
+	<li>condition non satisfaite : ex&eacute;cution de l'instruction suivante</li>
+	</ul>
+
+
+
+Les branchements conditionnels sont tr&egrave;s utiles, notamment pour cr&eacute;er des boucles
+ou des structures conditionnelles.
+</li>
+<li>Les branchements inconditionnels : on affecte une valeur d&eacute;finie au registre IP, c'est-&agrave;-dire que l'on ira ex&eacute;cuter
+l'instruction vers laquelle il pointe apr&egrave;s celle en cours quoi qu'il arrive !</li>
+</ul>
+
+<h2 id="discus_sim">Discussions pertinentes trouv&eacute;es dans le forum</h2><table class="simili"><tr class="sb">
+<td><span class="Dategris">07/06&nbsp;21h43</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1581627-executer-une-instruction-native-c-assembleur#2005-06-09%2019%3A34%3A59"><img src="../images/carre.gif" border="0" alt="executer instruction native assembleur"></a><a href="http://www.commentcamarche.net/forum/affich-1581627-executer-une-instruction-native-c-assembleur">&nbsp;Executer une instruction native C, ASSEMBLEUR</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">09/06&nbsp;19h34</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-1581627-executer-une-instruction-native-c-assembleur#2005-06-09%2019%3A34%3A59">altivex11</a></td><td style="text-align:center"><span class="Texte">2</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">06/05&nbsp;18h37</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2223895-privileged-instruction#2006-05-07%2019%3A31%3A39"><img src="../images/carrevalid.png" border="0" alt="privileged instruction"></a><a href="http://www.commentcamarche.net/forum/affich-2223895-privileged-instruction">&nbsp;privileged instruction</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-7-virus-securite">Virus/Sécurité</a></td>
+<td><span class="Date">07/05&nbsp;19h31</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-2223895-privileged-instruction#2006-05-07%2019%3A31%3A39">did71</a></td><td style="text-align:center"><span class="Texte">25</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Date">01/11&nbsp;10h38</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2450909-nouveau-pc-via-un-assembleur-bug-ecran-bleu#2007-02-22%2011%3A21%3A21"><img src="../images/carrevalid.png" border="0" alt="nouveau pc via assembleur écran bleu"></a><a href="http://www.commentcamarche.net/forum/affich-2450909-nouveau-pc-via-un-assembleur-bug-ecran-bleu">&nbsp;nouveau PC via un assembleur : bug écran bleu</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Datered">22/02&nbsp;11h21</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-2450909-nouveau-pc-via-un-assembleur-bug-ecran-bleu#2007-02-22%2011%3A21%3A21">pakistador</a></td><td style="text-align:center"><span class="Texte">13</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">16/09&nbsp;11h11</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1006060-instruction-pour-installer-un-driver#2005-02-10%2021%3A25%3A45"><img src="../images/carrevalid.png" border="0" alt="instruction installer driver"></a><a href="http://www.commentcamarche.net/forum/affich-1006060-instruction-pour-installer-un-driver">&nbsp;Instruction pour installer un driver</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-13-linux-unix">Linux/Unix</a></td>
+<td><span class="Date">10/02&nbsp;21h25</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-1006060-instruction-pour-installer-un-driver#2005-02-10%2021%3A25%3A45">renisaac</a></td><td style="text-align:center"><span class="Texte">11</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">08/11&nbsp;14h09</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-472661-faire-un-prog-en-assembleur#2007-01-25%2013%3A28%3A05"><img src="../images/carrevalid.png" border="0" alt="prog assembleur"></a><a href="http://www.commentcamarche.net/forum/affich-472661-faire-un-prog-en-assembleur">&nbsp;faire un prog en assembleur</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">25/01&nbsp;13h28</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-472661-faire-un-prog-en-assembleur#2007-01-25%2013%3A28%3A05">mina</a></td><td style="text-align:center"><span class="Texte">11</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">30/03&nbsp;21h01</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2171426-processeur-ntvdm-instruction-non-autorisee#2007-01-14%2004%3A25%3A57"><img src="../images/carrevalid.png" border="0" alt="processeur ntvdm instruction autorisée"></a><a href="http://www.commentcamarche.net/forum/affich-2171426-processeur-ntvdm-instruction-non-autorisee">&nbsp;processeur NTVDM instruction non autorisée</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-11-windows">Windows</a></td>
+<td><span class="Date">14/01&nbsp;04h25</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-2171426-processeur-ntvdm-instruction-non-autorisee#2007-01-14%2004%3A25%3A57">jack</a></td><td style="text-align:center"><span class="Texte">9</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">06/06&nbsp;23h23</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-789661-pb-instruction-update-mysql#2004-06-07%2016%3A11%3A26"><img src="../images/carrevalid.png" border="0" alt="instruction update mysql"></a><a href="http://www.commentcamarche.net/forum/affich-789661-pb-instruction-update-mysql">&nbsp;PB instruction UPDATE MySQL</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-24-webmastering">Webmastering</a></td>
+<td><span class="Date">07/06&nbsp;16h11</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-789661-pb-instruction-update-mysql#2004-06-07%2016%3A11%3A26">baborge</a></td><td style="text-align:center"><span class="Texte">7</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">16/10&nbsp;14h28</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1061538-instruction-0x005368e1-a-l-arret#2007-01-20%2020%3A08%3A32"><img src="../images/carrevalid.png" border="0" alt="instruction 0x005368e1 arrêt"></a><a href="http://www.commentcamarche.net/forum/affich-1061538-instruction-0x005368e1-a-l-arret">&nbsp;Instruction  0x005368e1 à l'arrêt !!!</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-11-windows">Windows</a></td>
+<td><span class="Date">20/01&nbsp;20h08</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-1061538-instruction-0x005368e1-a-l-arret#2007-01-20%2020%3A08%3A32">BP</a></td><td style="text-align:center"><span class="Texte">3</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">17/05&nbsp;19h13</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2238234-instruction-non-autorisee-sur-page-web#2006-05-17%2019%3A41%3A43"><img src="../images/carrevalid.png" border="0" alt="instruction autorisée page web"></a><a href="http://www.commentcamarche.net/forum/affich-2238234-instruction-non-autorisee-sur-page-web">&nbsp;instruction non autorisée sur page web</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-11-windows">Windows</a></td>
+<td><span class="Date">17/05&nbsp;19h41</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-2238234-instruction-non-autorisee-sur-page-web#2006-05-17%2019%3A41%3A43">le&nbsp;druide</a></td><td style="text-align:center"><span class="Texte">1</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">03/01&nbsp;18h03</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1212863-assembleur-pile#2005-01-06%2021%3A25%3A59"><img src="../images/carre.gif" border="0" alt="assembleur pile"></a><a href="http://www.commentcamarche.net/forum/affich-1212863-assembleur-pile">&nbsp;Assembleur Pile</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">06/01&nbsp;21h25</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-1212863-assembleur-pile#2005-01-06%2021%3A25%3A59">sam3000</a></td><td style="text-align:center"><span class="Texte">20</span></td>
+</tr>
+	<tr class="sa">
+	<td colspan="2"><span class="Texte"><img src="../images/carreblock.gif" width="12" alt="" title="Discussion ferm&eacute;e">Discussion ferm&eacute;e
+    <img src="../images/carrevalid.png" width="12" alt="" title="Probl&egrave;me r&eacute;solu">Probl&egrave;me r&eacute;solu</span></td>
+	<td style="vertical-align:top;text-align:right;" colspan="3"><img src="../images/plus.png" alt="Instruction assembleur" border="0"> Plus de discussions sur &laquo;&nbsp;<a href="http://www.commentcamarche.net/f/instruction-assembleur"><b>Instruction assembleur</b></a>&nbsp;&raquo;</td></tr></table>
+<br><span class="Footer">Ce document intitul&eacute; &laquo;&nbsp;<a href="http://www.commentcamarche.net/asm/instruction.php3">L'assembleur - Instructions</a>&nbsp;&raquo; issu de l'<a href="http://www.commentcamarche.net/encyclopedie/">encyclop&eacute;die</a> <a href="http://www.commentcamarche.net/informatique/informatique.php3">informatique</a> <a href="http://www.commentcamarche.net">Comment &Ccedil;a Marche</a> (<a href="http://www.commentcamarche.net/">www.commentcamarche.net</a>) est mis &agrave; disposition sous les termes de la licence <a href="../ccmguide/ccmlicence.htm">Creative Commons</a>.
+Vous pouvez copier, modifier des copies de cette page, dans les conditions fix&eacute;es par la licence, tant que cette note appara&icirc;t clairement.</span>
+<br>&nbsp;
+<center><a href="source.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt=""></a>
+<a href="adressage.htm"><img src="../images/forward.gif" border="0" width="38" height="63" alt=""></a></center>
+</div>
+
+</td>
+</tr>
+
+<tr><th colspan="4" style="background-color:#CED7F6">&nbsp;</th></tr>
+</table>
+<div id="footer"><br><a href="../ccmguide/ccmintro.htm"><b>A propos</b></a> | <a href="../ccmguide/cgu-conditions-generales.htm"><b>Conditions g&eacute;n&eacute;rales</b></a>  | &copy; Tous droits r&eacute;serv&eacute;s 2007 <a href="http://www.commentcamarche.net">Quidéa</a>
+</div>
+</body>
+</html>

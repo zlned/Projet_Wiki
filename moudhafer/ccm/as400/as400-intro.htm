@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="copyright" content="1998 by Jean-François Pillou">
+<META NAME="ROBOTS" content="all">
+<META NAME="author" content="Jean-François Pillou">
+<META NAME="subject" content="Comment ça marche? [L'informatique]">
+<META NAME="topic" content="AS400">
+<META NAME="keywords" content="systeme AS/400, syst&egrave;me AS/400, AS400, AS-400, OS/400, 0S400, OS-400, Mainframe, IBM">
+<META NAME="title" content="Syst&egrave;me AS/400 - Introduction">
+<title>Introduction aux syst&egrave;mes AS/400</title>
+<link rel="stylesheet" href="../ccm.css" type="text/css">
+
+
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute; informatique" href="http://www.commentcamarche.net/rss/actualite.php3">
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute;s du site CommentCaMarche.net" href="http://www.commentcamarche.net/rss/rss.php3">
+</head>
+
+<body>
+
+<table class="ccmmain">
+<tr>
+<td height="1" width="170"><img src="images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="540"><img src="images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="12"><img src="images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="10"><img src="images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+</tr>
+
+<tr>
+<td colspan="2" bgcolor="#AEBFE2" style="vertical-align:top;text-align:left;height:46;background-color:#AEBFE2;">
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td style="vertical-align:top;"><a href="index.htm" target="_top"><img src="images/logotop.png" border="0" width="328" height="42" title="Comment Ca Marche - Communaut&eacute; informatique" alt="Comment Ca Marche - Communaut&eacute; informatique"></a></td>
+    <td style="width:30px">&nbsp;</td>
+    <td style="vertical-align:middle;text-align:left"></td></tr>
+</table>
+</td>
+<td style="background-color: #AEBFE2; vertical-align:bottom;">&nbsp;</td>
+<td style="background-color: #AEBFE2;">&nbsp;</td>
+</tr>
+
+<tr>
+<td bgcolor="#8EA6D6"><div id="ccmicons"><a href="index.htm"  ><img src="images/icohome2.gif" name="icohome" alt="Accueil - Encyclop&eacute;die informatique" title="Accueil - Encyclop&eacute;die informatique" width="24" border="0"></a><a href="http://www.commentcamarche.net/encyclopedie"  ><img src="images/icozip2.gif" name="icozip" alt="T&eacute;l&eacute;charger l'encyclop&eacute;die" title="T&eacute;l&eacute;charger l'encyclop&eacute;die" width="24" border="0"></a><a href="http://www.commentcamarche.net/ccmbugs/?Bug_url=%2Fas400%2Fas400-intro.php3#ecrire"  ><img src="images/icowri2.gif" name="icowri" alt="Contribuer &agrave; cet article" width="24" border="0"></a><a href="http://www.commentcamarche.net/contact/"  ><img src="images/icomail2.gif" name="icomail" alt="" title="Ecrire &agrave; Jean-Francois Pillou" width="24"  border="0"></a></div></td>
+<td colspan="3" bgcolor="#8EA6D6"></td>
+</tr>
+
+<tr>
+<td height="1"><img src="images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1"><img src="images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1" rowspan="2"><img src="images/pixel_white.png" height="1" width="12" alt=""></td>
+
+<td bgcolor="#FFFFFF" height="100%" valign="top" rowspan="2">
+</td>
+</tr>
+
+<tr><td valign="top" colspan="3"><div id="contenu"><h1> Syst&egrave;me AS/400 - Introduction</h1><table border="0" cellpadding="0" cellspacing="0" width="722">
+	<tr>
+		<td><img src="images/as400-intro.gif" alt="Introduction &agrave; AS/400"></td>
+		<td valign="top" width="38"><a href="index.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt="Syst&egrave;me AS/400 - Introduction"></a></td>
+		<td valign="top" width="38"><a href="as400-commandes.htm"><img src="../images/forward.gif" border="0" width="38" height="63" alt=""></a></td>		<td valign="top" width="63"><a href="index.htm"><img src="../images/logoPClw.gif" alt="Encyclopédie" height="60" width="63" border="0"></a></td>
+		</tr>
+</table>
+<br><div id="CCMmenu">
+<table width="156">
+<tr><th>AS/400</th></tr>
+<tr><td><a class="mlink" href="as400-intro.htm">AS/400</a></td></tr>
+<tr><td><a class="mlink" href="as400-commandes.htm">Commandes</a></td></tr>
+	<!--
+<tr><td><a class="mlink" href="unixast.htm">Astuces</a></td></tr>
+	-->
+<tr><th><span class="rouge">A lire aussi</span></th></tr>
+<tr><td><a class="mlink" href="../systemes/sysintro.htm">Syst&egrave;me d'exploitation</a></td></tr>
+<tr><td><a class="mlink" href="../linux/linintro.htm">Linux</a></td></tr>
+<tr><td><a class="mlink" href="../unix/unixintro.htm">UNIX</a></td></tr>
+<tr><td><a class="mlink" href="../win/winintro.htm">Windows</a></td></tr>
+<tr><td><a class="mlink" href="../winnt/ntintro.htm">Windows 2000/XP</a></td></tr>
+<tr><td><a class="mlink" href="../mac/macintro.htm">Mac OS</a></td></tr>
+<tr><td><a class="mlink" href="../dos/dosintro.htm">MS-DOS</a></td></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/4-systemes-d-exploitation">FAQ syst&egrave;me</a></td></tr>
+</table></div>
+
+<hr>
+
+<a name="introduction" class="ancre"></a><h2>Introduction à l’AS/400</h2>
+
+<p align="justify">AS/400 est une gamme de mini-ordinateurs IBM apparue début f&eacute;vrier 1987.
+Dans l’informatique de gestion d’IBM, il existe trois gammes d’ordinateurs&nbsp;:
+<ul>
+<li>les gros systèmes (appel&eacute;s <i>MainFrame</i>), ES/9000, sous le syst&egrave;me d'exploitation MVS ou VM
+<li>les départementaux ou mini-ordinateurs, AS/400, fonctionnant avec le syst&egrave;me d'exploitation OS400
+<li>les micro-ordinateurs, PS/2, sous OS/2
+</ul>
+
+<p align="justify">L'AS/400 est une architecture compos&eacute;e d'&eacute;l&eacute;ments mat&eacute;riels et logiciels,
+comportant notamment une base de donn&eacute;es et des &eacute;l&eacute;ments de s&eacute;curit&eacute; avanc&eacute;s.
+La force de l'AS400 r&eacute;side dans la modularit&eacute; de ses &eacute;l&eacute;ments constitutifs lui conf&eacute;rant un
+haut degr&eacute; d'adaptabilit&eacute; et de s&eacute;curit&eacute;.
+
+<p align="justify">En effet l'architecture AS/400 est une structure en couche s&eacute;parant les &eacute;l&eacute;ments mat&eacute;riels et logiciels.
+Le syst&egrave;me d'exploitation de l'AS/400 est appel&eacute; <b>OS/400</b>. Il repose sur une couche appel&eacute;e <b>MI</b>
+(<i>Machine Interface</i>) charg&eacute;e de fournir un ensemble de fonctions (<i>API</i>, <i>application programming interface</i>) que
+les applicatifs doivent utiliser afin de s'interfacer avec le mat&eacute;riel.
+
+<p align="justify">Contrairement &agrave; la plupart des syst&egrave;mes d'exploitation, la gestion de la plupart des composants mat&eacute;riels
+(m&eacute;moire, entr&eacute;es-sorties, gestion des processus, ...) est r&eacute;gie par une couche ind&eacute;pendante, appel&eacute;e <i>SLIC</i> (<i>System Licensed Internal Code</i>), situ&eacute;e sous
+la couche <i>MI</i>. Ainsi l'architecture AS400 assure une r&eacute;elle ind&eacute;pendance entre le mat&eacute;riel, le syst&egrave;me d'exploitation
+et les applications.
+
+<p align="justify">
+<table class="ccm">
+	<tr>
+		<td><b>Applications</b></td>
+	</tr>
+	<tr>
+		<td><b>OS/400</b></td>
+	</tr>
+	<tr>
+		<td><b>MI</b></td>
+	</tr>
+	<tr>
+		<td><b>SLIC</b></td>
+	</tr>
+	<tr>
+		<td><b>Mat&eacute;riel</b></td>
+	</tr>
+</table>
+
+<a name="OS400" class="ancre"></a><h2>Description du syst&egrave;me OS/400</h2>
+
+<p align="justify">Le système d’exploitation <i>OS/400</i> est un syst&egrave;me multiutilisateur,
+c’est-à-dire que plusieurs personnes peuvent travailler
+sur l’ordinateur simultan&eacute;ment, notamment grâce à un terminal relié &agrave; l'AS/400.
+
+<br>Celui-ci comprend un écran et un clavier.
+Les écrans classiques de l’AS/400 sont passifs,
+ils ne permettent donc pas une gestion de la souris ou de l’affichage
+de nombreuses couleurs.
+
+<br>Ce qui est affiché à l’écran est appelé un panneau.
+Il en existe plusieurs sortes&nbsp;:
+<ul>
+<li>Les panneaux de type <i>INFO</i> : Ces panneaux affichent des informations.
+Les touches <i>PGUP</i> et <i>PGDN</i> permettent le déplacement vers les panneaux
+suivants ou précédents.
+<li>Les panneaux de type <i>SAISIE</i> permettent &agrave; l’utilisateur
+de remplir un ou plusieurs champs ; celui-ci peut passer d’un champ à l’autre
+avec la touche <i>TAB</i>.
+<li>Les panneaux de type <i>MENU</i> : Un menu est affiché, l’utilisateur
+choisit parmi les rubriques par l’intermédiaire d’une ligne de commande
+située en bas de l’écran.
+L’affichage respecte un standard, l’Architecture Unifiée d’Applications (<i>AUP</i>),
+afin d’avoir une cohérence dans la gamme des ordinateurs de gestion d’IBM.
+<li>Les panneaux de type <i>LISTE</i> servent à travailler sur des
+ensembles d’éléments présentés sous forme d’une liste, avec un élément par ligne.
+Certains champs de saisie sont réservés au traitement de l’élément sur chaque ligne.
+L’utilisateur indique l’option qu’il a sélectionnée parmi les choix disponibles
+pour chacun des champs.
+</ul>
+
+<a name="organisation" class="ancre"></a><h2>Organisation des données</h2>
+
+<p align="justify">Dans AS/400 tout &eacute;l&eacute;ment renfermant des informations et &eacute;tant accessible via
+l'interface d'OS/400 est repr&eacute;sent&eacute; sous forme d'objet.
+Les données sont stockées selon une arborescence à trois niveaux&nbsp;:
+<ul>
+<li><a href="#bibliotheques">bibliothèque</a>,
+<li><a href="#objets">objet</a>,
+<li><a href="#membres">membre</a>.
+</ul>
+
+<a name="objets" class="ancre"></a><h2>Les objets</h2>
+
+<p align="justify">Pratiquement tout &eacute;l&eacute;ment est considéré comme un objet, que ce soit les programmes
+ou bien les fichiers de données.
+Un objet est compos&eacute; de deux parties : un ensemble d'attributs le d&eacute;crivant et les donn&eacute;es
+proprement dites. Les attributs de l'objet sont notamment son nom, son type, sa taille, sa date de cr&eacute;ation ainsi qu'une
+partie description, et enfin la librairie &agrave; laquelle l'objet appartient.
+Un objet est toujours rattaché à une bibliothèque.
+La nature de l’objet est indiquée par son type.
+
+<a name="bibliotheques" class="ancre"></a><h2>Les bibliothèques</h2>
+
+<p align="justify">Les bibliothèques sont des objets de type *LIB (library).
+Elles référencent les objets du syst&egrave;me et contiennent des informations sur ceux-ci,
+comme le type ou l’emplacement physique où ils sont stockés sur le support physique.
+Une bibliothèque n’est pas limitée en nombre d’objets.
+Dans une bibliothèque, deux objets de même type ne peuvent pas avoir le même nom.
+Par contre, ils le peuvent s’ils sont dans deux bibliothèques différentes.
+Une bibliothèque étant un objet, elle est rattachée aussi à une bibliothèque.
+Il existe une bibliothèque particulière, QSYS, dans laquelle toutes les bibliothèques
+sont présentes. QSYS contient le système d’exploitation (OS/400) et des
+informations pour celui-ci.
+
+<a name="membres" class="ancre"></a><h2>Les membres</h2>
+
+<p align="justify">Les données contenues dans un fichier peuvent être regroupées par bloc, les membres.
+Par exemple,
+dans un fichier AGENCE contenant le nom des agences d’une banque réparties sur toute
+la France,
+un membre pourra regrouper tous les noms des agences d’une région.
+Il y aura autant de membres que de  régions.
+
+<a name="interaction" class="ancre"></a><h2>Interaction avec le système</h2>
+
+<p align="justify">Sans perdre ses informations, il est possible d’interrompre son travail pour
+effectuer des opérations et le reprendre ensuite. L’appel au système,
+en tapant simultanément sur les touches <i>SHIFT</i> et <i>ATTN</i> sur
+les claviers AS/400 (<i>ALTGR</i> et <i>IMPR</i> pour les claviers 102 touches) puis
+<i>ENTREE</i> affiche un panneau
+avec un menu. Voici quelques options de ce menu&nbsp;:
+<ul>
+<li><b>Sessions alternées</b>&nbsp;:
+Cette première option permet de lancer un nouveau travail sans arrêter le premier.
+Pour passer de l’un à l’autre, il suffit de taper <i>APP/SYS 1</i>. Un seul des travaux est actif,
+l’autre est endormi. Cette option ne permet pas de lancer des travaux en tâche de fond.
+Quand l’un des travaux est arrêté (par la commande <i>SIGNOFF</i> par exemple),
+l’utilisateur retrouve l’autre travail.
+<li><b>Arrêt d’un programme</b>&nbsp;:
+Cette seconde option arrête le programme qui était actif.
+<li><b>Gestion des travaux</b>&nbsp;:
+Cette troisième option affiche un nouveau menu qui regroupe les fonctions
+de gestion des travaux.
+<li><b>Affichage des messages</b> : Cette quatri&egrave;me option affiche les messages de l’utilisateur.
+<li><b>Fin du travail</b>&nbsp;:
+L’option 80 sauvegarde l’environnement de l’utilisateur, il sera restitué à la prochaine session.
+L’option 90 arrête le travail (SIGNOFF).
+</ul>
+
+<a name="bibliographie" class="ancre"></a><h2>Bibliographie</h2>
+
+<p align="justify">
+<ul>
+<li>Principes généraux et langage de contrôle sur AS/400, de Dominique Gayte,
+ed Eyrolles, ISBN:2-212-08769
+</ul>
+
+<p align="right">Article &eacute;crit par <b>Fran&ccedil;ois BOUHET</b>
+
+<h2 id="discus_sim">Discussions pertinentes trouv&eacute;es dans le forum</h2><table class="simili"><tr class="sb">
+<td><span class="Date">22/01&nbsp;12h49</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2612204-lister-des-fichiers-as400#2007-02-16%2014%3A34%3A34"><img src="images/carrevalid.png" border="0" alt="lister fichiers as400"></a><a href="http://www.commentcamarche.net/forum/affich-2612204-lister-des-fichiers-as400">&nbsp;Lister des fichiers AS400</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">16/02&nbsp;14h34</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-2612204-lister-des-fichiers-as400#2007-02-16%2014%3A34%3A34">Jerome</a></td><td style="text-align:center"><span class="Texte">7</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">08/12&nbsp;11h36</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-518705-emulateur-5250-as400-winodws-free#2006-10-17%2021%3A23%3A29"><img src="images/carrevalid.png" border="0" alt="emulateur 5250 as400 winodws free"></a><a href="http://www.commentcamarche.net/forum/affich-518705-emulateur-5250-as400-winodws-free">&nbsp;emulateur 5250 AS400 Winodws free ???</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-1-logiciels-pilotes">Logiciels/Pilotes</a></td>
+<td><span class="Date">17/10&nbsp;21h23</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-518705-emulateur-5250-as400-winodws-free#2006-10-17%2021%3A23%3A29">rrabeh</a></td><td style="text-align:center"><span class="Texte">3</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">07/03&nbsp;17h33</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2134233-trigger-sur-fichiers-as400#2006-12-11%2020%3A59%3A48"><img src="images/carrevalid.png" border="0" alt="trigger fichiers as400"></a><a href="http://www.commentcamarche.net/forum/affich-2134233-trigger-sur-fichiers-as400">&nbsp;Trigger sur fichiers AS400??</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">11/12&nbsp;20h59</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-2134233-trigger-sur-fichiers-as400#2006-12-11%2020%3A59%3A48">cdal</a></td><td style="text-align:center"><span class="Texte">3</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">04/07&nbsp;14h15</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-1648552-as400-koikece#2005-07-04%2014%3A42%3A24"><img src="images/carrevalid.png" border="0" alt="as400 koikecé"></a><a href="http://www.commentcamarche.net/forum/affich-1648552-as400-koikece">&nbsp;AS400 koikecé</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">04/07&nbsp;14h42</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-1648552-as400-koikece#2005-07-04%2014%3A42%3A24">jeff</a></td><td style="text-align:center"><span class="Texte">2</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">04/10&nbsp;21h46</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-23274-php-sur-as400#2005-12-15%2010%3A21%3A50"><img src="images/carre.gif" border="0" alt="php as400"></a><a href="http://www.commentcamarche.net/forum/affich-23274-php-sur-as400">&nbsp;PHP sur AS400</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-24-webmastering">Webmastering</a></td>
+<td><span class="Date">15/12&nbsp;10h21</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-23274-php-sur-as400#2005-12-15%2010%3A21%3A50">dedalios</a></td><td style="text-align:center"><span class="Texte">29</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">27/10&nbsp;13h47</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-455678-cherche-profils-as400#2007-02-02%2010%3A20%3A22"><img src="images/carre.gif" border="0" alt="profils as400"></a><a href="http://www.commentcamarche.net/forum/affich-455678-cherche-profils-as400">&nbsp;Cherche profils AS400</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-11-windows">Windows</a></td>
+<td><span class="Date">02/02&nbsp;10h20</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-455678-cherche-profils-as400#2007-02-02%2010%3A20%3A22">Globalsys</a></td><td style="text-align:center"><span class="Texte">23</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">28/08&nbsp;06h33</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-142550-quelqu-un-connait-il-les-as400#2007-01-30%2019%3A26%3A44"><img src="images/carre.gif" border="0" alt="un connaît as400"></a><a href="http://www.commentcamarche.net/forum/affich-142550-quelqu-un-connait-il-les-as400">&nbsp;Quelqu'un connaît-il les AS400?</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-2-materiel-hardware">Matériel (hardware)</a></td>
+<td><span class="Date">30/01&nbsp;19h26</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-142550-quelqu-un-connait-il-les-as400#2007-01-30%2019%3A26%3A44">sankaran</a></td><td style="text-align:center"><span class="Texte">20</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">08/10&nbsp;23h50</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-2413347-as400-oracle-recup-bd-as400-vers-oracle#2006-12-26%2017%3A59%3A02"><img src="images/carre.gif" border="0" alt="as400 oracle récup bd as400 oracle"></a><a href="http://www.commentcamarche.net/forum/affich-2413347-as400-oracle-recup-bd-as400-vers-oracle">&nbsp;[AS400/Oracle] récup BD as400 vers Oracle</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">26/12&nbsp;17h59</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-2413347-as400-oracle-recup-bd-as400-vers-oracle#2006-12-26%2017%3A59%3A02">sp&nbsp;AS/400</a></td><td style="text-align:center"><span class="Texte">12</span></td>
+</tr>
+<tr class="sb">
+<td><span class="Dategris">09/09&nbsp;12h12</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-398137-documentation-as400-urgente-pour-ce-soir#2006-12-16%2013%3A32%3A02"><img src="images/carre.gif" border="0" alt="documentation as400 soir"></a><a href="http://www.commentcamarche.net/forum/affich-398137-documentation-as400-urgente-pour-ce-soir">&nbsp;documentation as400 urgente pour ce soir</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">16/12&nbsp;13h32</span><span class="Date">-&gt;</span><a class="Date" href="http://www.commentcamarche.net/forum/affich-398137-documentation-as400-urgente-pour-ce-soir#2006-12-16%2013%3A32%3A02">nono78</a></td><td style="text-align:center"><span class="Texte">9</span></td>
+</tr>
+<tr class="sa">
+<td><span class="Dategris">14/07&nbsp;15h42</span></td>
+<td style="vertical-align:middle"><a href="http://www.commentcamarche.net/forum/affich-877963-access-et-as400#2006-12-26%2017%3A52%3A58"><img src="images/carre.gif" border="0" alt="access as400"></a><a href="http://www.commentcamarche.net/forum/affich-877963-access-et-as400">&nbsp;ACCESS ET AS400</a></td>
+<td><a href="http://www.commentcamarche.net/forum/forum-3-developpement">D&eacute;veloppement</a></td>
+<td><span class="Date">26/12&nbsp;17h52</span><span class="Date">-&gt;</span><a class="mlink2" href="http://www.commentcamarche.net/forum/affich-877963-access-et-as400#2006-12-26%2017%3A52%3A58">sp&nbsp;AS/400</a></td><td style="text-align:center"><span class="Texte">7</span></td>
+</tr>
+	<tr class="sa">
+	<td colspan="2"><span class="Texte"><img src="images/carreblock.gif" width="12" alt="" title="Discussion ferm&eacute;e">Discussion ferm&eacute;e
+    <img src="images/carrevalid.png" width="12" alt="" title="Probl&egrave;me r&eacute;solu">Probl&egrave;me r&eacute;solu</span></td>
+	<td style="vertical-align:top;text-align:right;" colspan="3"><img src="images/plus.png" alt="AS400" border="0"> Plus de discussions sur &laquo;&nbsp;<a href="http://www.commentcamarche.net/f/as400"><b>AS400</b></a>&nbsp;&raquo;</td></tr></table>
+<br><span class="Footer">Ce document intitul&eacute; &laquo;&nbsp;<a href="http://www.commentcamarche.net/as400/as400-intro.php3">Syst&egrave;me AS/400 - Introduction</a>&nbsp;&raquo; issu de l'<a href="http://www.commentcamarche.net/encyclopedie/">encyclop&eacute;die</a> <a href="http://www.commentcamarche.net/informatique/informatique.php3">informatique</a> <a href="http://www.commentcamarche.net">Comment &Ccedil;a Marche</a> (<a href="http://www.commentcamarche.net/">www.commentcamarche.net</a>) est mis &agrave; disposition sous les termes de la licence <a href="ccmguide/ccmlicence.htm">Creative Commons</a>.
+Vous pouvez copier, modifier des copies de cette page, dans les conditions fix&eacute;es par la licence, tant que cette note appara&icirc;t clairement.</span>
+<br>&nbsp;
+<center><a href="index.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt="Syst&egrave;me AS/400 - Introduction"></a>
+<a href="as400-commandes.htm"><img src="../images/forward.gif" border="0" width="38" height="63" alt=""></a></center>
+</div>
+
+</td>
+</tr>
+
+<tr><th colspan="4" style="background-color:#CED7F6">&nbsp;</th></tr>
+</table>
+<div id="footer"><br><a href="ccmguide/ccmintro.htm"><b>A propos</b></a> | <a href="ccmguide/cgu-conditions-generales.htm"><b>Conditions g&eacute;n&eacute;rales</b></a>  | &copy; Tous droits r&eacute;serv&eacute;s 2007 <a href="http://www.commentcamarche.net">Quidéa</a>
+</div>
+</body>
+</html>

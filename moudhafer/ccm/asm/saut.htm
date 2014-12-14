@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="copyright" content="1998 by Jean-François Pillou">
+<META NAME="ROBOTS" content="all">
+<META NAME="author" content="Jean-François Pillou">
+<META NAME="subject" content="L'assembleur">
+<META NAME="topic" content="JMP">
+<META NAME="keywords" content="Assembleur, assembleur, langage, Langage, instruction, Instruction, instructions, Instructions, saut, Saut, sauts, Sauts, branchement, Branchement, branchements, Branchements, JMP">
+<META NAME="title" content="L'assembleur - Branchements">
+<title>Branchements en assembleur</title>
+<link rel="stylesheet" href="../ccm.css" type="text/css">
+
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute; informatique" href="http://www.commentcamarche.net/rss/actualite.php3">
+<link rel="alternate" type="application/rss+xml" title="CCM: Actualit&eacute;s du site CommentCaMarche.net" href="http://www.commentcamarche.net/rss/rss.php3">
+</head>
+
+<body>
+<table class="ccmmain">
+<tr>
+<td height="1" width="170"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="540"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="12"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+<td height="1" width="10"><img src="../images/pixel_transparent.gif" height="1" width="100%" alt=""></td>
+</tr>
+
+<tr>
+<td colspan="2" bgcolor="#AEBFE2" style="vertical-align:top;text-align:left;height:46;background-color:#AEBFE2;">
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td style="vertical-align:top;"><a href="../index.htm" target="_top"><img src="../images/logotop.png" border="0" width="328" height="42" title="Comment Ca Marche - Communaut&eacute; informatique" alt="Comment Ca Marche - Communaut&eacute; informatique"></a></td>
+    <td style="width:30px">&nbsp;</td>
+    <td style="vertical-align:middle;text-align:left"></td></tr>
+</table>
+</td>
+<td style="background-color: #AEBFE2; vertical-align:bottom;">&nbsp;</td>
+<td style="background-color: #AEBFE2;">&nbsp;</td>
+</tr>
+
+<tr>
+<td bgcolor="#8EA6D6"><div id="ccmicons"><a href="../index.htm"  ><img src="../images/icohome2.gif" name="icohome" alt="Accueil - Encyclop&eacute;die informatique" title="Accueil - Encyclop&eacute;die informatique" width="24" border="0"></a><a href="http://www.commentcamarche.net/encyclopedie"  ><img src="../images/icozip2.gif" name="icozip" alt="T&eacute;l&eacute;charger l'encyclop&eacute;die" title="T&eacute;l&eacute;charger l'encyclop&eacute;die" width="24" border="0"></a><a href="http://www.commentcamarche.net/ccmbugs/?Bug_url=%2Fasm%2Fsaut.php3#ecrire"  ><img src="../images/icowri2.gif" name="icowri" alt="Contribuer &agrave; cet article" width="24" border="0"></a><a href="http://www.commentcamarche.net/contact/"  ><img src="../images/icomail2.gif" name="icomail" alt="" title="Ecrire &agrave; Jean-Francois Pillou" width="24"  border="0"></a></div></td>
+<td colspan="3" bgcolor="#8EA6D6"></td>
+</tr>
+
+<tr>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1"><img src="../images/pixel_white.png" height="1" width="100%" alt=""></td>
+<td height="1" rowspan="2"><img src="../images/pixel_white.png" height="1" width="12" alt=""></td>
+
+<td bgcolor="#FFFFFF" height="100%" valign="top" rowspan="2">
+</td>
+</tr>
+
+<tr><td valign="top" colspan="3"><div id="contenu"><h1> L'assembleur - Branchements</h1><table border="0" cellpadding="0" cellspacing="0" width="722">
+	<tr>
+		<td><img src="images/saut.gif" alt="Branchement"></td>
+		<td valign="top" width="38"><a href="affectation.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt=""></a></td>
+				<td valign="top" width="63"><a href="../index.htm"><img src="../images/logoPClw.gif" alt="Encyclopédie" height="60" width="63" border="0"></a></td>
+		</tr>
+</table>
+<br><div id="CCMmenu">
+<table width="156">
+<tr><th>Assembleur</th></tr>
+<tr><td><a class="mlink" href="assembleur.htm" >Assembleur</a></td></tr>
+<tr><td><a class="mlink" href="source.htm" >Compilation</a></td></tr>
+<tr><td><a class="mlink" href="instruction.htm" >Instructions</a></td></tr>
+<tr><td><a class="mlink" href="adressage.htm" >Adressage</a></td></tr>
+<tr><td><a class="mlink" href="logique.htm" >Instructions arithm&eacute;tiques et logiques</a></td></tr>
+<tr><td><a class="mlink" href="affectation.htm" >Affectation</a></td></tr>
+<tr><td><a class="mlink" href="saut.htm" >Branchements</a></td></tr>
+<tr><td><a class="mlink" href="pile.htm" >Pile</a></td></tr>
+<tr><td><a class="mlink" href="procedure.htm" >Proc&eacute;dures</a></td></tr>
+<tr><td><a class="mlink" href="segmentation.htm" >Segmentation de la m&eacute;moire</a></td></tr>
+<tr><td><a class="mlink" href="liste.htm" >Liste des principales instructions</a></td></tr>
+<tr><th><span class="rouge">A lire aussi</span></th></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/1-langages">FAQ langages</a></td></tr>
+<tr><td><a class="mlink" href="http://www.commentcamarche.net/faq/2-programmation">FAQ programmation</a></td></tr>
+</table></div><hr>
+
+On appelle saut (ou branchement) en assembleur le fait de passer &agrave; une instruction autre que celle
+qui suit celle en cours en m&eacute;moire. En effet, en temps normal (c'est-&agrave;-dire sans instruction
+contraire) le processeur ex&eacute;cute les instructions s&eacute;quentiellement, il ex&eacute;cute l'instruction
+situ&eacute;e &agrave; l'emplacement m&eacute;moire suivant. C'est un registre sp&eacute;cial (le registre IP)
+qui indique l'adresse de l'instruction suivante &agrave; ex&eacute;cuter.
+
+<p align="justify">Dans certaines conditions il peut &ecirc;tre int&eacute;ressant de &laquo;&nbsp;choisir&nbsp;&raquo; la prochaine instruction
+&agrave; effectuer. Ce type de condition peut notamment se rencontrer dans les structures conditionnelles (saut si...)
+ou bien dans les structures de boucle (en effet dans le cas o&ugrave; on d&eacute;sire ex&eacute;cuter un grand
+nombre de fois une instruction il peut &ecirc;tre int&eacute;ressant d'utiliser une instruction de branchement, qui
+indique au processeur l'adresse de la prochaine instruction &agrave; ex&eacute;cuter au lieu de gaspiller la m&eacute;moire
+en stockant plusieurs fois la m&ecirc;me instruction en m&eacute;moire).
+
+<p align="justify">Lors de l'ex&eacute;cution &laquo;&nbsp;normale&nbsp;&raquo; d'un programme, le processeur lit l'adresse contenue dans le registre IP,
+incr&eacute;mente celui-ci pour qu'il pointe vers l'instruction suivante, puis ex&eacute;cute l'instruction contenue &agrave;
+l'adresse qu'il vient de lire. Lorsqu'il rencontre une instruction de saut (ou branchement), celle-ci va lui faire modifier
+le contenu du registre IP pour qu'il pointe &agrave; l'adresse d'une autre instruction.
+
+<p align="justify">On distingue ces instructions de saut en deux cat&eacute;gories suivant que&nbsp;:
+<ul>
+<li>le saut est effectu&eacute; quoi qu'il arrive (<b>saut inconditionnel</b>)</li>
+<li>le saut est effectu&eacute; ou non selon l'&eacute;tat d'un registre (<b>saut conditionnel</b>)</li>
+</ul>
+
+<a name="inconditionnel" class="ancre"></a><h2>Saut inconditionnel</h2>
+
+<p align="justify">L'instruction JMP permet d'effectuer un saut inconditionnel, c'est-&agrave;-dire que cette instruction va
+stocker dans le registre IP l'adresse de l'instruction que l'on veut ex&eacute;cuter. L'op&eacute;rande
+de cette instruction (le param&egrave;tre) est donc l'adresse de l'instruction &agrave; laquelle on veut
+sauter. Une fois l'instruction de branchement ex&eacute;cut&eacute;e le processeur lit le contenu du registre IP
+et saute donc directement &agrave; l'adresse de l'instruction que l'on vient de d&eacute;finir !
+<br/>La taille de l'instruction JMP est de 1 bit.
+
+<p align="justify">On appelle <i>d&eacute;placement</i> (en anglais <i>offset</i>) le nombre d'octets (car il s'agit d'un nombre
+entier relatif cod&eacute; sur 8 bits) qui s&eacute;parent l'instruction suivante de l'instruction vis&eacute;e.
+Voyons cela sur le programme suivant&nbsp;:
+
+<p align="justify">
+<table border=0>
+<tr><td><b>Adresse</b></td>
+<td><b>Instruction en assembleur</b></td>
+<td><b>Commentaire</b></td>
+</tr>
+<tr>
+<td>0100</td>
+<td>MOV AX, [120]</td>
+<td>copie le contenu de la case m&eacute;moire &agrave; l'adresse 0120H dans le registre AX</td>
+</tr>
+<tr>
+<td>0103</td>
+<td>JMP 0100H</td>
+<td>saute &agrave; l'adresse 0100H</td>
+</tr>
+<tr>
+<td>0104</td>
+<td>MOV [120], BX</td>
+<td>instruction non ex&eacute;cut&eacute;e &agrave; cause du saut pr&eacute;c&eacute;dent...</td>
+</tr>
+</table>
+
+La valeur du d&eacute;placement est ici de: 0100H - 0104H = -4
+
+<a name="conditionnel" class="ancre"></a><h2>Saut conditionnel</h2>
+
+<p align="justify">Les instructions de saut conditionnel permettent d'effectuer un saut suivant une condition. Si celle-ci
+est r&eacute;alis&eacute;e le processeur saute &agrave; l'instruction demand&eacute;e, dans le cas contraire
+il ignore cette instruction et passe automatiquement &agrave; l'instruction d'apr&egrave;s, comme si cette
+instruction n'existait pas...
+
+<p align="justify">Les conditions pour chacune de ces instructions sont fonction de l'&eacute;tat des registres
+sp&eacute;cifiques appel&eacute;s indicateurs (en anglais <i>flag</i>, ce qui signifie <i>drapeau</i>).
+
+<a name="indicateurs" class="ancre"></a><h3>Les indicateurs</h3>
+<p align="justify">Les indicateurs sont des registres dont l'&eacute;tat est fix&eacute; par l'UAL apr&egrave;s
+certaines op&eacute;rations. Les indicateurs font partie de ce que l'on appelle le <i>registre d'&eacute;tat</i>
+qui n'est pas directement accessible par les autres instructions, seules des instructions sp&eacute;cifiques
+permettent de les manipuler. Voyons certains de ces indicateurs&nbsp;:
+<ul>
+<li><b>CF (Carry Flag)</b> : c'est l'indicateur de <i>retenue</i>.
+<br/>Il intervient lorsqu'il y a une retenue  apr&egrave;s une addition ou une soustraction entre des entiers naturels.
+Lorsqu'il y a une retenue il est positionn&eacute; &agrave; 1, dans le cas contraire &agrave; 0.</li>
+<li><b>OF (Overflow Flag)</b> : cet indicateur (indicateur de d&eacute;bordement : <i>overflow</i> = <i>d&eacute;bordement</i>) intervient lorsqu'il y a un d&eacute;bordement,
+c'est-&agrave;-dire lorsque le nombre de bits sur lesquels les nombres sont cod&eacute;s n'est pas suffisant et que le r&eacute;sultat d'une op&eacute;ration n'est pas codable
+avec le nombre de bits sp&eacute;cifi&eacute;s (il peut par exemple arriver dans ces conditions que la somme de deux nombres positifs donne un nombre n&eacute;gatif). Dans ce cas
+l'indicateur OF est positionn&eacute; &agrave; 1.</li>
+<li><b>SF (Sign Flag)</b> : c'est l'indicateur de signe. SF donne tout simplement le signe du bit de poids fort. Or, le bit de poids fort donne le signe du nombre
+(1 si le signe est n&eacute;gatif, 0 s'il est positif). Il simplifie le test du signe d'un entier relatif.</li>
+<li><b>ZF (Zero Flag)</b> : l'indicateur de z&eacute;ro permet de savoir si le r&eacute;sultat de la derni&egrave;re op&eacute;ration &eacute;tait nul.
+En effet, dans ce cas, l'indicateur ZF est positionn&eacute; &agrave; 1 (0 dans le cas contraire). Il permet notamment de d&eacute;terminer si deux valeurs
+sont &eacute;gales, en effectuant leur soustraction, puis en observant l'&eacute;tat de l'indicateur de z&eacute;ro.</li>
+</ul>
+
+Voyons les &eacute;tats de ces indicateurs sur un exemple&nbsp;:
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>+</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+<ul>
+<li>OF=1 (la somme de deux nombres positifs est n&eacute;gative)</li>
+<li>ZF=0 (le r&eacute;sultat 1011 n'est pas nul)</li>
+<li>SF=1 (le signe du r&eacute;sultat est n&eacute;gatif)</li>
+<li>CF=0 (il n'y a pas de retenue)</li>
+</ul>
+
+
+<a name="forcer" class="ancre"></a><h3>Forcer l'&eacute;tat de certains indicateurs</h3>
+<p align="justify">Les instructions STC et CLC permettent de positionner &laquo;&nbsp;manuellement&nbsp;&raquo; l'indicateur de retenue (CF).
+<br/>L'instruction STC (<b>S</b>e<b>T</b> <b>C</b>arry) positionne l'indicateur CF &agrave; 1.
+<br/>L'instruction CLC (<b>CL</b>ear <b>C</b>arry) positionne CF &agrave; 0.
+
+<a name="comparaison" class="ancre"></a><h3>Instruction de comparaison</h3>
+<p align="justify">L'instruction CMP permet de tester la valeur d'un registre (AX) avec une autre valeur. Sa seule
+action est de positionner l'indicateur ZF &agrave; 1 en cas d'&eacute;galit&eacute;, ou plus exactement
+lorsque la soustraction des deux valeurs donne un r&eacute;sultat nul. En ce sens il effectue la
+m&ecirc;me chose que SUB &agrave; la seule diff&eacute;rence pr&egrave;s qu'il ne modifie pas les op&eacute;randes.
+
+<p align="justify">Par exemple, l'instruction&nbsp;:
+<br/>CMP AX, 2
+<br/>positionne &agrave; 1 l'indicateur ZF si la valeur contenue dans le registre AX vaut 2, dans
+le cas contraire il le met &agrave; z&eacute;ro...
+
+<a name="conditionnels" class="ancre"></a><h3>Les sauts conditionnels</h3>
+<p align="justify">Les branchements conditionnels (ou sauts conditionnels) permettent au processeur de  traiter l'instruction
+situ&eacute;e &agrave; un emplacement m&eacute;moire indiqu&eacute; si une certaine condition est v&eacute;rifi&eacute;e.
+Dans le cas contraire (condition non r&eacute;alis&eacute;e), le processeur ignorera cette instruction, il traitera donc
+l'instruction suivante.
+
+<p align="justify">La (ou les) condition(s) &agrave; satisfaire d&eacute;pend(ent) de l'&eacute;tat d'indicateurs. Ainsi les branchements
+conditionnels doivent g&eacute;n&eacute;ralement &ecirc;tre plac&eacute;s apr&egrave;s une op&eacute;ration qui va modifier
+l'&eacute;tat d'un ou plusieurs indicateurs (une instruction CMP ou autre).
+
+<p align="justify">Selon l'intitul&eacute; de l'instruction, les conditions &agrave; satisfaire sont diff&eacute;rentes&nbsp;:
+<ul>
+<li><b>JA</b> (<i>Jump if above</i>, ce qui signifie <i>saute si au-del&agrave;)</i>
+<br/>effectue un saut si <b>ZF=0 et CF=0</b></li>
+<li><b>JB</b> (<i>Jump if Below</i>, ce qui signifie <i>saute si en de&ccedil;&agrave;</i>)
+<br/>effectue un saut si <b>CF=1</b></li>
+<li><b>JBE</b> (<i>Jump if Below or Equal</i>, ce qui signifie <i>saute si en de&ccedil;&agrave; ou &eacute;gal)</i>
+<br/>effectue un saut si <b>ZF=1 ou CF=1</b></li>
+<li><b>JE</b> (<i>Jump if Equal</i>, ce qui signifie <i>saute si &eacute;galit&eacute;)</i>
+<br/>effectue un saut si <b>ZF=1</b></li>
+<li><b>JG</b> (<i>Jump if Greater</i>, ce qui signifie <i>saute si sup&eacute;rieur)</i>
+<br/>effectue un saut si <b>ZF=0 et SF=OF</b></li>
+<li><b>JLE</b> (<i>Jump if Lower or Equal</i>, ce qui signifie <i>saute si inf&eacute;rieur ou &eacute;gal)</i>
+<br/>effectue un saut si <b>ZF=1 ou SF diff&eacute;rent de OF</b></li>
+<li><b>JNE</b> (<i>Jump if Not Equal</i>, ce qui signifie <i>saute si non-&eacute;galit&eacute;)</i>
+<br/>effectue un saut si <b>ZF=0</b></li>
+</ul>
+
+<br><span class="Footer">Ce document intitul&eacute; &laquo;&nbsp;<a href="http://www.commentcamarche.net/asm/saut.php3">L'assembleur - Branchements</a>&nbsp;&raquo; issu de l'<a href="http://www.commentcamarche.net/encyclopedie/">encyclop&eacute;die</a> <a href="http://www.commentcamarche.net/informatique/informatique.php3">informatique</a> <a href="http://www.commentcamarche.net">Comment &Ccedil;a Marche</a> (<a href="http://www.commentcamarche.net/">www.commentcamarche.net</a>) est mis &agrave; disposition sous les termes de la licence <a href="../ccmguide/ccmlicence.htm">Creative Commons</a>.
+Vous pouvez copier, modifier des copies de cette page, dans les conditions fix&eacute;es par la licence, tant que cette note appara&icirc;t clairement.</span>
+<br>&nbsp;
+<center><a href="affectation.htm"><img src="../images/bckward.gif" border="0" width="38" height="63" alt=""></a>
+</center>
+</div>
+
+</td>
+</tr>
+
+<tr><th colspan="4" style="background-color:#CED7F6">&nbsp;</th></tr>
+</table>
+<div id="footer"><br><a href="../ccmguide/ccmintro.htm"><b>A propos</b></a> | <a href="../ccmguide/cgu-conditions-generales.htm"><b>Conditions g&eacute;n&eacute;rales</b></a>  | &copy; Tous droits r&eacute;serv&eacute;s 2007 <a href="http://www.commentcamarche.net">Quidéa</a>
+</div>
+</body>
+</html>
