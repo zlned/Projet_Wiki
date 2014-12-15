@@ -1,9 +1,9 @@
 <?php
-    //error_reporting(E_ALL ^ E_DEPRECATED);
+    
 $db =mysqli_connect('localhost','root','','flux_rss') or ("Error " . mysqli_error($db)); 
 
 libxml_use_internal_errors(true);
-	$RSS_DOC = simpleXML_load_file('http://rss.maxifoot.com/football-psg.xml');
+	$RSS_DOC = simpleXML_load_file('http://www.lfp.fr/ligue1/rss.xml');
 	if (!$RSS_DOC) {
 		echo "Failed loading XML\n";
 		foreach(libxml_get_errors() as $error) {
@@ -21,6 +21,18 @@ libxml_use_internal_errors(true);
     $rss_description=$RSS_DOC->channel->description;
 
 	//Loop through each item in the RSS document
+	     $sqlrow = "SELECT * FROM flux " or die("Error in the consult.." . mysqli_error()); 
+        if ($stmt = $db->prepare($sqlrow)) {
+ 
+	/* Exécution de la requête */
+	$stmt->execute();
+ 
+	/* Stockage du résultat */
+
+            $stmt->store_result();        
+ 
+	
+}
 
 	foreach($RSS_DOC->channel->item as $RSSitem)
 	{
@@ -34,7 +46,10 @@ libxml_use_internal_errors(true);
         
 
 		//echo "Processing item '" , $item_id , "' on " , $fetch_date 	, "<br/>";
+	
+		echo ("<h1>");
 		echo utf8_decode ($item_title), "<br/>";
+		echo ("</h1>");
 		echo utf8_decode ($item_date), "<br/>";
 		echo utf8_decode ($item_description), "<br/>";
         echo "<a href=".$item_url.">Par ici</a><br/>";
@@ -56,7 +71,7 @@ libxml_use_internal_errors(true);
 }
        if($stmt->num_rows <1)
 		{
-			echo "<font color=green>Inserting new item..</font><br/>";
+			
 			$sql = " INSERT INTO flux(id_flux ,date_flux, title_flux, link_flux, description_flux) VALUES ('" .$id_flux. "','" .$item_date. "', '" .utf8_decode ($item_title) . "', '" . $item_url . "', '" . utf8_decode ($item_description) . "')" or die("Error in the consult.." . mysqli_error($db));
 			
       
@@ -74,7 +89,7 @@ libxml_use_internal_errors(true);
 		}
 		else
 		{
-			echo "<font color=blue>Not inserting existing item..</font><br/>";
+			//echo "<font color=blue>Not inserting existing item..</font><br/>";
 		}
 		
 
