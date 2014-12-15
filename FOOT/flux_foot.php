@@ -1,6 +1,6 @@
 <?php
     
-$db =mysqli_connect('localhost','root','','flux') or ("Error " . mysqli_error($db)); 
+$db =mysqli_connect('localhost','root','','flux_rss') or ("Error " . mysqli_error($db)); 
 
 libxml_use_internal_errors(true);
 	$RSS_DOC = simpleXML_load_file('http://www.lfp.fr/ligue1/rss.xml');
