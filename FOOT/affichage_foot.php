@@ -24,7 +24,8 @@ text {
 </style>
 <body class='with-3d-shadow with-transitions'>
 
-<h2>Statistiques </h2>
+<h2>Statestiques </h2>
+	<br></br>
 <svg id="test1" class="mypiechart"></svg>
 
 

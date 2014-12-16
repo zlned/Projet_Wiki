@@ -67,7 +67,7 @@
 							</li>
 							<li><a href="left-sidebar.html">Left Sidebar</a></li>
 							<li><a href="right-sidebar.html">Right Sidebar</a></li>
-							<li><a href="no-sidebar.html">No Sidebar</a></li>
+							<li><a href="no-sidebar.php">No Sidebar</a></li>
 						</ul>
 					</nav>
 
@@ -85,11 +85,12 @@
 			</section>
 
 		<!-- Carousel -->
+		<form action="palyer.php" method="post">
 			<section class="carousel">
 				<div class="reel">
 
 					<article>
-						<a href="#" class="image featured"><img src="images/om.png" alt="" /></a>
+						<a href="team.php" class="image featured"><img src="images/2.png" alt="" id="photo" value="1"/></a>
 						<header>
 							<h3><a href="#">Pulvinar sagittis congue</a></h3>
 						</header>
@@ -97,7 +98,7 @@
 					</article>
 				
 					<article>
-						<a href="#" class="image featured"><img src="images/ol.png" alt="" /></a>
+						<a href="team.php" class="image featured"><img src="images/3.png" alt="" id="photo" value="2"/></a>
 						<header>
 							<h3><a href="#">Fermentum sagittis proin</a></h3>
 						</header>
@@ -105,7 +106,7 @@
 					</article>
 				
 					<article>
-						<a href="#" class="image featured"><img src="images/PSG.png" alt="" /></a>
+						<a href="team.php" class="image featured"><img src="images/1.png" alt="" id="photo" value="3" /></a>
 						<header>
 							<h3><a href="#">Sed quis rhoncus placerat</a></h3>
 						</header>
@@ -113,7 +114,7 @@
 					</article>
 				
 					<article>
-						<a href="#" class="image featured"><img src="images/am.png" alt="" /></a>
+						<a href="team.php" class="image featured"><img src="images/4.png" alt="" id="photo" value="4" /></a>
 						<header>
 							<h3><a href="#">Ultrices urna sit lobortis</a></h3>
 						</header>
@@ -128,11 +129,11 @@
 						<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>							
 					</article>
 
-					
+							</form>
 
 				</div>
 			</section>
-			
+	
 		<!-- Main -->
 			<div class="wrapper style2">
 

@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link href="../src/nv.d3.css" rel="stylesheet" type="text/css">
+<style>
+
+body {
+  overflow-y:scroll;
+}
+
+text {
+  font: 12px sans-serif;
+}
+
+.mypiechart {
+  width: 500px;
+  border: 2px;
+}
+</style>
+<body class='with-3d-shadow with-transitions'>
+
+<h2>Conférence </h2>
+<svg id="test1" class="mypiechart"></svg>
+
+<center>sujet= <input type="number" value="10" name="howmuch1" id="Sujet" min="0" max="10" style="border:solid 1px black; border-radius:5px; text-align:center; box-shadow:0 0 6px;">
+ambiance= <input type="number"  value="10" name="howmuch2" id="Ambiance" min="0" max="10" style="border:solid 1px black; border-radius:5px; text-align:center; box-shadow:0 0 6px;">
+Discour= <input type="number" value="10" name="howmuch3" id="Discour" min="0" max="10" style="border:solid 1px black; border-radius:5px; text-align:center; box-shadow:0 0 6px;">
+Equipement= <input type="number" value="10" name="howmuch4" id="Equipement" min="0" max="10" style="border:solid 1px black; border-radius:5px; text-align:center; box-shadow:0 0 6px;">
+   <br>
+   <input type="button" value="valider" onclick="test2()"  style="width:100px; height:100px; border:solid 1px black; border-radius:51px;" >
+
+<script src="../lib/d3.v3.js"></script>
+<script src="../nv.d3.js"></script>
+<!--<script src="../src/models/legend.js"></script>-->
+<script src="../src/models/pie.js"></script>
+<script src="../src/models/pieChart.js"></script>
+<!--//<script src="../src/utils.js"></script>-->
+<script>
+   
+  
+function test2()
+    {
+  var testdata = [
+    {
+      key: "Sujet",
+      y: document.getElementById("Sujet").value
+    },
+    {
+      key: "Ambiance",
+      y: document.getElementById("Ambiance").value
+    },
+    {
+      key: "Discour",
+      y: document.getElementById("Discour").value
+    },
+    {
+      key: "Equipement",
+      y: document.getElementById("Equipement").value
+    }
+  ];
+
+
+nv.addGraph(function() {
+    var width = 500,
+        height = 500;
+
+    var chart = nv.models.pieChart()
+        .x(function(d) { return d.key })
+        .y(function(d) { return d.y })
+        .color(d3.scale.category10().range())
+        .width(width)
+        .height(height);
+
+      d3.select("#test1")
+          .datum(testdata)
+        .transition().duration(1200)
+          .attr('width', width)
+          .attr('height', height)
+          .call(chart);
+
+    chart.dispatch.on('stateChange', function(e) { nv.log('New State:', JSON.stringify(e)); });
+
+    return chart;
+});
+
+nv.addGraph(function() {
+
+    var width = 500,
+        height = 500;
+
+    var chart = nv.models.pieChart()
+        .x(function(d) { return d.key })
+        //.y(function(d) { return d.value })
+        //.labelThreshold(.08)
+        //.showLabels(false)
+        .color(d3.scale.category10().range())
+        .width(width)
+        .height(height)
+        .donut(true);
+
+    chart.pie
+        .startAngle(function(d) { return d.startAngle/2 -Math.PI/2 })
+        .endAngle(function(d) { return d.endAngle/2 -Math.PI/2 });
+
+      //chart.pie.donutLabelsOutside(true).donut(true);
+
+     
+
+    return chart;
+})
+    }
+;
+
+</script>
+    </center>
