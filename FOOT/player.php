@@ -16,7 +16,7 @@ while($data = mysql_fetch_assoc($req))
 <?php
  
 echo'<hr>';
-
+echo '<link rel="stylesheet" href="table.css" type="text/css"/>';
 mysql_query("CREATE OR REPLACE VIEW vue AS 
          SELECT p.nom_pays AS country , e.nom_equipe AS team , itp.nom_trophee_perso AS prize , j.nom_joueur AS nom_joueur , 
          j.poste_joueur AS poste , j.nbr_but AS goal , j.nbr_match AS matches , j.description AS descr , j.age AS age, j.id_joueur AS idj , j.id_equipe AS jid
@@ -29,7 +29,7 @@ $sql='SELECT * FROM vue ';
 $req= mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
 echo ('<div width="25">');
 echo ('<h1>Table Joueur</h1>');
-echo('<table border="1">');
+echo('<table class="CSS_Table_Example" style="width:600px;height:150px;>');
 
 while($data = mysql_fetch_assoc($req))
 {
@@ -40,7 +40,7 @@ while($data = mysql_fetch_assoc($req))
     $folder_name= (string)$data['jid'] ;
 	echo '<center><img src="photos/'.$folder_name."/".$image_name.'.jpg"><p style="font-size:20px">'.$image_name.'</p></center></br>';
 	echo('</td>');
-	echo('<tr>');
+	echo('</tr>');
     echo('<td>');
 	echo 'Nom Joueur : '.$data['nom_joueur'].'</br>';
 	echo('</td>');
