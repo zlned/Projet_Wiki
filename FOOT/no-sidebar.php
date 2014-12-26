@@ -34,14 +34,14 @@
 				<!-- Inner -->
 					<div class="inner">
 						<header>
-							<h1><a href="index.html" id="logo">Helios</a></h1>
+							<h1><a href="index.php" id="logo">Helios</a></h1>
 						</header>
 					</div>
 				
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="index.php">Home</a></li>
 							<li>
 								<a href="">Dropdown</a>
 								<ul>
@@ -61,7 +61,7 @@
 								</ul>
 							</li>
 							<li><a href="left-sidebar.html">Left Sidebar</a></li>
-							<li><a href="right-sidebar.html">Right Sidebar</a></li>
+							<li><a href="indexblog.php">Blog</a></li>
 							<li><a href="no-sidebar.html">No Sidebar</a></li>
 						</ul>
 					</nav>
