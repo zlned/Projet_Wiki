@@ -94,13 +94,11 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
 
             </div><!-- /#templatemo-carousel -->
         </div>
-            <div class="container">
-                <div class="templatemo-slogan text-center">
-                    <span class="txt_darkgrey">Welcome to </span><span class="txt_orange">Portail Ligue 1</span>     
-                </div>	
-            </div>
 			<hr>
-			
+				<center><span class="txt_orange"><h2>Vidéos</h2></span></center>
+				<br>
+   			<center><iframe width="854" height="510" src="//www.youtube.com/embed/eoYH7eM33dM" frameborder="0" allowfullscreen></iframe></center>
+			<br>
 <!--<a href="index.html" class="current">-->
 		
 		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </a> </h5></center>

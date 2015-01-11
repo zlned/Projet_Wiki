@@ -137,7 +137,11 @@ echo'</ul>';}
         <script src="js/colorbox/jquery.colorbox-min.js"  type="text/javascript"></script>
         <script src="js/templatemo_script.js"  type="text/javascript"></script>
 		-->
-		<br><br><br><br><br><br><br>
+			<hr>
+				<center><span class="txt_orange"><h2>Vidéos</h2></span></center>
+				<br>
+   			<center><iframe width="854" height="510" src="//www.youtube.com/embed/eoYH7eM33dM" frameborder="0" allowfullscreen></iframe></center>
+			<br>
 <center><h5>ACCEUIL | NEWS | EQUIPES | JOUEURS | TERRAINS</h5></center>
    			<br>
    		<center>Copyright © portail foot2015</center>

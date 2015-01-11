@@ -179,6 +179,13 @@ $(document).ready(function(){
     Free HTML5 Templates
     http://www.templatemo.com
 -->
+	<hr>
+				<center><span class="txt_orange"><h2>Vidéos</h2></span></center>
+				<br>
+   			<center><iframe width="750" height="450" src="//www.youtube.com/embed/4kRd-lrLy6k" frameborder="0" allowfullscreen></iframe></center>
+			<br>
+
+					
   <br>
 		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </a> </h5></center>
    			<br>

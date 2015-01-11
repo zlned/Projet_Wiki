@@ -302,10 +302,10 @@ if ($stmt = $db->prepare($sql)) {
                 </div>
           </div>
         </div>
-			<hr>
+	<hr>
 				<center><span class="txt_orange"><h2>Vidéos</h2></span></center>
 				<br>
-   			<center><img src="images/watch.jpg" alt="watchvideo" /></center>
+   			<center><iframe width="854" height="510" src="//www.youtube.com/embed/-6k7ML1nksk" frameborder="0" allowfullscreen></iframe></center>
 			<br>
 		<center><h5>ACCEUIL | NEWS | EQUIPES | JOUEURS | TERRAINS</h5></center>
    			<br>
