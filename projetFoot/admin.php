@@ -159,7 +159,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
 			<br>
 <!--<a href="index.html" class="current">-->
 		
-		<center><h5>ACCEUIL | NEWS | EQUIPES | JOUEURS | TERRAINS</h5></center>
+		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </a> </h5></center>
    			<br>
    		<center>Copyright © portail foot2015</center>
     </body>
