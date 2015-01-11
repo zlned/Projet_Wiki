@@ -66,7 +66,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
                                 <li><a href="accueil.php"><strong><h5>Accueil</strong></h5></a></li>
-                                <li><a href="equipe.php"><strong><h5>Equipes</strong></h5></a></li>
+                                <li><a href="equipeall.php"><strong><h5>Equipes</strong></h5></a></li>
                                 <li class="active"><a href="joueurs.php"><strong><h5>Joueurs</strong></h5></a></li>
 								<li><a href="terrains.php"><strong><h5>Terrains</strong></h5></a></li>
                             </ul>
@@ -238,7 +238,7 @@ window.onload = function () {
 	
             
 	
-			<hr>
+			><hr>
 				<center><span class="txt_orange"><h2>Vidéos</h2></span></center>
 				<br>
    			<center><img src="images/watch.jpg" alt="watchvideo" /></center>
