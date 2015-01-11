@@ -82,7 +82,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
       
       <input type="checkbox" id="btn" name="options" value="under">&nbsp;-25 ans<br>
      <input type="checkbox" id="btn" name="options" value="over">&nbsp;+25 ans <br>
-	<input type="checkbox" id="btn" name="options" value="all">&nbsp;Reset<br>
+	<input type="checkbox" id="btn" name="options" value="all"  style='visibility:hidden'>&nbsp;<br>
      
     <input type="submit" value="trier" id="btn" name="submit">
      </form>
@@ -94,9 +94,7 @@ echo '<link rel="stylesheet" href="galerie.css" type="text/css">';
 	$db = mysqli_connect("localhost","root","","football") or die("Error" . mysqli_error($db)); 
 	 	 
 
- if(isset($_POST['options']) && 
-   $_POST['options'] == 'all') 
-{
+ 
 	$sql = "SELECT nom_joueur , poste_joueur , age ,id_joueur , id_equipe FROM joueur" or die("Error in the consult.." . mysqli_error($db));  
 if ($stmt = $db->prepare($sql)) {
  
@@ -135,13 +133,12 @@ if ($stmt = $db->prepare($sql)) {
 	echo "</a>";
 	}
 	echo '</ul>';	
-
+	}
 	
 	
-}}
+echo "<div id='afficher'>";
 
-else if(isset($_POST['options']) && 
-   $_POST['options'] == 'over') 
+if(isset($_POST['options']) && ($_POST['options'] == 'over')) 
 {
    $sql = "SELECT nom_joueur , poste_joueur , age ,id_joueur , id_equipe FROM joueur
    where age >25" or die("Error in the consult.." . mysqli_error($db));  
@@ -192,8 +189,7 @@ if ($stmt = $db->prepare($sql)) {
 
 	}
 }
-else  if(isset($_POST['options']) && 
-   $_POST['options'] == 'under') 
+else  
 {
     {
    $sql = "SELECT nom_joueur , poste_joueur , age ,id_joueur , id_equipe FROM joueur
