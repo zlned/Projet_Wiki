@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION['admin'])) {
-	header ('Location: admin.php');
+if (!isset($_SESSION['utilisateur']) && !isset($_SESSION['admin'])) {
+	header ('Location: inscription.php');
 	exit();
 }
 ?>
@@ -66,7 +66,11 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                                 <li><a href="equipeA.php"><strong><h5>Equipes</strong></h5></a></li>
                                 <li><a href="joueursA.php"><strong><h5>Joueurs</strong></h5></a></li>
 								<li><a href="terrainsA.php"><strong><h5>Terrains</strong></h5></a></li>
-								<li class="active"><a href="admin2.php"><strong><h5>Admin</strong></h5></a></li>
+								<?php 
+									if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
+								?>
+								<li class="active"><a href="admin.php"><strong><h5>Admin</strong></h5></a></li>
+								<?php } ?>
                             </ul>
                         </div><!--/.nav-collapse -->
                     </div><!--/.container-fluid -->
