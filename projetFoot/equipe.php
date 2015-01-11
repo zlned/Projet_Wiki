@@ -166,14 +166,18 @@ echo'</ul>';
         <script src="js/colorbox/jquery.colorbox-min.js"  type="text/javascript"></script>
         <script src="js/templatemo_script.js"  type="text/javascript"></script>
 		-->
+<<<<<<< HEAD
 			<hr>
 				<center><span class="txt_orange"><h2>Vidéos</h2></span></center>
 				<br>
    			<center><iframe width="854" height="510" src="//www.youtube.com/embed/eoYH7eM33dM" frameborder="0" allowfullscreen></iframe></center>
 			<br>
 <center><h5>ACCEUIL | NEWS | EQUIPES | JOUEURS | TERRAINS</h5></center>
+=======
+		<br><br><br><br><br><br><br>
+<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </a> </h5></center>
+>>>>>>> origin/master
    			<br>
    		<center>Copyright © portail foot2015</center>
-		<br>
     </body>
 </html>

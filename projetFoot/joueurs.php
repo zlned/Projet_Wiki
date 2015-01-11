@@ -307,9 +307,8 @@ if ($stmt = $db->prepare($sql)) {
 				<br>
    			<center><iframe width="854" height="510" src="//www.youtube.com/embed/-6k7ML1nksk" frameborder="0" allowfullscreen></iframe></center>
 			<br>
-		<center><h5>ACCEUIL | NEWS | EQUIPES | JOUEURS | TERRAINS</h5></center>
+		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </a> </h5></center>
    			<br>
    		<center>Copyright © portail foot2015</center>
-		<br><br>
     </body>
 </html>

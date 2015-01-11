@@ -265,7 +265,7 @@ libxml_use_internal_errors(true);
 			<hr>
 				<center><span class="txt_orange"><h2>Vidéos</h2></span></center>
 				<br>
-   			<center><img src="images/watch.jpg" alt="watchvideo" /></center>
+   			<center><iframe width="854" height="510" src="//www.youtube.com/embed/eoYH7eM33dM" frameborder="0" allowfullscreen></iframe></center>
 			<br>
 <!--<a href="index.html" class="current">-->
 		
