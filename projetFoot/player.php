@@ -44,7 +44,9 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
         <div class="templatemo-top-bar" id="templatemo-top">
             <div class="container">
                 <div class="subheader">
-					Bienvenue <?php echo htmlentities(trim($_SESSION['utilisateur'])); ?> !<br />
+					Bienvenue <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
+echo htmlentities(trim($_SESSION['admin']));}
+else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
 					<a href="deconnexion.php">Déconnexion</a>
                 </div>
             </div>
@@ -69,6 +71,11 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                                 <li><a href="equipeall.php"><strong><h5>Equipes</strong></h5></a></li>
                                 <li class="active"><a href="joueurs.php"><strong><h5>Joueurs</strong></h5></a></li>
 								<li><a href="terrains.php"><strong><h5>Terrains</strong></h5></a></li>
+								<?php 
+									if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
+								?>
+								<li><a href="admin.php"><strong><h5>Admin</strong></h5></a></li>
+								<?php } ?>
                             </ul>
                         </div><!--/.nav-collapse -->
                     </div><!--/.container-fluid -->

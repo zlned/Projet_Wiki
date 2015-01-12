@@ -42,7 +42,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
             <div class="container">
                 <div class="subheader">
 					Bienvenue Admin!<br />
-					<a href="deconnexion.php">Déconnexion</a>
+					<a href="deconnexion.php">Dï¿½connexion</a>
                 </div>
             </div>
         </div>
@@ -62,14 +62,14 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                         </div>
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
-                                <li class="active"><a href="admin.php"><strong><h5>Accueil</strong></h5></a></li>
+                                <li><a href="accueil.php"><strong><h5>Accueil</strong></h5></a></li>
                                 <li><a href="equipeall.php"><strong><h5>Equipes</strong></h5></a></li>
                                 <li><a href="joueurs.php"><strong><h5>Joueurs</strong></h5></a></li>
 								<li><a href="terrains.php"><strong><h5>Terrains</strong></h5></a></li>
 								<?php 
 									if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
 								?>
-								<li><a href="admin.php"><strong><h5>Admin</strong></h5></a></li>
+								<li class="active"><a href="admin.php"><strong><h5>Admin</strong></h5></a></li>
 								<?php } ?>
                             </ul>
                         </div><!--/.nav-collapse -->
@@ -94,72 +94,10 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
 
             </div><!-- /#templatemo-carousel -->
         </div>
-            <div class="container">
-                <div class="templatemo-slogan text-center">
-                    <span class="txt_darkgrey">Welcome to </span><span class="txt_orange">Portail Ligue 1</span>     
-                </div>	
-            </div>
-			<hr>
-			<center><span class="txt_orange"><h2>NEWS</h2></span></center>
-        <div class="templatemo-service">
-		  <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="templatemo-service-item">
-						
-                            <div>
-                                <img src="images/mercatof.jpg" alt="icon" />
-                                <span class="templatemo-service-item-header">MERCATO</span>
-                            </div>
-                            <p>transferts mercao jnzhuf bzccns cjnjdscn uzenfcnc s vcnsdiv ndifvbd vsvsfihv sfvs bvisvhs vshfv hsvsi fsfvs ifvsfb hcsbd cgv sdc h hs vhjshjvd sh vds cjsidncvjsk vckjs dvs v sknjdv js vjnzhuf bzccns cjnjdscn uzenfcnc s vcnsdiv ndifvbd vsvsfihv sfvs bvisvhs vshfv hsvsi fsfvs ifvsfb hcsbd cgv sdc h hs vhjshjvd sh vds cjsidncvjsk vckjs dvs v sknjdv js v</p>
-                            <div class="text-center">
-                            	<a href="#" 
-                                	class="templatemo-btn-read-more btn btn-orange">READ MORE</a>
-                            </div>
-                            <br class="clearfix"/>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    
-                   <span> <div class="col-md-4">
-                        <div class="templatemo-service-item" >
-                            <div>
-                                <img src="images/infosf.jpg" alt="icon"/>
-                                <span class="templatemo-service-item-header">INFOS LIGUE 1</span>
-                            </div>
-							<p>rss infos ligue 1 de football jnzhuf bzccns cjnjdscn uzenfcnc s vcnsdiv ndifvbd vsvsfihv sfvs bvisvhs vshfv hsvsi fsfvs ifvsfb hcsbd cgv sdc h hs vhjshjvd sh vds cjsidncvjsk vckjs dvs v sknjdv js vjnzhuf bzccns cjnjdscn uzenfcnc s vcnsdiv ndifvbd vsvsfihv sfvs bvisvhs vshfv hsvsi fsfvs ifvsfb hcsbd cgv sdc h hs vhjshjvd sh vds cjsidncvjsk vckjs dvs v sknjdv js v</p>
-                            <div class="text-center">
-                                <a href="#" 
-                                	class="templatemo-btn-read-more btn btn-orange">READ MORE</a>
-                            </div>
-                            <br class="clearfix"/>
-                        </div></span>
-						
-                        
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="templatemo-service-item">
-                            <div>
-                                <img src="images/resultatsf.jpg" alt="icon"/>
-                                <span class="templatemo-service-item-header">Résultats L1</span>
-                            </div>
-                            <p>Les résultats jnzhuf bzccns cjnjdscn uzenfcnc s vcnsdiv ndifvbd vsvsfihv sfvs bvisvhs vshfv hsvsi fsfvs ifvsfb hcsbd cgv sdc h hs vhjshjvd sh vds cjsidncvjsk vckjs dvs v sknjdv js vjnzhuf bzccns cjnjdscn uzenfcnc s vcnsdiv ndifvbd vsvsfihv sfvs bvisvhs vshfv hsvsi fsfvs ifvsfb hcsbd cgv sdc h hs vhjshjvd sh vds cjsidncvjsk vckjs dvs v sknjdv js v</p>
-                            <div class="text-center">
-                                <a href="#" 
-                                	class="templatemo-btn-read-more btn btn-orange">READ MORE</a>
-                            </div>
-                            <br class="clearfix"/>
-                        </div>
-                        <br class="clearfix"/>
-                    </div>
-                </div>
-            </div>
-        </div>
 			<hr>
 				<center><span class="txt_orange"><h2>Vidéos</h2></span></center>
 				<br>
-   			<center><img src="images/watch.jpg" alt="watchvideo" /></center>
+   			<center><iframe width="854" height="510" src="//www.youtube.com/embed/eoYH7eM33dM" frameborder="0" allowfullscreen></iframe></center>
 			<br>
 <!--<a href="index.html" class="current">-->
 		

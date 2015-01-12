@@ -43,7 +43,9 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
         <div class="templatemo-top-bar" id="templatemo-top">
             <div class="container">
                 <div class="subheader">
-					Bienvenue <?php echo htmlentities(trim($_SESSION['utilisateur'])); ?> !<br />
+					Bienvenue <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
+echo htmlentities(trim($_SESSION['admin']));}
+else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
 					<a href="deconnexion.php">Déconnexion</a>
                 </div>
             </div>
