@@ -62,14 +62,14 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                         </div>
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
-                                <li><a href="admin.php"><strong><h5>Accueil</strong></h5></a></li>
+                                <li><a href="accueil.php"><strong><h5>Accueil</strong></h5></a></li>
                                 <li><a href="equipeall.php"><strong><h5>Equipes</strong></h5></a></li>
                                 <li><a href="joueurs.php"><strong><h5>Joueurs</strong></h5></a></li>
 								<li><a href="terrainsA.php"><strong><h5>Terrains</strong></h5></a></li>
 								<?php 
 									if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
 								?>
-								<li class="active"><a href="admin.php"><strong><h5>Admin</strong></h5></a></li>
+								<li class="active"><a href="admin2.php"><strong><h5>Admin</strong></h5></a></li>
 								<?php } ?>
                             </ul>
                         </div><!--/.nav-collapse -->
@@ -103,6 +103,6 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
 		
 		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </a> </h5></center>
    			<br>
-   		<center>Copyright ï¿½ portail foot2015</center>
+   		<center>Copyright © portail foot2015</center>
     </body>
 </html>
