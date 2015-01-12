@@ -83,24 +83,61 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
             </div> <!-- /container -->
         </div>
     
-	<center><span class="txt_orange"><h2>joueurs</h2></span></center>
 	<div class="text-center">              
-		<form action="" method="POST">
-      
-			<input type="checkbox" id="btn" name="options" value="under">&nbsp;-25 ans<br>
-			<input type="checkbox" id="btn" name="options" value="over">&nbsp;+25 ans <br>
-		 
-			<input class="templatemo-btn-read-more btn btn-orange" type="submit" value="Trier" id="btn" name="submit">
-		</form>
-	</div>	
-<center>
+                           <center><span class="txt_orange"><h2>Les Joueurs</h2></span></center>
+                    <form action="" method="POST">
+      	<input type="checkbox" id="btn" name="options" value="all" >&nbsp;Reset<br>
+     
+      <input type="checkbox" id="btn" name="options" value="under">&nbsp;-25 ans<br>
+     <input type="checkbox" id="btn" name="options" value="over">&nbsp;+25 ans <br>
+		<input type="checkbox" id="btn" name="options" value="buteur">&nbsp;Top Buteur <br>
+<?php
+$db = mysqli_connect("localhost","root","","football") or die("Error" . mysqli_error($db)); 
+$sql='SELECT * FROM pays ';
+		if ($stmt = $db->prepare($sql)) {
+
+				/* Exécution de la requête */
+				$stmt->execute();
+
+				/* Stockage du résultat */
+
+						$stmt->store_result();
+					 "<br>";
+					 $stmt->num_rows () ;
+							
+
+			}
+echo("<p>Pays </p>");
+				echo('<select name="choix_pays" id="choix_pays">');
+
+		if ($stmt = $db->query($sql)) 
+		{
+
+		while ($data =mysqli_fetch_assoc($stmt))
+		   {
+			echo('<option value="' .$data['id_pays'].'">');
+			echo $data['nom_pays'];
+			echo('</option>');
+			}
+
+		}
+
+echo "</select>";
+?>
+	<br>
+    <input class="btn btn-primary" type="submit" value="trier" id="btn" name="submit">
+     </form>
+	</div>
+<center>	
+
 <?php
 echo '<link rel="stylesheet" href="galerie.css" type="text/css">';
 
 	$db = mysqli_connect("localhost","root","","football") or die("Error" . mysqli_error($db)); 
 	 	 
 
- 
+ if(isset($_POST['options']) && ($_POST['options'] == 'all')) 
+ {
 	$sql = "SELECT nom_joueur , poste_joueur , age ,id_joueur , id_equipe FROM joueur" or die("Error in the consult.." . mysqli_error($db));  
 if ($stmt = $db->prepare($sql)) {
  
@@ -142,9 +179,54 @@ if ($stmt = $db->prepare($sql)) {
 	}
 	
 	
-echo "<div id='afficher'>";
+ }
+else if(isset($_POST['options']) && ($_POST['options'] == 'buteur')) 
+ {
+	$sql = "SELECT nom_joueur , poste_joueur , age ,id_joueur , id_equipe FROM joueur ORDER BY nbr_but DESC" or die("Error in the consult.." . mysqli_error($db));  
+if ($stmt = $db->prepare($sql)) {
+ 
+	/* Exécution de la requête */
+	$stmt->execute();
+ 
+	/* Stockage du résultat */
 
-if(isset($_POST['options']) && ($_POST['options'] == 'over')) 
+            $stmt->store_result();
+			echo "<br>";
+			echo $stmt->num_rows () ;
+				echo "<br>";
+		
+}
+
+	if ($stmt = $db->query($sql)) 
+	{
+		echo ('<table>');
+		echo '<ul id="photo-wall">';
+		
+	while ($ligne =mysqli_fetch_assoc($stmt))
+	{
+	
+	 $image_name= (string)$ligne['id_joueur'] ;
+    $folder_name= (string)$ligne['id_equipe'] ;
+			$nom = $ligne['nom_joueur'];
+		$post = $ligne['poste_joueur'];
+		$age = $ligne['age'];
+	echo '<a href="player.php?id='.$image_name.'">';
+	echo '<li><img src="photos/'.$folder_name."/".$image_name.'.jpg"><p style="font-size:20px"></sli>';
+	
+			echo ("<p><font size='2px'>".$nom."</font></p>") ;
+			echo ("<p><font size='2px'>".$post."</font></p>") ;
+			echo ("<p><font size='2px'>".$age." Ans  	 </font></p>") ;
+		
+	echo "</a>";
+	}
+	echo '</ul>';	
+	}
+	
+	
+ }
+
+
+else if(isset($_POST['options']) && ($_POST['options'] == 'over')) 
 {
    $sql = "SELECT nom_joueur , poste_joueur , age ,id_joueur , id_equipe FROM joueur
    where age >25" or die("Error in the consult.." . mysqli_error($db));  
@@ -195,15 +277,60 @@ if ($stmt = $db->prepare($sql)) {
 
 	}
 }
-else  
+else if(isset($_POST['options']) && ($_POST['options'] == 'under'))  
 {
-    {
+    
    $sql = "SELECT nom_joueur , poste_joueur , age ,id_joueur , id_equipe FROM joueur
    where age <= 25" or die("Error in the consult.." . mysqli_error($db));  
 	
 
 	
 
+if ($stmt = $db->prepare($sql)) {
+ 
+	/* Exécution de la requête */
+	$stmt->execute();
+ 
+	/* Stockage du résultat */
+
+            $stmt->store_result();
+			echo "<br>";
+			echo $stmt->num_rows () ;
+				echo "<br>";
+		
+}
+
+		if ($stmt = $db->query($sql)) 
+		{
+			echo ('<table>');
+			echo '<ul id="photo-wall">';
+
+		while ($ligne =mysqli_fetch_assoc($stmt))
+		{
+	
+	 $image_name= (string)$ligne['id_joueur'] ;
+    $folder_name= (string)$ligne['id_equipe'] ;
+			$nom = $ligne['nom_joueur'];
+		$post = $ligne['poste_joueur'];
+		$age = $ligne['age'];
+	echo '<a href="player.php?id='.$image_name.'">';
+	echo '<li><img src="photos/'.$folder_name."/".$image_name.'.jpg"><p style="font-size:20px"></sli>';
+	
+			echo ("<p><font size='2px'>".$nom."</font></p>") ;
+			echo ("<p><font size='2px'>".$post."</font></p>") ;
+			echo ("<p><font size='2px'>".$age." Ans  	 </font></p></a>") ;
+	
+	}
+	echo '</ul>';	
+
+	}
+}
+else if(isset($_POST['choix_pays']))
+ {
+	$pays=$_POST['choix_pays'];
+	$sql = "SELECT nom_joueur , poste_joueur , age ,id_joueur , id_equipe FROM joueur
+	WHERE id_pays = $pays ";
+	
 if ($stmt = $db->prepare($sql)) {
  
 	/* Exécution de la requête */
@@ -236,18 +363,19 @@ if ($stmt = $db->prepare($sql)) {
 	
 			echo ("<p><font size='2px'>".$nom."</font></p>") ;
 			echo ("<p><font size='2px'>".$post."</font></p>") ;
-			echo ("<p><font size='2px'>".$age." Ans  	 </font></p></a>") ;
-	
+			echo ("<p><font size='2px'>".$age." Ans  	 </font></p>") ;
+		
+	echo "</a>";
 	}
 	echo '</ul>';	
-
 	}
-}
-}
+	
+	
+ }
 
 
 ?>
-<center>
+</center>
 
 <hr>
 				<center><span class="txt_orange"><h2>Vidéos</h2></span></center>

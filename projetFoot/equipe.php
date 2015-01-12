@@ -92,7 +92,7 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
 						<hr class="team_hr team_hr_right"/></center>
 							<br><br>
 <center>
-  <?php
+   <?php
 echo '<link href="galerie.css" rel="stylesheet">';
 //echo '<link rel="stylesheet" href="table.css" type="text/css"/>';
 $db = mysqli_connect('localhost','root','','football'); 
@@ -110,7 +110,7 @@ if (isset($_GET['id']))
 
 
  
-echo'<hr>';
+echo'<hr />';
 
 $sql_vue="
          SELECT nom_equipe , id_equipe ,description_equipe ,nom_terrain ,nom_entraineur
@@ -126,19 +126,18 @@ while($data = $result->fetch_assoc())
 	
 {
 	$image_folder =$data['id_equipe'];
-	 echo '<img src="images_eq/'.$image_folder.'.png" width="200" height="200"/><br>';	
-	echo '* Nom Equipe : '.$data['nom_equipe'].'*<br><br>';
-	echo utf8_decode ('DescriptionEquipe : '.$data['description_equipe'].'<br><br>');
-	echo 'Nom Equipe : '.$data['nom_entraineur'].'<br><br>';
+	 echo '<img src="images_eq/'.$image_folder.'.png" width="200" height="200"/>';	
+	echo 'Nom Equipe : '.$data['nom_equipe'].'</br>';
+	echo utf8_decode ('DescriptionEquipe : '.$data['description_equipe'].'</br>');
+	echo 'Nom Equipe : '.$data['nom_entraineur'].'</br>';
 	//echo'<img src="images/terrain/'.$image_terrain.'.jpg"></br>';
-	echo 'Terrain : <a href="terrains.php">'.$data['nom_terrain'].'<br><br></a>';
-	
+	echo 'Terrain : <a href="terrains.php">'.$data['nom_terrain'].'</a>';
 
 	
 }
-}
 	
-$sql1='SELECT * FROM vue_photo_players';
+$sql1="SELECT * FROM joueur
+WHERE id_equipe= $id_equipe";
 if ($result = $db->query($sql1))
 {
 echo '<ul id="photo-wall">' ;
@@ -147,9 +146,9 @@ while($data = $result->fetch_assoc())
 
 {
 	
-    $image_name =$data['jij'];
-    $image_folder =$data['ide'];
-    $player_name=$data['joueur'];
+    $image_name =$data['id_joueur'];
+    $image_folder =$data['id_equipe'];
+    $player_name=$data['nom_joueur'];
     
      echo '<li>';
    
@@ -160,7 +159,8 @@ while($data = $result->fetch_assoc())
    
      
     
-}}
+}}}
+
 echo'</ul>';
 }
 ?>
