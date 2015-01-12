@@ -12,6 +12,7 @@ if (!isset($_SESSION['utilisateur']) && !isset($_SESSION['admin'])) {
 		<meta charset="utf-8"/>
         <meta name="keywords" content="" />
 		<meta name="description" content="" />
+		<meta charset="utf-8"/>
 <!-- 
 Urbanic Template 
 http://www.templatemo.com/preview/templatemo_395_urbanic 
