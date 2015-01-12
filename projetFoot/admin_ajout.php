@@ -98,8 +98,8 @@ echo("<p>Trophée </p>");
 			echo $data['nom_trophee_perso'];
 			echo('</option>');
 			}
-
 		}
+
 echo "</select>";
 echo '<p>Poste Joueur : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp<input type ="text" name="poste_joueur"></p><br>';
 echo '<p>Nombre de but : &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp <input type ="text" name="nbr_but"></p><br>';
@@ -117,16 +117,8 @@ echo '<p>Age : &nbsp&nbsp &nbsp &nbsp&nbsp&nbsp &nbsp &nbsp&nbsp&nbsp &nbsp &nbs
 echo '<p>photo: <input type="file" name="picToUpload" id="picToUpload" ></p>';
 echo '<p><input type="submit" value="enregistrer"</p>'
 ?>
-
 			
 		</form>
-
-
-
-
-
-
-
-				
+		
 	</body>
 </html>

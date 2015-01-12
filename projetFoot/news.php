@@ -9,6 +9,7 @@ if (!isset($_SESSION['utilisateur']) && !isset($_SESSION['admin'])) {
 <html lang="en">
     <head>
         <title>Urbanic HTML5 Template</title>
+		<meta charset="utf-8"/>
         <meta name="keywords" content="" />
 		<meta name="description" content="" />
 <!-- 
@@ -64,11 +65,11 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
                         </div>
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
-                                <li class="active"><a href="accueil.php"><strong><h5>Accueil</strong></h5></a></li>
+                                <li><a href="accueil.php"><strong><h5>Accueil</strong></h5></a></li>
                                 <li><a href="equipeall.php"><strong><h5>Equipes</strong></h5></a></li>
                                 <li><a href="joueurs.php"><strong><h5>Joueurs</strong></h5></a></li>
 								<li><a href="terrains.php"><strong><h5>Terrains</strong></h5></a></li>
-								<li><a href="news.php"><strong><h5>News</strong></h5></a></li>
+								<li  class="active"><a href="news.php"><strong><h5>News</strong></h5></a></li>
 																<?php 
 									if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
 								?>
@@ -114,7 +115,8 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
                                 <img src="images/mercatof.jpg" alt="icon" />
                                 <span class="templatemo-service-item-header">MERCATO</span>
                             </div>
-                            <p><?php
+                            <p>
+<?php
     
 $db =mysqli_connect('localhost','root','','flux_rss') or ("Error " . mysqli_error($db)); 
 
@@ -221,10 +223,7 @@ libxml_use_internal_errors(true);
 
 
 ?></p>
-                            <div class="text-center">
-                            	<a href="#" 
-                                	class="templatemo-btn-read-more btn btn-orange">READ MORE</a>
-                            </div>
+                            
                             <br class="clearfix"/>
                         </div>
                         <div class="clearfix"></div>
@@ -237,10 +236,7 @@ libxml_use_internal_errors(true);
                                 <span class="templatemo-service-item-header">INFOS LIGUE 1</span>
                             </div>
 							<p><?php include 'mercato.php' ?></p>
-                            <div class="text-center">
-                                <a href="#" 
-                                	class="templatemo-btn-read-more btn btn-orange">READ MORE</a>
-                            </div>
+                           
                             <br class="clearfix"/>
                         </div></span>
 						
@@ -254,10 +250,7 @@ libxml_use_internal_errors(true);
                                 <span class="templatemo-service-item-header">Résultats L1</span>
                             </div>
                             <p><?php include 'resultat.php'?></p>
-                            <div class="text-center">
-                                <a href="#" 
-                                	class="templatemo-btn-read-more btn btn-orange">READ MORE</a>
-                            </div>
+                       
                             <br class="clearfix"/>
                         </div>
                         <br class="clearfix"/>
@@ -270,9 +263,8 @@ libxml_use_internal_errors(true);
 				<br>
    			<center><iframe width="854" height="510" src="//www.youtube.com/embed/eoYH7eM33dM" frameborder="0" allowfullscreen></iframe></center>
 			<br>
-<!--<a href="index.html" class="current">-->
 		
-		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a></a> </h5></center>
+		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a> </h5></center>
 
    			<br>
    		<center>Copyright © portail foot2015</center>

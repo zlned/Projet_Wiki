@@ -11,6 +11,8 @@ if (!isset($_SESSION['utilisateur']) && !isset($_SESSION['admin'])) {
         <title>Urbanic HTML5 Template</title>
         <meta name="keywords" content="" />
 		<meta name="description" content="" />
+				<meta charset="utf-8"/>
+
 <!-- 
 Urbanic Template 
 http://www.templatemo.com/preview/templatemo_395_urbanic 
@@ -80,17 +82,18 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
                 </div><!--/.navbar -->
             </div> <!-- /container -->
         </div>
-                            <center><span class="txt_orange"><h2>joueurs</h2></span></center>
-                    <form action="" method="POST">
+    
+	<center><span class="txt_orange"><h2>joueurs</h2></span></center>
+	<div class="text-center">              
+		<form action="" method="POST">
       
-      <input type="checkbox" id="btn" name="options" value="under">&nbsp;-25 ans<br>
-     <input type="checkbox" id="btn" name="options" value="over">&nbsp;+25 ans <br>
-	<input type="checkbox" id="btn" name="options" value="all"  style='visibility:hidden'>&nbsp;<br>
-     
-    <input type="submit" value="trier" id="btn" name="submit">
-     </form>
-		
-
+			<input type="checkbox" id="btn" name="options" value="under">&nbsp;-25 ans<br>
+			<input type="checkbox" id="btn" name="options" value="over">&nbsp;+25 ans <br>
+		 
+			<input class="templatemo-btn-read-more btn btn-orange" type="submit" value="Trier" id="btn" name="submit">
+		</form>
+	</div>	
+<center>
 <?php
 echo '<link rel="stylesheet" href="galerie.css" type="text/css">';
 
@@ -244,69 +247,14 @@ if ($stmt = $db->prepare($sql)) {
 
 
 ?>
-		<hr>
-		<center><span class="txt_orange"><h2>NEWS</h2></span></center>
-        <div class="templatemo-service">
-		  <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="templatemo-service-item">
-						
-                            <div>
-                                <img src="images/mercatof.jpg" alt="icon" />
-                                <span class="templatemo-service-item-header">MERCATO</span>
-                            </div>
-                            <p>transferts mercao jnzhuf bzccns cjnjdscn uzenfcnc s vcnsdiv ndifvbd vsvsfihv sfvs bvisvhs vshfv hsvsi fsfvs ifvsfb hcsbd cgv sdc h hs vhjshjvd sh vds cjsidncvjsk vckjs dvs v sknjdv js vjnzhuf bzccns cjnjdscn uzenfcnc s vcnsdiv ndifvbd vsvsfihv sfvs bvisvhs vshfv hsvsi fsfvs ifvsfb hcsbd cgv sdc h hs vhjshjvd sh vds cjsidncvjsk vckjs dvs v sknjdv js v</p>
-                            <div class="text-center">
-                            	<a href="#" 
-                                	class="templatemo-btn-read-more btn btn-orange">READ MORE</a>
-                            </div>
-                            <br class="clearfix"/>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    
-                   <span> <div class="col-md-4">
-                        <div class="templatemo-service-item" >
-                            <div>
-                                <img src="images/infosf.jpg" alt="icon"/>
-                                <span class="templatemo-service-item-header">INFOS LIGUE 1</span>
-                            </div>
-							<p>rss infos ligue 1 de football jnzhuf bzccns cjnjdscn uzenfcnc s vcnsdiv ndifvbd vsvsfihv sfvs bvisvhs vshfv hsvsi fsfvs ifvsfb hcsbd cgv sdc h hs vhjshjvd sh vds cjsidncvjsk vckjs dvs v sknjdv js vjnzhuf bzccns cjnjdscn uzenfcnc s vcnsdiv ndifvbd vsvsfihv sfvs bvisvhs vshfv hsvsi fsfvs ifvsfb hcsbd cgv sdc h hs vhjshjvd sh vds cjsidncvjsk vckjs dvs v sknjdv js v</p>
-                            <div class="text-center">
-                                <a href="#" 
-                                	class="templatemo-btn-read-more btn btn-orange">READ MORE</a>
-                            </div>
-                            <br class="clearfix"/>
-                        </div></span>
-						
-                        
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="templatemo-service-item">
-                            <div>
-                                <img src="images/resultatsf.jpg" alt="icon"/>
-                                <span class="templatemo-service-item-header">Résultats L1</span>
-                            </div>
-                            <p>Les résultats jnzhuf bzccns cjnjdscn uzenfcnc s vcnsdiv ndifvbd vsvsfihv sfvs bvisvhs vshfv hsvsi fsfvs ifvsfb hcsbd cgv sdc h hs vhjshjvd sh vds cjsidncvjsk vckjs dvs v sknjdv js vjnzhuf bzccns cjnjdscn uzenfcnc s vcnsdiv ndifvbd vsvsfihv sfvs bvisvhs vshfv hsvsi fsfvs ifvsfb hcsbd cgv sdc h hs vhjshjvd sh vds cjsidncvjsk vckjs dvs v sknjdv js v</p>
-                            <div class="text-center">
-                                <a href="#" 
-                                	class="templatemo-btn-read-more btn btn-orange">READ MORE</a>
-                            </div>
-                            <br class="clearfix"/>
-                        </div>
-                        <br class="clearfix"/>
-                    </div>
-                </div>
-          </div>
-        </div>
-	<hr>
+<center>
+
+<hr>
 				<center><span class="txt_orange"><h2>Vidéos</h2></span></center>
 				<br>
    			<center><iframe width="854" height="510" src="//www.youtube.com/embed/-6k7ML1nksk" frameborder="0" allowfullscreen></iframe></center>
 			<br>
-		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a></a> </h5></center>
+		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a> </h5></center>
 
    			<br>
    		<center>Copyright © portail foot2015</center>

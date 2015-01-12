@@ -11,6 +11,7 @@ if (!isset($_SESSION['utilisateur'])) {
 	  
     <head>
         <title>Urbanic HTML5 Template</title>
+		<meta charset="utf-8" />
         <meta name="keywords" content="" />
 		<meta name="description" content="" />
 <!-- 
@@ -84,7 +85,11 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
                 </div><!--/.navbar -->
             </div> <!-- /container -->
         </div>
-                            <center><span class="txt_orange"><h2>joueurs</h2></span></center>
+    <div class="templatemo-team" id="templatemo-about">
+		<!--  <div class="container">
+			<div class="row">
+                <div class="templatemo-line-header">
+                   <div class="text-center"> -->
 		<?php
 
 if (isset($_GET['id']))
@@ -126,7 +131,6 @@ if ($stmt = $db->prepare($req)) {
 $sql='SELECT * FROM vue ';
 if ($result = $db->query($sql)) {
 echo ('<div width="25">');
-echo ('<h1>Table Joueur</h1>');
 echo('<table class="CSS_Table_Example">');
 
 while($data = $result->fetch_assoc())
@@ -179,7 +183,6 @@ while($data = $result->fetch_assoc())
 echo '</table>';
 
 echo ('</div>');
-echo'<hr>';
 
 echo ('<div>');
 
@@ -239,20 +242,22 @@ window.onload = function () {
 
 	
 </script>
+
+</div>
 <script type="text/javascript" src="canvasjs-1.5.7/canvasjs.min.js"></script>
 
 <body>
-<div  id="chartContainer" style="height: 500px; width: 100%;"></div
+<div  id="chartContainer" style="height: 500px; width: 100%;"></div>
 	
 	
             
 	
-			><hr>
+			<hr>
 				<center><span class="txt_orange"><h2>Vidéos</h2></span></center>
 				<br>
-   			<center><img src="images/watch.jpg" alt="watchvideo" /></center>
+   			<center><iframe width="640" height="390" src="//www.youtube.com/embed/Wxzm9psN9m8" frameborder="0" allowfullscreen></iframe></center>
 			<br>
-		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a></a> </h5></center>
+		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a> </h5></center>
 
    			<br>
    		<center>Copyright © portail foot2015</center>

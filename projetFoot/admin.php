@@ -10,6 +10,8 @@ exit();
 <html lang="en">
     <head>
         <title>Urbanic HTML5 Template</title>
+				<meta charset="utf-8"/>
+
         <meta name="keywords" content="" />
 <meta name="description" content="" />
 <!-- 
@@ -87,7 +89,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
             </div><!-- /#templatemo-carousel -->
         </div>
 <br><br><br><br><br><br><br><br><br><br><br>
-<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </a> </h5></center>
+		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a> </h5></center>
    	<br>
    	<center>Copyright © portail foot2015</center>
     </body>

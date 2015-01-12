@@ -11,6 +11,8 @@ if (!isset($_SESSION['utilisateur']) && !isset($_SESSION['admin'])) {
         <title>Urbanic HTML5 Template</title>
         <meta name="keywords" content="" />
 		<meta name="description" content="" />
+				<meta charset="utf-8"/>
+
 <!-- 
 Urbanic Template 
 http://www.templatemo.com/preview/templatemo_395_urbanic 
@@ -82,13 +84,15 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
         </div>
 		
         <div class="templatemo-team" id="templatemo-about">
-        <div class="container">
-<div class="row">
+			<div class="container">
+				<div class="row">
                     <div class="templatemo-line-header">
                         <div class="text-center">
                             <center><hr class="team_hr team_hr_left"/><span>EQUIPES</span>
 							<hr class="team_hr team_hr_right"/></center>
 							<br><br>
+						
+
 							
  <?php
 echo '<link href="galerie.css" rel="stylesheet">';
@@ -100,12 +104,7 @@ $db = mysqli_connect("localhost","root","","football");
 //{
 //echo $pic_choice=$_POST['photo'];
 //}
-
-
-
- 
 echo'<hr>';
-
 
 $sql='SELECT nom_equipe , nom_terrain , nom_entraineur,id_equipe
 FROM equipe e ,terrain t, entraineur en 
@@ -135,16 +134,19 @@ echo'</ul>';
 }
 
 ?>
-         
-
+				</div> 
+			</div> 
+		</div> 
+	</div> 
+</div> 
 			<hr>
-				<center><div class="txt_orange"><h2>Vidéos</h2></div></center></div>
+				<center><div class="txt_orange"><h2>Vidéos</h2></div></center>
 				<br><br><br>
    			<center><iframe width="854" height="510" src="//www.youtube.com/embed/eoYH7eM33dM" frameborder="0" allowfullscreen></iframe></center>
 			<br>
 
 		<br><br>
-<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a></a> </h5></center>
+<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a> </h5></center>
 
    			<br>
    		<center>Copyright © portail foot2015</center>

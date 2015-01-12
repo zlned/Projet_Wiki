@@ -83,15 +83,15 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
             </div> <!-- /container -->
         </div>
 		
-        <div class="templatemo-team" id="templatemo-about">
-        <div class="container">
-<div class="row">
-                    <div class="templatemo-line-header">
-                        <div class="text-center">
-                            <center><hr class="team_hr team_hr_left"/><span>EQUIPES</span>
-							<hr class="team_hr team_hr_right"/></center>
+    <div class="templatemo-team" id="templatemo-about">
+		<div class="container">
+			<div class="row">
+                <div class="templatemo-line-header">
+                    <div class="text-center">
+                        <center><hr class="team_hr team_hr_left"/><span>EQUIPES</span>
+						<hr class="team_hr team_hr_right"/></center>
 							<br><br>
-
+<center>
   <?php
 echo '<link href="galerie.css" rel="stylesheet">';
 //echo '<link rel="stylesheet" href="table.css" type="text/css"/>';
@@ -164,14 +164,12 @@ while($data = $result->fetch_assoc())
 echo'</ul>';
 }
 ?>
-         
-<!--        <script src="js/jquery.min.js" type="text/javascript"></script>
-        <script src="js/bootstrap.min.js"  type="text/javascript"></script>
-        <script src="js/stickUp.min.js"  type="text/javascript"></script>
-        <script src="js/colorbox/jquery.colorbox-min.js"  type="text/javascript"></script>
-        <script src="js/templatemo_script.js"  type="text/javascript"></script>
-		-->
-
+</center>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 			<hr>
 				<center><div class="txt_orange"><h2>Vidéos</h2></div></center></div>
 				<br><br><br>
@@ -179,7 +177,7 @@ echo'</ul>';
 			<br>
 
 		<br><br><br><br><br><br><br>
-<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a></a> </h5></center>
+<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a> </h5></center>
 
    			<br>
    		<center>Copyright © portail foot2015</center>

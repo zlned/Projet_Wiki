@@ -11,6 +11,8 @@ if (!isset($_SESSION['utilisateur']) && !isset($_SESSION['admin'])) {
         <title>Urbanic HTML5 Template</title>
         <meta name="keywords" content="" />
 		<meta name="description" content="" />
+				<meta charset="utf-8"/>
+
 <!-- 
 Urbanic Template 
 http://www.templatemo.com/preview/templatemo_395_urbanic 
@@ -93,7 +95,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
         </div>
 <!--<a href="index.html" class="current">-->
 		
-		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a></a> </h5></center>
+		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a> </h5></center>
 
    			<br>
    		<center>Copyright © portail foot2015</center>

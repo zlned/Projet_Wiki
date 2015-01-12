@@ -11,6 +11,8 @@ if (!isset($_SESSION['utilisateur']) && !isset($_SESSION['admin'])) {
         <title>Urbanic HTML5 Template</title>
         <meta name="keywords" content="" />
 		<meta name="description" content="" />
+				<meta charset="utf-8"/>
+
 <!-- 
 Urbanic Template 
 http://www.templatemo.com/preview/templatemo_395_urbanic 
@@ -156,8 +158,8 @@ $(document).ready(function(){
                                     <p class="team-inner-header"><?php echo "le terrain" .$nom. "</b> ce trouve dans la ville ".$ville." en ".$pays.".<br/>"; ?></p>
 								</div>
 								   <?php echo "<i>".$description ."</i><br />";
-										 echo "<button id=\"hide\">Masquer</button>";
-										 echo  "<button id=\"show\">Afficher</button><br/><br/>";
+										 echo "<button id=\"hide\" class=\"btn btn-primary\">Masquer</button>";
+										 echo  "<button id=\"show\" class=\"btn btn-primary\">Afficher</button><br/><br/>";
 									?>
                             </div>
                         </li>
@@ -192,7 +194,7 @@ $(document).ready(function(){
 
 					
   <br>
-		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a></a> </h5></center>
+		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a> </h5></center>
 
    			<br>
    		<center>Copyright © portail foot2015</center>

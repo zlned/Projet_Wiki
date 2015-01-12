@@ -10,7 +10,7 @@ if (!isset($_SESSION['utilisateur']) && !isset($_SESSION['admin'])) {
 
     <head>
         <title>Urbanic HTML5 Template</title>
-		<meta charset="utf-8"
+		<meta charset="utf-8"/>
         <meta name="keywords" content="" />
 		<meta name="description" content="" />
 <!-- 
@@ -164,7 +164,7 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
 			<br>
 <!--<a href="index.html" class="current">-->
 		
-		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </a> </h5></center>
+		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </h5></center>
    			<br>
    		<center>Copyright © portail foot2015</center>
     </body>
