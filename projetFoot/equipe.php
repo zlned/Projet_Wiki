@@ -44,7 +44,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
             <div class="container">
                 <div class="subheader">
 					Bienvenue <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
-echo htmlentities(trim($_SESSION['admin']));}
+echo 'Admin';}
 else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
 					<a href="deconnexion.php">Déconnexion</a>
                 </div>
@@ -70,6 +70,7 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
                                 <li class="active"><a href="equipeall.php"><strong><h5>Equipes</strong></h5></a></li>
                                 <li><a href="joueurs.php"><strong><h5>Joueurs</strong></h5></a></li>
 								<li><a href="terrains.php"><strong><h5>Terrains</strong></h5></a></li>
+								<li><a href="news.php"><strong><h5>News</strong></h5></a></li>
 																<?php 
 									if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
 								?>
@@ -87,8 +88,10 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
 <div class="row">
                     <div class="templatemo-line-header">
                         <div class="text-center">
-                            <hr class="team_hr team_hr_left"/><span>EQUIPES</span>
+                            <center><hr class="team_hr team_hr_left"/><span>EQUIPES</span>
+							<hr class="team_hr team_hr_right"/></center>
 							<br><br>
+
   <?php
 echo '<link href="galerie.css" rel="stylesheet">';
 //echo '<link rel="stylesheet" href="table.css" type="text/css"/>';
@@ -123,12 +126,12 @@ while($data = $result->fetch_assoc())
 	
 {
 	$image_folder =$data['id_equipe'];
-	 echo '<img src="images_eq/'.$image_folder.'.png" width="200" height="200"/>';	
-	echo 'Nom Equipe : '.$data['nom_equipe'].'</br>';
-	echo utf8_decode ('DescriptionEquipe : '.$data['description_equipe'].'</br>');
-	echo 'Nom Equipe : '.$data['nom_entraineur'].'</br>';
+	 echo '<img src="images_eq/'.$image_folder.'.png" width="200" height="200"/><br>';	
+	echo '* Nom Equipe : '.$data['nom_equipe'].'*<br><br>';
+	echo utf8_decode ('DescriptionEquipe : '.$data['description_equipe'].'<br><br>');
+	echo 'Nom Equipe : '.$data['nom_entraineur'].'<br><br>';
 	//echo'<img src="images/terrain/'.$image_terrain.'.jpg"></br>';
-	echo 'Terrain : <a href="terrains.php">'.$data['nom_terrain'].'</a>';
+	echo 'Terrain : <a href="terrains.php">'.$data['nom_terrain'].'<br><br></a>';
 	
 
 	
@@ -170,13 +173,13 @@ echo'</ul>';
 		-->
 
 			<hr>
-				<center><span class="txt_orange"><h2>Vidéos</h2></span></center>
-				<br>
+				<center><div class="txt_orange"><h2>Vidéos</h2></div></center></div>
+				<br><br><br>
    			<center><iframe width="854" height="510" src="//www.youtube.com/embed/eoYH7eM33dM" frameborder="0" allowfullscreen></iframe></center>
 			<br>
 
 		<br><br><br><br><br><br><br>
-<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </a> </h5></center>
+<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a></a> </h5></center>
 
    			<br>
    		<center>Copyright © portail foot2015</center>

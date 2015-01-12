@@ -42,7 +42,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
             <div class="container">
                 <div class="subheader">
 					Bienvenue <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
-										echo htmlentities(trim($_SESSION['admin']));}
+			echo 'Admin';}
 									else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
 					<a href="deconnexion.php">Déconnexion</a>
                 </div>
@@ -68,6 +68,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                                 <li class="active"><a href="equipeall.php"><strong><h5>Equipes</strong></h5></a></li>
                                 <li><a href="joueurs.php"><strong><h5>Joueurs</strong></h5></a></li>
 								<li><a href="terrains.php"><strong><h5>Terrains</strong></h5></a></li>
+								<li><a href="news.php"><strong><h5>News</strong></h5></a></li>
 																<?php 
 									if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
 								?>
@@ -85,7 +86,8 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
 <div class="row">
                     <div class="templatemo-line-header">
                         <div class="text-center">
-                            <hr class="team_hr team_hr_left"/><span>EQUIPES</span>
+                            <center><hr class="team_hr team_hr_left"/><span>EQUIPES</span>
+							<hr class="team_hr team_hr_right"/></center>
 							<br><br>
 							
  <?php
@@ -109,7 +111,9 @@ $sql='SELECT nom_equipe , nom_terrain , nom_entraineur,id_equipe
 FROM equipe e ,terrain t, entraineur en 
 WHERE e.id_terrain= t.id_terrain 
 AND	e.id_entraineur= en.id_entraineur';
+
 if ($result = $db->query($sql)) {
+
 echo '<ul id="photo-wall">' ;
 
 while($data = $result->fetch_assoc())
@@ -119,29 +123,28 @@ while($data = $result->fetch_assoc())
     $nom_equipe =$data['nom_equipe'];
     $nom_entraineur =$data['nom_entraineur'];
     $nom_terrain=$data['nom_terrain'];
-    
-     echo '<li>';
    
-        echo '<a href="equipe.php?id='.$image_name.'"><img src="images_eq/'.$image_name.'.png" alt="'.$nom_equipe.'"></a>';
-	 echo'</sli>';	
-         echo '<strong>'.$nom_equipe.'</strong>';
-         echo '</a>';
+     echo '<div style="width:135px; display:inline;">';
+     echo '<a href="equipe.php?id='.$image_name.'"><img title="'.$nom_equipe.'" src="images_eq/'.$image_name.'.png" alt="'.$nom_equipe.'">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </a>';
+	 
+     //echo '<strong>'.$nom_equipe.'</strong>';
+echo'</div>';	
    
-     
-    
 }
-echo'</ul>';}
+echo'</ul>';
+}
+
 ?>
          
 
 			<hr>
-				<center><span class="txt_orange"><h2>Vidéos</h2></span></center>
-				<br>
+				<center><div class="txt_orange"><h2>Vidéos</h2></div></center></div>
+				<br><br><br>
    			<center><iframe width="854" height="510" src="//www.youtube.com/embed/eoYH7eM33dM" frameborder="0" allowfullscreen></iframe></center>
 			<br>
 
 		<br><br>
-<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </a> </h5></center>
+<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a></a> </h5></center>
 
    			<br>
    		<center>Copyright © portail foot2015</center>

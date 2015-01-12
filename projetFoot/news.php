@@ -7,10 +7,8 @@ if (!isset($_SESSION['utilisateur']) && !isset($_SESSION['admin'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <title>Urbanic HTML5 Template</title>
-		<meta charset="utf-8"
         <meta name="keywords" content="" />
 		<meta name="description" content="" />
 <!-- 
@@ -71,7 +69,6 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
                                 <li><a href="joueurs.php"><strong><h5>Joueurs</strong></h5></a></li>
 								<li><a href="terrains.php"><strong><h5>Terrains</strong></h5></a></li>
 								<li><a href="news.php"><strong><h5>News</strong></h5></a></li>
-
 																<?php 
 									if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
 								?>
@@ -117,8 +114,117 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
                                 <img src="images/mercatof.jpg" alt="icon" />
                                 <span class="templatemo-service-item-header">MERCATO</span>
                             </div>
-							<p>Retrouvez le tableau des transferts du championnat de Ligue1. Les dernières rumeurs, les mouvements du mercato.</p>
+                            <p><?php
+    
+$db =mysqli_connect('localhost','root','','flux_rss') or ("Error " . mysqli_error($db)); 
 
+libxml_use_internal_errors(true);
+	$RSS_DOC = simpleXML_load_file('http://www.lfp.fr/ligue1/rss.xml');
+	if (!$RSS_DOC) {
+		echo "Failed loading XML\n";
+		foreach(libxml_get_errors() as $error) {
+			echo "\t", $error->message;
+		}
+	}
+
+
+	/* Get title, link, managing editor, and copyright from the document  */
+	$rss_title = $RSS_DOC->channel->title;
+	$rss_link = $RSS_DOC->channel->link;
+	$rss_editor = $RSS_DOC->channel->managingEditor;
+	$rss_copyright = $RSS_DOC->channel->copyright;
+	$rss_date = $RSS_DOC->channel->pubDate;
+    $rss_description=$RSS_DOC->channel->description;
+
+	//Loop through each item in the RSS document
+	     $sqlrow = "SELECT * FROM flux " or die("Error in the consult.." . mysqli_error()); 
+        if ($stmt = $db->prepare($sqlrow)) {
+ 
+	/* Exécution de la requête */
+	$stmt->execute();
+ 
+	/* Stockage du résultat */
+
+            $stmt->store_result();        
+ 
+	
+}
+
+	foreach($RSS_DOC->channel->item as $RSSitem)
+	{
+
+		$id_flux 	= md5($RSSitem->title);
+		$fetch_date = date("Y-m-j G:i:s"); //NOTE: we don't use a DB SQL function so its database independant
+		$item_title = $RSSitem->title;
+		$item_date  = date("Y-m-j", strtotime($RSSitem->pubDate));
+		$item_url	= $RSSitem->link;
+        $item_description= $RSSitem->description;
+        
+
+		//echo "Processing item '" , $item_id , "' on " , $fetch_date 	, "<br/>";
+	
+		echo ("<h1>");
+		echo utf8_decode ($item_title), "<br/>";
+		echo ("</h1>");
+		echo utf8_decode ($item_date), "<br/>";
+		echo utf8_decode ($item_description), "<br/>";
+        echo "<a href=".$item_url.">Par ici</a><br/>";
+        
+        $item_exists_sql = "SELECT id_flux FROM flux where id_flux = '" . $id_flux . "'" or die("Error in the consult.." . mysqli_error()); 
+        if ($stmt = $db->prepare($item_exists_sql)) {
+ 
+	/* Exécution de la requête */
+	$stmt->execute();
+ 
+	/* Stockage du résultat */
+
+            $stmt->store_result();
+ 
+	
+          
+ 
+	
+}
+       if($stmt->num_rows <1)
+		{
+			
+			$sql = " INSERT INTO flux(id_flux ,date_flux, title_flux, link_flux, description_flux) VALUES ('" .$id_flux. "','" .$item_date. "', '" .utf8_decode ($item_title) . "', '" . $item_url . "', '" . utf8_decode ($item_description) . "')" or die("Error in the consult.." . mysqli_error($db));
+			
+      
+                if ($stmt = $db->prepare($sql)) {
+ 
+	/* Exécution de la requête */
+	$stmt->execute();
+ 
+	/* Stockage du résultat */
+
+            $stmt->store_result();
+ 
+	
+}
+		}
+		else
+		{
+			//echo "<font color=blue>Not inserting existing item..</font><br/>";
+		}
+		
+
+		echo "<br/>";
+	
+
+	// End of form //
+}
+
+
+
+
+
+
+?></p>
+                            <div class="text-center">
+                            	<a href="#" 
+                                	class="templatemo-btn-read-more btn btn-orange">READ MORE</a>
+                            </div>
                             <br class="clearfix"/>
                         </div>
                         <div class="clearfix"></div>
@@ -130,9 +236,9 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
                                 <img src="images/infosf.jpg" alt="icon"/>
                                 <span class="templatemo-service-item-header">INFOS LIGUE 1</span>
                             </div>
-							<p>Retrouvez le classement Ligue1 de football, le calendrier, l'actualité en direct ainsi que le classement des buteurs.</p>
-                            <div class="text-center"><br><br>
-                                <a href="news.php" 
+							<p><?php include 'mercato.php' ?></p>
+                            <div class="text-center">
+                                <a href="#" 
                                 	class="templatemo-btn-read-more btn btn-orange">READ MORE</a>
                             </div>
                             <br class="clearfix"/>
@@ -147,9 +253,11 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
                                 <img src="images/resultatsf.jpg" alt="icon"/>
                                 <span class="templatemo-service-item-header">Résultats L1</span>
                             </div>
-                            <p>Suivez tous les resultats ainsi que nos analyses des matchs et les coulisses de la ligue1. </p>
+                            <p><?php include 'resultat.php'?></p>
                             <div class="text-center">
-                                
+                                <a href="#" 
+                                	class="templatemo-btn-read-more btn btn-orange">READ MORE</a>
+                            </div>
                             <br class="clearfix"/>
                         </div>
                         <br class="clearfix"/>
@@ -164,7 +272,8 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
 			<br>
 <!--<a href="index.html" class="current">-->
 		
-		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </a> </h5></center>
+		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a></a> </h5></center>
+
    			<br>
    		<center>Copyright © portail foot2015</center>
     </body>

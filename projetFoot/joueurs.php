@@ -42,7 +42,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
             <div class="container">
                 <div class="subheader">
 					Bienvenue <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
-echo htmlentities(trim($_SESSION['admin']));}
+echo 'Admin';}
 else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
 					<a href="deconnexion.php">Déconnexion</a>
                 </div>
@@ -68,6 +68,7 @@ else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
                                 <li><a href="equipeall.php"><strong><h5>Equipes</strong></h5></a></li>
                                 <li class="active"><a href="joueurs.php"><strong><h5>Joueurs</strong></h5></a></li>
 								<li><a href="terrains.php"><strong><h5>Terrains</strong></h5></a></li>
+								<li><a href="news.php"><strong><h5>News</strong></h5></a></li>
 								<?php 
 									if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
 								?>
@@ -305,7 +306,8 @@ if ($stmt = $db->prepare($sql)) {
 				<br>
    			<center><iframe width="854" height="510" src="//www.youtube.com/embed/-6k7ML1nksk" frameborder="0" allowfullscreen></iframe></center>
 			<br>
-		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </a> </h5></center>
+		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a></a> </h5></center>
+
    			<br>
    		<center>Copyright © portail foot2015</center>
     </body>

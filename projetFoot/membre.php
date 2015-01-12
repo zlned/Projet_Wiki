@@ -10,7 +10,7 @@ if (!isset($_SESSION['utilisateur'])) {
 
 <body>
 Bienvenue <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
-echo htmlentities(trim($_SESSION['admin']));}
+echo 'Admin';}
 else { echo htmlentities(trim($_SESSION['utilisateur']));} ?> !<br />
 <a href="deconnexion.php">Déconnexion</a>
 </body>
