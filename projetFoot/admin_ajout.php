@@ -7,8 +7,8 @@
 			
 			<?php
 $db = mysqli_connect("localhost","root","","football") or die("Error" . mysqli_error($db)); 
-echo '<form  action="save.php" method="post" enctype="multipart/form-data">';
-echo '<p>Nom joueur : <input type ="text" name="nom_joueur"></p><br>';
+echo '<form  action="" method="post" enctype="multipart/form-data">';
+echo '<p>Nom joueur : &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp <input type ="text" name="nom_joueur"></p><br>';
 //////////////////////////////////////////Pays//////////////////////////////
 			$sql='SELECT * FROM pays ';
 		if ($stmt = $db->prepare($sql)) {
@@ -87,7 +87,7 @@ $sql='SELECT * FROM trophee_perso ';
 
 			}
 echo("<p>Trophée </p>");
-				echo('<select name="choix_tro" id="choix_tro">');
+				echo('<select name="choix_tro" id="choix_tro"><br>');
 
 		if ($stmt = $db->query($sql)) 
 		{
@@ -101,20 +101,20 @@ echo("<p>Trophée </p>");
 
 		}
 echo "</select>";
-echo '<p>Poste Joueur : <input type ="text" name="poste_joueur"></p><br>';
-echo '<p>Nombre de but : <input type ="text" name="nbr_but"></p><br>';
-echo '<p>Trophee Perso : <input type ="text" name="tp"></p><br>';
-echo '<p>Saison : <input type ="text" name="sai"></p><br>';
-echo '<p>Matches joué: <input type="number"  min="1" max="99" name="nbr_m"></p><br>';
-echo '<p>Description : <input type ="text" name="descr"></p><br>';
-echo '<p>Carton jaune :<input type="number" min="1" max="99" name="cj"></p><br>';
-echo '<p>Carton rouge : <input type="number" min="1" max="99" name="cr"></p><br>';
+echo '<p>Poste Joueur : &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp<input type ="text" name="poste_joueur"></p><br>';
+echo '<p>Nombre de but : &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp <input type ="text" name="nbr_but"></p><br>';
+echo '<p>Trophee Perso : &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp<input type ="text" name="tp"></p><br>';
+echo '<p>Saison : &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp<input type ="text" name="sai"></p><br>';
+echo '<p>Matches joué:  &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp<input type="number"  min="1" max="99" name="nbr_m"></p><br>';
+echo '<p>Description :  &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp<input type ="text" name="descr"></p><br>';
+echo '<p>Carton jaune : &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp<input type="number" min="1" max="99" name="cj"></p><br>';
+echo '<p>Carton rouge : &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp<input type="number" min="1" max="99" name="cr"></p><br>';
 echo '<p>nombre ds butes marqué avec la tete : <input type="number"  min="1" max="99" name="bt"></p><br>';
 echo '<p>nombre ds butes marqué avec le pied : <input type="number"  min="1" max="99" name="bp"></p><br>';
-echo '<p>nombre  matches tut : <input type="number"  min="1" max="99" name="tut"></p><br>';
-echo '<p>nombre  matches rempla : <input type="number"  min="1" max="99" name="remp"></p><br>';
-echo '<p>Age : <input type="number"  min="1" max="99" name="age"></p><br>';
-echo'<p>photo:</p><input type="file" name="picToUpload" id="picToUpload" ></p>';
+echo '<p>nombre  matches tut :&nbsp&nbsp &nbsp &nbsp &nbsp&nbsp<input type="number"  min="1" max="99" name="tut"></p><br>';
+echo '<p>nombre  matches rempla : &nbsp <input type="number"  min="1" max="99" name="remp"></p><br>';
+echo '<p>Age : &nbsp&nbsp &nbsp &nbsp&nbsp&nbsp &nbsp &nbsp&nbsp&nbsp &nbsp &nbsp&nbsp&nbsp &nbsp &nbsp&nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp<input type="number"  min="1" max="99" name="age"></p><br>';
+echo '<p>photo: <input type="file" name="picToUpload" id="picToUpload" ></p>';
 echo '<p><input type="submit" value="enregistrer"</p>'
 ?>
 

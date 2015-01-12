@@ -1,9 +1,8 @@
-
 <?php
 session_start();
 if (!isset($_SESSION['utilisateur']) && !isset($_SESSION['admin'])) {
-header ('Location: inscription.php');
-exit();
+	header ('Location: inscription.php');
+	exit();
 }
 ?>
 <!DOCTYPE html>
@@ -11,7 +10,7 @@ exit();
     <head>
         <title>Urbanic HTML5 Template</title>
         <meta name="keywords" content="" />
-<meta name="description" content="" />
+		<meta name="description" content="" />
 <!-- 
 Urbanic Template 
 http://www.templatemo.com/preview/templatemo_395_urbanic 
@@ -30,6 +29,11 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
         <link href="js/colorbox/colorbox.css"  rel='stylesheet' type='text/css'>
         <link href="css/templatemo_style.css"  rel='stylesheet' type='text/css'>
 
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
     </head>
     
     <body>
@@ -37,8 +41,8 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
         <div class="templatemo-top-bar" id="templatemo-top">
             <div class="container">
                 <div class="subheader">
-Bienvenue Admin!<br />
-<a href="deconnexion.php">Déconnexion</a>
+					Bienvenue Admin!<br />
+					<a href="deconnexion.php">Déconnexion</a>
                 </div>
             </div>
         </div>
@@ -62,11 +66,12 @@ Bienvenue Admin!<br />
                                 <li><a href="equipeall.php"><strong><h5>Equipes</strong></h5></a></li>
                                 <li><a href="joueurs.php"><strong><h5>Joueurs</strong></h5></a></li>
 								<li><a href="terrains.php"><strong><h5>Terrains</strong></h5></a></li>
-<?php 
-if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
-?>
+								<li><a href="news.php"><strong><h5>News</strong></h5></a></li>
+								<?php 
+									if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
+								?>
 								<li class="active"><a href="admin.php"><strong><h5>Admin</strong></h5></a></li>
-<?php } ?>
+								<?php } ?>
                             </ul>
                         </div><!--/.nav-collapse -->
                     </div><!--/.container-fluid -->
@@ -74,21 +79,23 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
             </div> <!-- /container -->
         </div>
         
-        <div>
-<img src="images/bgnouveau.jpg" alt="gallery" width="1500" height="400" class="img-responsive" />
-</div>
-<br>
-<center>
-<button class="btn btn-primary">Gestion des équipes</button>
-<a href="gestion_joueur.php"><button class="btn btn-success">Gestion des joueurs</button></a>
-<button class="btn btn-info">Gestion des entraineurs</button>
-<button class="btn btn-warning">Gestion des terrains</button>
-</center>
-            </div><!-- /#templatemo-carousel -->
+      
+        <div class="templatemo-team" id="templatemo-about">
+            <div class="container">
+                <div class="row">
+                    <div class="templatemo-line-header">
+                          <hr class="team_hr team_hr_left"/><span>Ajouter un joueur</span>
+                            <hr class="team_hr team_hr_right" /><br><br><br><br><br>
+						    <?php include'admin_ajout.php'; ?>
+                    </div>
+                </div>
+            </div>
         </div>
-<br><br><br><br><br><br><br><br><br><br><br>
-<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> </a> </h5></center>
-   	<br>
-   	<center>Copyright © portail foot2015</center>
+<!--<a href="index.html" class="current">-->
+		
+		<center><h5><a href="accueil.php">ACCEUIL</a> | <a href="equipeall.php">EQUIPES</a>  | <a href="joueurs.php">JOUEURS</a>  | <a href="terrains.php">TERRAINS</a> | <a href="news.php">NEWS</a></a> </h5></center>
+
+   			<br>
+   		<center>Copyright © portail foot2015</center>
     </body>
 </html>
