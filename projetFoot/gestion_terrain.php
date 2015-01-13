@@ -86,7 +86,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
             <div class="container">
                 <div class="row">
                     <div class="templatemo-line-header">
-                          <hr class="team_hr team_hr_left"/><span>Ajouter un joueur</span>
+                          <hr class="team_hr team_hr_left"/><span>Ajouter un Terrain</span>
                             <hr class="team_hr team_hr_right" /><br><br><br><br><br>
 						<center>    <?php include'admin_ter.php'; ?> </center>
                     </div>

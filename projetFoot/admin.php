@@ -77,7 +77,7 @@ if (isset($_SESSION['admin']) && $_SESSION['admin'] <> ""){
         </div>
         
         <div>
-<img src="images/bgnouveau.jpg" alt="gallery" width="1500" height="400" class="img-responsive" />
+<img src="images/bgnouveau.jpg" alt="gallery" width="1500" height="350" class="img-responsive" />
 </div>
 <br>
 <center>
